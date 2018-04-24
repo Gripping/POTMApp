@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Potm" x:Class="Potm.PotmPage">
+
+        <ContentPage.Content>
+        <StackLayout>
+         <Button Clicked="OnRefresh" Text="tap this" Margin="50"/>
+            <ScrollView>
+               
+               <ListView ItemsSource="{Binding}"
+                  >
+            <ListView.ItemTemplate>
+              <DataTemplate>
+                <TextCell Text="{Binding name}">
+                  
+                </TextCell>
+              </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>
