@@ -65,13 +65,13 @@
       <IncludeInPackage>true</IncludeInPackage>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Fonts\Oswald-Bold.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\background.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\cirkel1.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\cirkel2.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\cirkel3.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\cirkel4.png" />
-    <None Include="$(MSBuildThisFileDirectory)Resources\Fonts\Oswald-Bold.ttf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 </Project>

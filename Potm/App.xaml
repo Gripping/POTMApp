@@ -1,6 +1,38 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Potm.App">
     <Application.Resources>
-        <!-- Application resource dictionary -->
+      <ResourceDictionary>
+            <Color x:Key="facebook">#093E88</Color>
+            <Color x:Key="textBlack">#2E2F34</Color>
+            <Color x:Key="white">#FFFFFF</Color>
+            <Color x:Key="darkRed">#8B2727</Color>
+            <Color x:Key="orange">#FF8B36</Color>
+            <Color x:Key="green">#469528</Color>
+
+            <Style x:Key="FPBig" TargetType="Label">
+                <Setter Property="FontSize" Value="43" />
+            </Style>
+            <Style x:Key="FPBig2" TargetType="Label">
+                <Setter Property="FontSize" Value="93" />
+            </Style>
+            <Style x:Key="std" TargetType="Label">
+                <Setter Property="FontSize" Value="15" />
+            </Style>
+            <Style x:Key="std-sm" TargetType="Label">
+                <Setter Property="FontSize" Value="12" />
+            </Style>
+            <Style x:Key="h1" TargetType="Label">
+                <Setter Property="FontSize" Value="35" />
+            </Style>
+            <Style x:Key="h2" TargetType="Label">
+                <Setter Property="FontSize" Value="26" />
+            </Style>
+            <Style x:Key="date" TargetType="Label">
+                <Setter Property="FontSize" Value="20" />
+            </Style>
+            <Style x:Key="date-sm" TargetType="Label">
+                <Setter Property="FontSize" Value="9" />
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
