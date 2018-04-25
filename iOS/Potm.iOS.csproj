@@ -128,6 +128,13 @@
     <BundleResource Include="Resources\Images\cirkel3.png" />
     <BundleResource Include="Resources\Images\cirkel4.png" />
     <BundleResource Include="Resources\Fonts\Oswald-Bold.ttf" />
+    <BundleResource Include="Resources\Images\basketball.png" />
+    <BundleResource Include="Resources\Images\football.png" />
+    <BundleResource Include="Resources\Images\puck.png" />
+    <BundleResource Include="Resources\Images\soccer-ball-variant.png" />
+    <BundleResource Include="Resources\Images\profilepic1.png" />
+    <BundleResource Include="Resources\Images\profilepic2.png" />
+    <BundleResource Include="Resources\Images\profilepic3.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Images\background.png" />

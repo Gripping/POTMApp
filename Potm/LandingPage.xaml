@@ -7,7 +7,7 @@
         <StackLayout>
             <Button x:Name="GetFullCollection" Text="Get full collection"></Button>
             <Button x:Name="GetEmptyCollection" Text="Get empty collection"></Button>
-            <Button x:Name="AddPlayer" Text="Add player"></Button>
+            <Button x:Name="AddPlayer" Text="Add player" ></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

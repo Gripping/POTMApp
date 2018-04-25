@@ -26,6 +26,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)pages\FrontPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)pages\PlayerList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
@@ -46,6 +54,12 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)pages\admin\AddPlayer.xaml.cs">
       <DependentUpon>AddPlayer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)pages\FrontPage.xaml.cs">
+      <DependentUpon>FrontPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)pages\PlayerList.xaml.cs">
+      <DependentUpon>PlayerList.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -73,5 +87,12 @@
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\cirkel2.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\cirkel3.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\cirkel4.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\basketball.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\football.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\puck.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\soccer-ball-variant.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\profilepic1.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\profilepic2.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\profilepic3.png" />
   </ItemGroup>
 </Project>
