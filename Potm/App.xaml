@@ -45,8 +45,13 @@
                 <Setter Property="FontFamily" Value="Oswald"/>
                 <Setter Property="TextColor" Value="{StaticResource textWhite}"/>
             </Style>
-            <Style x:Key="date-sm" TargetType="Label">
+            <Style x:Key="sm-info" TargetType="Label">
                 <Setter Property="FontSize" Value="9" />
+                <Setter Property="FontFamily" Value="Oswald"/>
+                <Setter Property="TextColor" Value="{StaticResource textWhite}"/>
+            </Style>
+             <Style x:Key="playerName" TargetType="Label">
+                <Setter Property="FontSize" Value="30" />
                 <Setter Property="FontFamily" Value="Oswald"/>
                 <Setter Property="TextColor" Value="{StaticResource textWhite}"/>
             </Style>
@@ -76,6 +81,8 @@
                 <Setter Property="BorderRadius" Value="5"/>
                 
             </Style>
+
+           
         </ResourceDictionary>
     </Application.Resources>
 </Application>

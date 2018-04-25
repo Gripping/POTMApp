@@ -135,6 +135,7 @@
     <BundleResource Include="Resources\Images\profilepic1.png" />
     <BundleResource Include="Resources\Images\profilepic2.png" />
     <BundleResource Include="Resources\Images\profilepic3.png" />
+    <BundleResource Include="Resources\Images\klublogo.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Images\background.png" />

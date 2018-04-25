@@ -1,39 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             x:Class="Potm.pages.PlayerList">
+             x:Class="Potm.pages.PlayerList"
+             BackgroundImage="Images/background.png">
     <ContentPage.Content>
 
                 <StackLayout HorizontalOptions="Center"
                      Margin="20">
 
-            <Label Style="{StaticResource h1}"
-                   FontAttributes="Bold">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="100"  />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                </Grid.RowDefinitions>
+
+                <Label 
+                    Style="{StaticResource h1}"
+                    FontAttributes="Bold"
+                    Grid.Column="0"
+                    >
                 <Label.Text>
-                    VELKOMMEN
-MANAGER!
+                    ODENSE
+HÅNDBOLD
                 </Label.Text>
+                </Label>
+                
+                <Image Source="Images/klublogo.png" Grid.Column="3"/>
+                
+                </Grid>
+
+            
+             <Label Style="{StaticResource std}"
+                    Margin="0, -20, 0, 0"
+                   >
+                <Label.Text>
+                    Serie 1 - Damer
+                </Label.Text>
+                
             </Label>
             <BoxView HeightRequest="1"
                      BackgroundColor="White"
                      Margin="0, 0, 0, 25"/>
-        <StackPanel Orientation="Horizontal">
-            <Viewbox>
-                <Image Source="http://lorempixel.com/200/200/" />
-            </Viewbox>
-            <Viewbox>
-                <Image Source="http://lorempixel.com/400/600/" />
-            </Viewbox>
-            <Viewbox>
-                <Image Source="http://lorempixel.com/700/700/" />
-            </Viewbox>
-            <Viewbox>
-                <Image Source="http://lorempixel.com/100/300/" />
-            </Viewbox>
-            <Viewbox>
-                <Image Source="http://lorempixel.com/100/500/" />
-            </Viewbox>
-        </StackPanel>
+
+
+            <StackLayout Margin="0, 20, 0, 0"
+                         WidthRequest="220" 
+                         HorizontalOptions="Center">
+                <Image Source="Images/profilepic1.png"/>
+                <Label Style="{StaticResource playerName}"> SUZANNE BÆKHØJ </Label>
+                <Label Style="{StaticResource sm-info}"> 
+                NUMMER 3   
+                </Label> 
+                <Label Style="{StaticResource sm-info}">
+                VENSTRE FLØJ 
+                  </Label>
+                <Label Style="{StaticResource sm-info}"> 
+                ALDER 22    
+                </Label>
             </StackLayout>
+
+
+    
+   
+           
+    </StackLayout>
     </ContentPage.Content>
 </ContentPage>

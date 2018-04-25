@@ -94,5 +94,7 @@
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\profilepic1.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\profilepic2.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\profilepic3.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\klublogo.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\klublogo %28copy%29.png" />
   </ItemGroup>
 </Project>
