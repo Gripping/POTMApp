@@ -123,12 +123,14 @@
   <ItemGroup>
     <BundleResource Include="Resources\Fonts\BebasNeue.otf" />
     <BundleResource Include="Resources\Fonts\Oswald.ttf" />
-    <BundleResource Include="Resources\Images\background.png" />
     <BundleResource Include="Resources\Images\cirkel1.png" />
     <BundleResource Include="Resources\Images\cirkel2.png" />
     <BundleResource Include="Resources\Images\cirkel3.png" />
     <BundleResource Include="Resources\Images\cirkel4.png" />
     <BundleResource Include="Resources\Fonts\Oswald-Bold.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Images\background.png" />
   </ItemGroup>
   <Import Project="..\Potm\Potm.projitems" Label="Shared" Condition="Exists('..\Potm\Potm.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
