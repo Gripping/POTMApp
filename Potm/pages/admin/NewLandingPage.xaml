@@ -15,7 +15,7 @@
                    FontAttributes="Bold">
                 <Label.Text>
                     VELKOMMEN
-MANAGER!
+
                 </Label.Text>
             </Label>
             <BoxView HeightRequest="1"

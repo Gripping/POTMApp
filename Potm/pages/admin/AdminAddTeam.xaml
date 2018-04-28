@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Potm.pages.admin.AdminAddTeam"
+             BackgroundImage="Images/background.png">
+    <ContentPage.Content>
+        <ScrollView>
+     <StackLayout HorizontalOptions="Center"
+                     Margin="20">
+
+                      <Label Style="{StaticResource h1}"
+                   FontAttributes="Bold">
+                <Label.Text>
+                    Indtast Oplysninger
+
+                </Label.Text>
+            </Label>
+            <BoxView Style="{StaticResource linje}"/>
+            
+        <Grid HorizontalOptions="Center"
+              VerticalOptions="Center"
+              RowSpacing="0"
+              Margin="0, -20, 0 ,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition  Height="50"/>
+            <RowDefinition  Height="50"/>
+            <RowDefinition  Height="50"/>
+            <RowDefinition  Height="50"/>
+            <RowDefinition  Height="50"/>
+            <RowDefinition  Height="50"/>
+        </Grid.RowDefinitions>
+                
+        <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                   
+
+                </Grid.ColumnDefinitions>       
+
+       <Label Grid.Row="0" Grid.Column="0" Margin="0, 20, 0, 0" Text="Sportsgren" Style="{StaticResource orangeText-sm}"/>                
+        <Picker Grid.Row="1"
+                Grid.Column="0"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                HeightRequest="40"
+                WidthRequest="320"
+                Margin="-20, 0, 0, 0"
+                SelectedIndex="1" > 
+
+        <Picker.Items>
+                      <x:String>hello</x:String>
+                      <x:String>hello1</x:String>
+                      <x:String>hello2</x:String>
+                    </Picker.Items>
+                </Picker>
+        <Label Grid.Row="2" Grid.Column="0" Margin="0, 30, 0, 0" Text="Holdnavn" Style="{StaticResource orangeText-sm}"/>
+        <Entry Grid.Row="3" Grid.Column="0" Margin="-20, 0, 0, 0" Style="{StaticResource textInput}"/>
+                
+        <Label Grid.Row="4" Grid.Column="0" Margin="0, 30, 0, 0" Text="Træner" Style="{StaticResource orangeText-sm}"/>        
+        <Entry Grid.Row="5" Grid.Column="0"  Margin="-20, 0, 0, 0" Style="{StaticResource textInput}"/>
+        <Label Grid.Row="6" Grid.Column="0" Margin="0, 30, 0, 0" Text="Sportsgren" Style="{StaticResource orangeText-sm}"/>                
+        <Picker Grid.Row="7"
+                Grid.Column="0"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                HeightRequest="40"
+                WidthRequest="320"
+                Margin="-20, 0, 0, 0"
+                SelectedIndex="1" > 
+
+        <Picker.Items>
+                      <x:String>hello</x:String>
+                      <x:String>hello1</x:String>
+                      <x:String>hello2</x:String>
+                    </Picker.Items>
+                </Picker>        
+       <Button />
+
+       
+    </Grid>
+
+            </StackLayout>
+            </ScrollView>
+        
+    </ContentPage.Content>
+</ContentPage>

@@ -55,6 +55,11 @@
                 <Setter Property="FontFamily" Value="Oswald"/>
                 <Setter Property="TextColor" Value="{StaticResource textWhite}"/>
             </Style>
+             <Style x:Key="orangeText-sm" TargetType="Label">
+                <Setter Property="FontSize" Value="10" />
+                <Setter Property="FontFamily" Value="Oswald"/>
+                <Setter Property="TextColor" Value="{StaticResource orange}"/>
+            </Style>
 
             <Style x:Key="buttonFP" TargetType="Button">
                 <Setter Property="HorizontalOptions" Value="Center"/>
@@ -80,6 +85,20 @@
                 <Setter Property="BackgroundColor" Value="{StaticResource textWhite}"/>
                 <Setter Property="BorderRadius" Value="5"/>
                 
+            </Style>
+
+            <Style x:Key="textInput" TargetType="Entry">
+                
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="WidthRequest" Value="320"/>
+                <Setter Property="HeightRequest" Value="40"/> 
+            </Style>
+
+            <Style x:Key="linje" TargetType="BoxView">
+                <Setter Property="HeightRequest" Value="1"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource textWhite}"/>
+                <Setter Property="Margin" Value="0, 0, 0, 25"/>
             </Style>
 
            

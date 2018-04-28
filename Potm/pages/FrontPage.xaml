@@ -53,11 +53,11 @@
                      Style="{StaticResource buttonFP}"
                      />
             <Button x:Name="btn1" 
-                     Text="KOM I GANG"
+                     Text="GÆST"
                      Style="{StaticResource button2FP}"
                      />
             <Button x:Name="btn2" 
-                     Text="KOM I GANG"
+                     Text="MANAGER"
                      Style="{StaticResource button2FP}"
                      />
 
