@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Potm.pages.admin.AddPlayersPage">
+    <ContentPage.Content>
+           <ScrollView>
+     <StackLayout HorizontalOptions="Center"
+                     Margin="20">
+
+                      <Label Style="{StaticResource h1}"
+                   FontAttributes="Bold">
+                <Label.Text>
+                    Indtast Oplysninger
+
+                </Label.Text>
+            </Label>
+            <BoxView Style="{StaticResource linje}"/>
+
+            </StackLayout>
+            </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

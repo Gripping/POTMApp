@@ -10,7 +10,7 @@ namespace Potm
         {
             InitializeComponent();
 
-            var navPage = new NavigationPage(new AdminAddTeam());
+            var navPage = new NavigationPage(new AddPlayers());
 
             navPage.BarBackgroundColor = Color.FromHex("#8B2727");
             navPage.BarTextColor = Color.White;
