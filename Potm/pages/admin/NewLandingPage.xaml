@@ -4,11 +4,18 @@
              x:Class="Potm.pages.admin.NewLandingPage"
              Title="VELKOMMEN!"
              BackgroundColor="#F4F4F4"
+<<<<<<< HEAD
              BackgroundImage="background.png">
+=======
+             BackgroundImage="Images/background.png"
+
+             >
+>>>>>>> fb19101bb97b94619cbdde78baeec22515e1c43a
     <ContentPage.Content>
         <StackLayout HorizontalOptions="Center"
                      Margin="20">
 
+<<<<<<< HEAD
             <Label TextColor="White"
                    FontSize="35"
                    Margin="0, 40, 0,0"
@@ -17,6 +24,13 @@
                 <Label.Text>
                     VELKOMMEN
 MANAGER!
+=======
+            <Label Style="{StaticResource h1}"
+                   FontAttributes="Bold">
+                <Label.Text>
+                    VELKOMMEN
+
+>>>>>>> fb19101bb97b94619cbdde78baeec22515e1c43a
                 </Label.Text>
             </Label>
             <BoxView HeightRequest="1"
@@ -26,17 +40,27 @@ MANAGER!
             <Label x:Name="introText"
                    HorizontalOptions="Center"
                    VerticalOptions="Center"
+<<<<<<< HEAD
                    FontFamily="Oswald"
                    FontSize="12"
                    Margin="20, 0, 20, 0"
                    TextColor="White"
                    XAlign="Center">
+=======
+                   XAlign="Center"
+                   Style="{StaticResource std-sm}"
+                   >
+>>>>>>> fb19101bb97b94619cbdde78baeec22515e1c43a
                 <Label.Text>
                     Velkommen til din POTM manager profil.
 Du vil i de næste 4 trin kunne oprette dit hold med spillerinfo, kampinfo og spillerbilleder.  Nu kan alle Jeres fans stemme på kampens spiller, vinde fede præmier og være en del af holdet!
                 </Label.Text>
             </Label>
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> fb19101bb97b94619cbdde78baeec22515e1c43a
             <Grid Margin="0, 40, 0, 0"
                   VerticalOptions="Center"
                   HorizontalOptions="Center"
@@ -50,10 +74,17 @@ Du vil i de næste 4 trin kunne oprette dit hold med spillerinfo, kampinfo og sp
                     <ColumnDefinition Width="125" />
                     <ColumnDefinition Width="125" />
                 </Grid.ColumnDefinitions>
+<<<<<<< HEAD
                 <Image Grid.Row="0" Grid.Column="0" Source="cirkel1.png" />
                 <Image Grid.Row="0" Grid.Column="1" Source="cirkel2.png" />
                 <Image Grid.Row="1" Grid.Column="0" Source="cirkel3.png" />
                 <Image Grid.Row="1" Grid.Column="1" Source="cirkel4.png" />
+=======
+                <Image Grid.Row="0" Grid.Column="0" Source="Images/cirkel1.png" />
+                <Image Grid.Row="0" Grid.Column="1" Source="Images/cirkel2.png" />
+                <Image Grid.Row="1" Grid.Column="0" Source="Images/cirkel3.png" />
+                <Image Grid.Row="1" Grid.Column="1" Source="Images/cirkel4.png" />
+>>>>>>> fb19101bb97b94619cbdde78baeec22515e1c43a
             </Grid>
 
             <Button x:Name="btnGetStarted" Text="KOM I GANG"

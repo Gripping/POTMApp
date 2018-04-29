@@ -1,4 +1,9 @@
 ﻿using Xamarin.Forms;
+<<<<<<< HEAD
+=======
+using Potm.pages;
+using Potm.pages.admin;
+>>>>>>> fb19101bb97b94619cbdde78baeec22515e1c43a
 
 namespace Potm
 {
@@ -8,7 +13,11 @@ namespace Potm
         {
             InitializeComponent();
 
+<<<<<<< HEAD
             var navPage = new NavigationPage(new LandingPage());
+=======
+            var navPage = new NavigationPage(new AdminAddTeam());
+>>>>>>> fb19101bb97b94619cbdde78baeec22515e1c43a
 
             navPage.BarBackgroundColor = Color.FromHex("#8B2727");
             navPage.BarTextColor = Color.White;
