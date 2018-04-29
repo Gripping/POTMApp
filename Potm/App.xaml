@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Potm.App">
+    <Application.Resources>
+        <!-- Application resource dictionary -->
+=======
 <?xml version="1.0" encoding="utf-8"?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Potm.App">
     <Application.Resources>
@@ -103,5 +109,6 @@
 
            
         </ResourceDictionary>
+>>>>>>> fb19101bb97b94619cbdde78baeec22515e1c43a
     </Application.Resources>
 </Application>

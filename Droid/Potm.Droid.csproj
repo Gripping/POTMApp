@@ -130,6 +130,8 @@
     <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
+<<<<<<< HEAD
+=======
     <AndroidResource Include="Resources\drawable\background.png" />
     <AndroidResource Include="Resources\drawable\basketball.png" />
     <AndroidResource Include="Resources\drawable\football.png" />
@@ -142,9 +144,13 @@
     <AndroidResource Include="Resources\drawable\profilepic1.png" />
     <AndroidResource Include="Resources\drawable\profilepic2.png" />
     <AndroidResource Include="Resources\drawable\profilepic3.png" />
+<<<<<<< HEAD
     <AndroidResource Include="Resources\drawable\BtnOrange.png" />
     <AndroidResource Include="Resources\drawable\BtnWhite.png" />
     <AndroidResource Include="Resources\drawable\StaticPicture.png" />
+=======
+>>>>>>> fb19101bb97b94619cbdde78baeec22515e1c43a
+>>>>>>> 19e40a973e96c5be63ff377047f9c988d99517b0
   </ItemGroup>
   <Import Project="..\Potm\Potm.projitems" Label="Shared" Condition="Exists('..\Potm\Potm.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

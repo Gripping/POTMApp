@@ -7,7 +7,11 @@
         <StackLayout>
             <Button x:Name="GetFullCollection" Text="Get full collection"></Button>
             <Button x:Name="GetEmptyCollection" Text="Get empty collection"></Button>
+<<<<<<< HEAD
+            <Button x:Name="AddPlayer" Text="Add player"></Button>
+=======
             <Button x:Name="AddPlayer" Text="Add player" ></Button>
+>>>>>>> fb19101bb97b94619cbdde78baeec22515e1c43a
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
