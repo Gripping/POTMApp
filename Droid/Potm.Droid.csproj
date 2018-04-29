@@ -142,6 +142,9 @@
     <AndroidResource Include="Resources\drawable\profilepic1.png" />
     <AndroidResource Include="Resources\drawable\profilepic2.png" />
     <AndroidResource Include="Resources\drawable\profilepic3.png" />
+    <AndroidResource Include="Resources\drawable\BtnOrange.png" />
+    <AndroidResource Include="Resources\drawable\BtnWhite.png" />
+    <AndroidResource Include="Resources\drawable\StaticPicture.png" />
   </ItemGroup>
   <Import Project="..\Potm\Potm.projitems" Label="Shared" Condition="Exists('..\Potm\Potm.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

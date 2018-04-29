@@ -137,6 +137,10 @@
     <BundleResource Include="Resources\Images\profilepic3.png" />
     <BundleResource Include="Resources\Images\klublogo.png" />
     <BundleResource Include="Resources\Images\background.png" />
+    <BundleResource Include="Resources\Images\BtnOrange.png" />
+    <BundleResource Include="Resources\Images\BtnWhite.png" />
+    <BundleResource Include="Resources\Images\BtnWhite1.png" />
+    <BundleResource Include="Resources\Images\StaticPicture.png" />
   </ItemGroup>
   <Import Project="..\Potm\Potm.projitems" Label="Shared" Condition="Exists('..\Potm\Potm.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

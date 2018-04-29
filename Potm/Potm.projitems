@@ -103,5 +103,9 @@
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\klublogo.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\klublogo %28copy%29.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\background.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\BtnOrange.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\BtnWhite.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\BtnWhite1.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\StaticPicture.png" />
   </ItemGroup>
 </Project>
