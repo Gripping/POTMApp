@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
@@ -137,3 +138,137 @@
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\StaticPicture.png" />
   </ItemGroup>
 </Project>
+=======
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{04F13471-EDA3-4424-A628-36DDFE6E0BFA}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Potm</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)LandingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)pages\admin\NewLandingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)pages\admin\OldLandingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)pages\admin\AddPlayer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)pages\FrontPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)pages\PlayerList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)pages\admin\AdminAddTeam.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)pages\admin\AddPlayers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)pages\admin\AddPlayerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)pages\admin\AddMatch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)LandingPage.xaml.cs">
+      <DependentUpon>LandingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Data\Collections.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\CollectionManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\Actions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\ActionsManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)pages\admin\NewLandingPage.xaml.cs">
+      <DependentUpon>NewLandingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)pages\admin\OldLandingPage.xaml.cs">
+      <DependentUpon>OldLandingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)pages\admin\AddPlayer.xaml.cs">
+      <DependentUpon>AddPlayer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)pages\FrontPage.xaml.cs">
+      <DependentUpon>FrontPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)pages\PlayerList.xaml.cs">
+      <DependentUpon>PlayerList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)pages\admin\AdminAddTeam.xaml.cs">
+      <DependentUpon>AdminAddTeam.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)pages\admin\AddPlayers.xaml.cs">
+      <DependentUpon>AddPlayers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)pages\admin\AddPlayerPage.xaml.cs">
+      <DependentUpon>AddPlayerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)pages\admin\AddMatch.xaml.cs">
+      <DependentUpon>AddMatch.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Data\" />
+    <Folder Include="$(MSBuildThisFileDirectory)pages\" />
+    <Folder Include="$(MSBuildThisFileDirectory)pages\admin\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Resources\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Resources\Fonts\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Resources\Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Fonts\BebasNeue.otf">
+      <IncludeInPackage>true</IncludeInPackage>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Fonts\Oswald.ttf">
+      <IncludeInPackage>true</IncludeInPackage>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Fonts\Oswald-Bold.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\cirkel1.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\cirkel2.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\cirkel3.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\cirkel4.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\basketball.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\football.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\puck.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\soccer-ball-variant.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\profilepic1.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\profilepic2.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\profilepic3.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\klublogo.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\klublogo %28copy%29.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\background.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\BtnOrange.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\BtnWhite.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\BtnWhite1.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\StaticPicture.png" />
+  </ItemGroup>
+</Project>
+>>>>>>> 2721bd74228980480effe21b86c22dd08e216065

@@ -21,7 +21,7 @@
             <BoxView HeightRequest="1"
                      BackgroundColor="White"
                      Margin="0, 0, 0, 25"/>
-            
+
             <Label x:Name="introText"
                    HorizontalOptions="Center"
                    VerticalOptions="Center"
@@ -73,7 +73,7 @@ Du vil i de næste 4 trin kunne oprette dit hold med spillerinfo, kampinfo og sp
                     FontFamily="Oswald"
                     BorderRadius="10"
                     />
-            
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

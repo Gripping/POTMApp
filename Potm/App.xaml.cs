@@ -10,8 +10,12 @@ namespace Potm
         {
             InitializeComponent();
 
+<<<<<<< HEAD
 
             var navPage = new NavigationPage(new AddMatch());
+=======
+            var navPage = new NavigationPage(new LandingPage());
+>>>>>>> 2721bd74228980480effe21b86c22dd08e216065
 
             var navPage = new NavigationPage(new LandingPage());
 

@@ -28,7 +28,7 @@ namespace Potm
             {
                 if(teams.All(t => t.name != team.name)){
                     teams.Add(team);
-                }   
+                }
             }
         }
     }
