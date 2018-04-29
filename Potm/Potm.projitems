@@ -26,8 +26,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-<<<<<<< HEAD
-=======
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)pages\FrontPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -40,7 +38,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-<<<<<<< HEAD
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)pages\admin\AddPlayers.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -53,9 +50,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-=======
->>>>>>> fb19101bb97b94619cbdde78baeec22515e1c43a
->>>>>>> 19e40a973e96c5be63ff377047f9c988d99517b0
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
@@ -77,8 +71,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)pages\admin\AddPlayer.xaml.cs">
       <DependentUpon>AddPlayer.xaml</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-=======
     <Compile Include="$(MSBuildThisFileDirectory)pages\FrontPage.xaml.cs">
       <DependentUpon>FrontPage.xaml</DependentUpon>
     </Compile>
@@ -88,7 +80,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)pages\admin\AdminAddTeam.xaml.cs">
       <DependentUpon>AdminAddTeam.xaml</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="$(MSBuildThisFileDirectory)pages\admin\AddPlayers.xaml.cs">
       <DependentUpon>AddPlayers.xaml</DependentUpon>
     </Compile>
@@ -98,9 +89,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)pages\admin\AddMatch.xaml.cs">
       <DependentUpon>AddMatch.xaml</DependentUpon>
     </Compile>
-=======
->>>>>>> fb19101bb97b94619cbdde78baeec22515e1c43a
->>>>>>> 19e40a973e96c5be63ff377047f9c988d99517b0
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Data\" />
@@ -119,22 +107,13 @@
       <IncludeInPackage>true</IncludeInPackage>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-<<<<<<< HEAD
-    <None Include="$(MSBuildThisFileDirectory)Resources\Images\background.png" />
-=======
     <None Include="$(MSBuildThisFileDirectory)Resources\Fonts\Oswald-Bold.ttf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
->>>>>>> fb19101bb97b94619cbdde78baeec22515e1c43a
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\cirkel1.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\cirkel2.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\cirkel3.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\cirkel4.png" />
-<<<<<<< HEAD
-    <None Include="$(MSBuildThisFileDirectory)Resources\Fonts\Oswald-Bold.ttf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-=======
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\basketball.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\football.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\puck.png" />
@@ -145,13 +124,9 @@
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\klublogo.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\klublogo %28copy%29.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\background.png" />
-<<<<<<< HEAD
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\BtnOrange.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\BtnWhite.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\BtnWhite1.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\StaticPicture.png" />
-=======
->>>>>>> fb19101bb97b94619cbdde78baeec22515e1c43a
->>>>>>> 19e40a973e96c5be63ff377047f9c988d99517b0
   </ItemGroup>
 </Project>

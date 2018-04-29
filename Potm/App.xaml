@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Potm.App">
-    <Application.Resources>
-        <!-- Application resource dictionary -->
-=======
 <?xml version="1.0" encoding="utf-8"?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Potm.App">
     <Application.Resources>
@@ -14,7 +8,7 @@
             <Color x:Key="darkRed">#8B2727</Color>
             <Color x:Key="orange">#FF8B36</Color>
             <Color x:Key="green">#469528</Color>
-            
+
 
             <Style x:Key="FPBig" TargetType="Label">
                 <Setter Property="FontSize" Value="43" />
@@ -74,31 +68,31 @@
                 <Setter Property="FontFamily" Value="Oswald"/>
                 <Setter Property="TextColor" Value="{StaticResource textWhite}"/>
                 <Setter Property="WidthRequest" Value="141"/>
-                <Setter Property="HeightRequest" Value="34"/> 
+                <Setter Property="HeightRequest" Value="34"/>
                 <Setter Property="BackgroundColor" Value="{StaticResource facebook}"/>
                 <Setter Property="BorderRadius" Value="5"/>
-                
+
             </Style>
             <Style x:Key="button2FP" TargetType="Button">
                 <Setter Property="HorizontalOptions" Value="Center"/>
                 <Setter Property="VerticalOptions" Value="Center"/>
-                
+
                 <Setter Property="FontSize" Value="{StaticResource std}"/>
                 <Setter Property="FontFamily" Value="Oswald"/>
                 <Setter Property="TextColor" Value="{StaticResource darkRed}"/>
                 <Setter Property="WidthRequest" Value="141"/>
-                <Setter Property="HeightRequest" Value="34"/> 
+                <Setter Property="HeightRequest" Value="34"/>
                 <Setter Property="BackgroundColor" Value="{StaticResource textWhite}"/>
                 <Setter Property="BorderRadius" Value="5"/>
-                
+
             </Style>
 
             <Style x:Key="textInput" TargetType="Entry">
-                
+
                 <Setter Property="HorizontalOptions" Value="Center"/>
                 <Setter Property="VerticalOptions" Value="Center"/>
                 <Setter Property="WidthRequest" Value="320"/>
-                <Setter Property="HeightRequest" Value="40"/> 
+                <Setter Property="HeightRequest" Value="40"/>
             </Style>
 
             <Style x:Key="linje" TargetType="BoxView">
@@ -107,8 +101,8 @@
                 <Setter Property="Margin" Value="0, 0, 0, 25"/>
             </Style>
 
-           
+
         </ResourceDictionary>
->>>>>>> fb19101bb97b94619cbdde78baeec22515e1c43a
+
     </Application.Resources>
 </Application>
