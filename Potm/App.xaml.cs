@@ -10,7 +10,11 @@ namespace Potm
         {
             InitializeComponent();
 
+
             var navPage = new NavigationPage(new AddMatch());
+
+            var navPage = new NavigationPage(new LandingPage());
+
 
             navPage.BarBackgroundColor = Color.FromHex("#8B2727");
             navPage.BarTextColor = Color.White;

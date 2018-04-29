@@ -11,7 +11,7 @@
                       <Label Style="{StaticResource h1}"
                    FontAttributes="Bold">
                 <Label.Text>
-                    TILFØJ KAMP
+                    OPRET KAMP
 
                 </Label.Text>
             </Label>
