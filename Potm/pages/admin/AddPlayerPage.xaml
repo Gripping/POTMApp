@@ -12,7 +12,7 @@
                       <Label Style="{StaticResource h1}"
                    FontAttributes="Bold">
                 <Label.Text>
-                    Tilføj spillere
+                    Tilføj spiller
 
                 </Label.Text>
             </Label>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Potm.pages.admin.AddMatch"
+             BackgroundImage="Images/background.png">
+    <ContentPage.Content>
+             <ScrollView>
+     <StackLayout HorizontalOptions="Center"
+                     Margin="20">
+
+                      <Label Style="{StaticResource h1}"
+                   FontAttributes="Bold">
+                <Label.Text>
+                    TILFØJ KAMP
+
+                </Label.Text>
+            </Label>
+            <BoxView Style="{StaticResource linje}"/>
+            
+     
+         
+                <Grid Margin="0, 0, 0, 0"
+                      RowSpacing="20"
+                      ColumnSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="6*"/>
+
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/> 
+                         
+                    </Grid.RowDefinitions>
+                    <Image Grid.Row="0" 
+                           Grid.Column="0" 
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"
+                           Source="Images/StaticPicture.png"/>
+                    <Label  
+                           Grid.Row="0" 
+                           Grid.Column="0"
+                           HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                           Style="{DynamicResource orangeText-sm}" 
+                           Text="INDSÆT BILLEDE" />
+                    <Label Grid.Column="1" 
+                           FontSize="25" 
+                           VerticalOptions="Center" 
+                           HorizontalOptions="Center" 
+                           Style="{DynamicResource orangeText-sm}" 
+                           Text="VS"
+                           />
+                    <Image Grid.Row="0" Grid.Column="2"
+                           Source="Images/StaticPicture.png"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"/>
+                    <Label HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                           Grid.Row="0" 
+                           Grid.Column="2" 
+                           Style="{DynamicResource orangeText-sm}" 
+                           Text="INDSÆT BILLEDE" />
+                    
+                </Grid>
+
+                <StackLayout Margin="0, 40, 0, 0" HorizontalOptions="Center"
+                             VerticalOptions="Center">
+                    <Label Text="JERES HOLD/RÆKKE"
+                           HorizontalOptions="Start"
+                           VerticalOptions="End"
+                           Margin="0, 0, 0, 0"
+                           Style="{DynamicResource orangeText-sm}"/> 
+                    <Picker HeightRequest="39"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            WidthRequest="400"
+                            >
+                        <Picker.Items> 
+                            <x:String>ODENSE HC DIV 1</x:String>
+                            <x:String>ODENSE HC DIV 1</x:String>
+                            <x:String>ODENSE HC DIV 1</x:String>
+                        </Picker.Items>
+                    </Picker>
+
+                    <Label Text="MODSTANDER"
+                           HorizontalOptions="Start"
+                           VerticalOptions="End"
+                           Margin="0, 20, 0, 0"
+                           Style="{DynamicResource orangeText-sm}"/>
+                    <Entry HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           WidthRequest="400"
+                           HeightRequest="39"/>
+
+
+                    <Label Text="ADRESSE"
+                           HorizontalOptions="Start"
+                           VerticalOptions="End"
+                           Margin="0, 20, 0, 0"
+                           Style="{DynamicResource orangeText-sm}"/>
+                    <Entry HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           WidthRequest="400"
+                           HeightRequest="39"/>
+
+
+
+                    <Label Text="JERES HOLD/RÆKKE"
+                           HorizontalOptions="Start"
+                           VerticalOptions="End"
+                           Margin="0, 20, 0, 0"
+                           Style="{DynamicResource orangeText-sm}"/> 
+                    <DatePicker HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                WidthRequest="400"
+                                HeightRequest="39"
+                                />
+
+
+
+                    <Label Text="JERES HOLD/RÆKKE"
+                           HorizontalOptions="Start"
+                           VerticalOptions="End"
+                           Margin="0, 20, 0, 0"
+                           Style="{DynamicResource orangeText-sm}"/> 
+                    <TimePicker
+                        HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                WidthRequest="400"
+                                HeightRequest="39"
+                    />
+
+                    
+                </StackLayout>
+                <Button BackgroundColor="{StaticResource green}"
+                        Text="GODKEND" 
+                        FontFamily="OSWALD"
+                        TextColor="{StaticResource textWhite}"
+                        WidthRequest="135"
+                        HeightRequest="34"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Margin="0, 20, 0 ,0"/>
+                </StackLayout>
+
+            </ScrollView>
+        
+    </ContentPage.Content>
+</ContentPage>

@@ -134,7 +134,7 @@
     <AndroidResource Include="Resources\drawable\basketball.png" />
     <AndroidResource Include="Resources\drawable\football.png" />
     <AndroidResource Include="Resources\drawable\puck.png" />
-    <AndroidResource Include="Resources\drawable\soccer-ball-variant.png" />
+    <AndroidResource Include="Resources\drawable\soccerballvariant.png" />
     <AndroidResource Include="Resources\drawable\cirkel1.png" />
     <AndroidResource Include="Resources\drawable\cirkel2.png" />
     <AndroidResource Include="Resources\drawable\cirkel3.png" />
