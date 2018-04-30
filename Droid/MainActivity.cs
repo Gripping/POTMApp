@@ -22,6 +22,8 @@ namespace Potm.Droid
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
+            CarouselView.FormsPlugin.Android.CarouselViewRenderer.Init();
+
             LoadApplication(new App());
         }
     }

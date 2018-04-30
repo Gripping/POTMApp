@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+              xmlns:controls="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
+             x:Class="Potm.pages.Filter"
+              BackgroundImage="Images/background.png">
+    <ContentPage.Content>
+           <ScrollView>
+     <StackLayout HorizontalOptions="Center"
+                     Margin="20">
+
+                      <Label Style="{StaticResource h1}"
+                   FontAttributes="Bold">
+                <Label.Text>
+                    TILFØJ KAMP
+
+                </Label.Text>
+            </Label>
+            <BoxView Style="{StaticResource linje}"
+                     WidthRequest="500"/>
+                <Label Margin="0, -20, 0 ,0" Style="{DynamicResource std}">
+                    VÆLG DIN SPORT
+                </Label>
+
+        <StackLayout HorizontalOptions="Center"
+                     VerticalOptions="Center"
+                     Margin="0, 40, 0 ,0">
+
+        <controls:CarouselViewControl  x:Name="carousel"
+                                       InterPageSpacing="5"
+        
+        ShowArrows="true"
+        ShowIndicators="true"
+        Scrolled="Handle_Scrolled"
+        Orientation="Horizontal"
+                           
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            HeightRequest="300"
+                            WidthRequest="300">
+
+        <controls:CarouselViewControl.ItemsSource>
+           <x:Array Type="{x:Type View}">  
+                <Image HorizontalOptions="Center" Margin="50, 150, 50, 0" VerticalOptions="Center"  Source="Images/FodboldSport.png" Aspect="AspectFill" />
+                <Image Source="Images/FodboldSport.png" Margin="0, 150, 0, 0" Aspect="AspectFill" />
+                <Image  Source="Images/FodboldSport.png" Margin="0, 150, 0, 0" Aspect="AspectFill" />
+           </x:Array>
+        </controls:CarouselViewControl.ItemsSource>
+
+    </controls:CarouselViewControl>
+            </StackLayout>
+
+<Label Style="{DynamicResource std}" Text="INDEN FOR RADIUS AF" Margin="0,25,0,0"/>
+    <Slider x:Name="slider2"  
+            Minimum="0" 
+            Maximum="10"
+             />
+   
+                
+                </StackLayout>
+            </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

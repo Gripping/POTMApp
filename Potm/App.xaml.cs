@@ -9,15 +9,7 @@ namespace Potm
         public App()
         {
             InitializeComponent();
-
-<<<<<<< HEAD
-
-            var navPage = new NavigationPage(new AddMatch());
-=======
-            var navPage = new NavigationPage(new LandingPage());
->>>>>>> 2721bd74228980480effe21b86c22dd08e216065
-
-            var navPage = new NavigationPage(new LandingPage());
+            var navPage = new NavigationPage(new AllTeams());
 
 
             navPage.BarBackgroundColor = Color.FromHex("#8B2727");
