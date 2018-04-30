@@ -143,5 +143,8 @@
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\BtnWhite1.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\StaticPicture.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\FodboldSport.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\DHG.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\klub2.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\stjernen.png" />
   </ItemGroup>
 </Project>

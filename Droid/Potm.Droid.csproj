@@ -158,6 +158,8 @@
     <AndroidResource Include="Resources\drawable\BtnWhite.png" />
     <AndroidResource Include="Resources\drawable\StaticPicture.png" />
     <AndroidResource Include="Resources\drawable\FodboldSport.png" />
+    <AndroidResource Include="Resources\drawable\DHG.png" />
+    <AndroidResource Include="Resources\drawable\klub2.png" />
   </ItemGroup>
   <Import Project="..\Potm\Potm.projitems" Label="Shared" Condition="Exists('..\Potm\Potm.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
