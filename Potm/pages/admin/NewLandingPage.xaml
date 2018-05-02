@@ -5,7 +5,7 @@
              Title="VELKOMMEN!"
              BackgroundColor="#F4F4F4"
              BackgroundImage="Images/background.png"
-              ControlTemplate="{DynamicResource adminTemplate}"
+
 
              >
     <ContentPage.Content>
@@ -55,7 +55,7 @@ Du vil i de næste 4 trin kunne oprette dit hold med spillerinfo, kampinfo og sp
             </Grid>
 
             <Button x:Name="btnGetStarted" Text="OPRET HOLD"
-                    BackgroundColor="{StaticResource green}"
+                    BackgroundColor="{StaticResource orange}"
                     TextColor="White"
                     HorizontalOptions="Center"
                     WidthRequest="250"
@@ -65,7 +65,7 @@ Du vil i de næste 4 trin kunne oprette dit hold med spillerinfo, kampinfo og sp
                     BorderRadius="10"
                     />
             <Button x:Name="btnGetCreateTeam" Text="OPRET KAMP"
-                    BackgroundColor="{StaticResource green}"
+                    BackgroundColor="{StaticResource orange}"
                     TextColor="White"
                     HorizontalOptions="Center"
                     WidthRequest="250"
