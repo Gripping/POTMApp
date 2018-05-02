@@ -1,7 +1,13 @@
-﻿
+﻿using Potm.Data;
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Xamarin.Forms;
-using Potm.pages;
 using Potm.pages.admin;
+using Potm.pages;
 
 namespace Potm
 {
@@ -17,6 +23,9 @@ namespace Potm
             navPage.BarTextColor = Color.White;
 
             MainPage = navPage;
+
+
+
         }
 
         protected override void OnStart()
@@ -33,5 +42,20 @@ namespace Potm
         {
             // Handle when your app resumes
         }
+
+        public async void filterPage(object sender, EventArgs e)
+        {
+            await ((NavigationPage)Application.Current.MainPage).PushAsync(new Filter());
+        }
+
+        public async void favoritesPage(object sender, EventArgs e)
+        {
+            await ((NavigationPage)Application.Current.MainPage).PushAsync(new Favorites());
+        }
+
+        public async void logoutPage(object sender, EventArgs e)
+        {
+            await ((NavigationPage)Application.Current.MainPage).PushAsync(new Logout());
+        }
     }
-}
+} 

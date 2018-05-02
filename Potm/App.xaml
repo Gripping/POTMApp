@@ -144,13 +144,16 @@
                             </Grid.ColumnDefinitions>
                              <Button Grid.Row="0" 
                                         Grid.Column="1" 
-                                        Image="Images/filterIcon.png"/>
+                                        Image="Images/filterIcon.png"
+                                                    Clicked="filterPage"/>
                                          <Button Grid.Row="0" 
                                         Grid.Column="0" 
-                                        Image="Images/starIcon.png"/>
+                                        Image="Images/starIcon.png"
+                                                 Clicked="favoritesPage"/>
                                         <Button Grid.Row="0" 
                                         Grid.Column="2" 
-                                        Image="Images/logoutIcon.png"/>
+                                        Image="Images/logoutIcon.png"
+                                                Clicked="logoutPage"/>
                         </Grid>
                         
                     </Grid>

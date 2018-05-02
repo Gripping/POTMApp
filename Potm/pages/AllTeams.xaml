@@ -4,7 +4,8 @@
              xmlns:custom="clr-namespace:potm.pages;assembly=RoundedCornerViewDemo"  
              x:Class="Potm.pages.AllTeams"
              BackgroundImage="Images/background.png"
-             ControlTemplate="{DynamicResource userTemplate}">
+             ControlTemplate="{DynamicResource userTemplate}"
+             >
     <ContentPage.Content>
         
            

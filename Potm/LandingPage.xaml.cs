@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Potm.pages.admin;
+using Potm.pages;
 
 namespace Potm
 {
@@ -23,6 +24,12 @@ namespace Potm
             GetFullCollection.Clicked += (s, e) => Navigation.PushAsync(new OldLandingPage(FullClubId));
             GetEmptyCollection.Clicked += (s, e) => Navigation.PushAsync(new OldLandingPage(EmptyClubId));
             AddPlayer.Clicked += (s, e) => Navigation.PushAsync(new AddPlayer());
+
+
+        }
+        public async void filterPage(){
+            await Navigation.PushAsync(new Filter());
         }
     }
+
 }

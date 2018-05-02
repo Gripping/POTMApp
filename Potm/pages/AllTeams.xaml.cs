@@ -11,7 +11,7 @@ namespace Potm.pages
     {
         public AllTeams()
         {
-            NavigationPage.HasNavigationBarProperty(this, false);
+         
             InitializeComponent();
         }
     }
