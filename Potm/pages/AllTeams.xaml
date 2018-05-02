@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-               xmlns:custom="clr-namespace:potm.pages;assembly=RoundedCornerViewDemo"  
-            
+             xmlns:custom="clr-namespace:potm.pages;assembly=RoundedCornerViewDemo"  
              x:Class="Potm.pages.AllTeams"
              BackgroundImage="Images/background.png"
-            >
+             ControlTemplate="{DynamicResource userTemplate}">
     <ContentPage.Content>
-           <ScrollView>
+        
+           
      <StackLayout HorizontalOptions="Center"
                      Margin="20">
-
+                
                       <Label Style="{StaticResource h1}"
                    FontAttributes="Bold">
                 <Label.Text>
                     VÆLG KLUB
-
                 </Label.Text>
             </Label>
             <BoxView Style="{StaticResource linje}"
@@ -25,8 +24,6 @@
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="1*"/>
                         <ColumnDefinition Width="1*"/>
-                        
-                        
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition/>
@@ -34,8 +31,13 @@
                         <RowDefinition/>
                         <RowDefinition/>   
                     </Grid.RowDefinitions>
-                    <Frame Grid.Row="0" Grid.Column="0" Style="{DynamicResource clubBadge}">
-                        <StackLayout    HorizontalOptions="Center" VerticalOptions="Center" Margin="5">
+                    <Frame Grid.Row="0" 
+                           Grid.Column="0" 
+                           Style="{DynamicResource clubBadge}">
+                        <StackLayout 
+                            HorizontalOptions="Center" 
+                            VerticalOptions="Center" 
+                            Margin="5">
                             <Image Source="Images/DHG.png" 
                                    WidthRequest="70" 
                                    HeightRequest="70" />
@@ -49,8 +51,6 @@
                                    Text="hello klub ludder"/>
                         </StackLayout>
                     </Frame>
-
-
                     <Frame Grid.Row="0" Grid.Column="1" Style="{DynamicResource clubBadge}">
                         <StackLayout    HorizontalOptions="Center" VerticalOptions="Center" Margin="5">
                             <Image Source="Images/klub2.png" WidthRequest="70" HeightRequest="70" />
@@ -64,9 +64,6 @@
                                    Text="hello klub ludder"/>
                         </StackLayout>
                     </Frame>
-
-
-
                     <Frame Grid.Row="1" Grid.Column="0" Style="{DynamicResource clubBadge}">
                         <StackLayout    HorizontalOptions="Center" VerticalOptions="Center" Margin="5">
                             <Image Source="Images/stjernen.png" WidthRequest="70" HeightRequest="70" />
@@ -80,9 +77,6 @@
                                    Text="hello klub ludder"/>
                         </StackLayout>
                     </Frame>
-
-
-
                     <Frame Grid.Row="1" Grid.Column="1" Style="{DynamicResource clubBadge}">
                         <StackLayout    HorizontalOptions="Center" VerticalOptions="Center" Margin="5">
                             <Image Source="Images/klub2.png" WidthRequest="70" HeightRequest="70" />
@@ -96,8 +90,6 @@
                                    Text="hello klub ludder"/>
                         </StackLayout>
                     </Frame>
-
-
                     <Frame Grid.Row="2" Grid.Column="0" Style="{DynamicResource clubBadge}">
                         <StackLayout    HorizontalOptions="Center" VerticalOptions="Center" Margin="5">
                             <Image Source="Images/DHG.png" WidthRequest="70" HeightRequest="70" />
@@ -111,7 +103,6 @@
                                    Text="hello klub ludder"/>
                         </StackLayout>
                     </Frame>
-
                     <Frame Grid.Row="2" Grid.Column="1" Style="{DynamicResource clubBadge}">
                         <StackLayout    HorizontalOptions="Center" VerticalOptions="Center" Margin="5">
                             <Image Source="Images/stjernen.png" WidthRequest="70" HeightRequest="70" />
@@ -125,15 +116,8 @@
                                    Text="hello klub ludder"/>
                         </StackLayout>
                     </Frame>
-                   
                 </Grid>
-
- 
-
-
                     </StackLayout>
-                </ScrollView>
-        
-     
+                
     </ContentPage.Content>
 </ContentPage>

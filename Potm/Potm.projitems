@@ -146,5 +146,8 @@
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\DHG.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\klub2.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\stjernen.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\filterIcon.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\logoutIcon.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\starIcon.png" />
   </ItemGroup>
 </Project>

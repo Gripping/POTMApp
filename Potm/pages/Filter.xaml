@@ -27,8 +27,7 @@
                      Margin="0, 40, 0 ,0">
 
         <controls:CarouselViewControl  x:Name="carousel"
-                                       InterPageSpacing="5"
-        
+                                       InterPageSpacing="0"
         ShowArrows="true"
         ShowIndicators="true"
         Scrolled="Handle_Scrolled"
@@ -56,7 +55,7 @@
             Maximum="10"
              />
    
-                
+              
                 </StackLayout>
             </ScrollView>
 

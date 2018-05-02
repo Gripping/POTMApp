@@ -109,7 +109,75 @@
                 <Setter Property="WidthRequest" Value="130"/>
             </Style>
 
+            <ControlTemplate x:Key="userTemplate">
+
+                <StackLayout HorizontalOptions="FillAndExpand"
+                           VerticalOptions="FillAndExpand"
+                             > 
+                    <Grid HorizontalOptions="FillAndExpand"
+                          VerticalOptions="FillAndExpand"
+                          >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="55"/>
+                        </Grid.RowDefinitions>
+                        <ScrollView Grid.Row="1"
+                                    Grid.Column="0">
+                            <ContentPresenter HorizontalOptions="FillAndExpand"
+                                              VerticalOptions="FillAndExpand"/> 
+                        </ScrollView>
+                        
+                        <Grid Grid.Row="2"  BackgroundColor="White"
+                              HorizontalOptions="FillAndExpand">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                       
+                            </Grid.ColumnDefinitions>
+                             <Button Grid.Row="0" 
+                                        Grid.Column="1" 
+                                        Image="Images/filterIcon.png"/>
+                                         <Button Grid.Row="0" 
+                                        Grid.Column="0" 
+                                        Image="Images/starIcon.png"/>
+                                        <Button Grid.Row="0" 
+                                        Grid.Column="2" 
+                                        Image="Images/logoutIcon.png"/>
+                        </Grid>
+                        
+                    </Grid>
+                </StackLayout>
+               </ControlTemplate>
+               <!-- <AbsoluteLayout BackgroundColor="Transparent">
+                 
+
+                    <Grid BackgroundColor="White" 
+                           
+                           AbsoluteLayout.LayoutBounds=".5,1,1,.07" 
+                           AbsoluteLayout.LayoutFlags="All">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                             <ColumnDefinition Width="1*"/>
+                             <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                    </Grid>
+                </AbsoluteLayout>-->
+                
            
+
+            
 
 
         </ResourceDictionary>

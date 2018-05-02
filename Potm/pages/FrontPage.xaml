@@ -23,7 +23,9 @@
                     MATCH
                    
                 </Label.Text>
+
             </Label>
+
             <Grid Margin="0, -30, 0, 70"
                   VerticalOptions="Center"
                   HorizontalOptions="Center"
