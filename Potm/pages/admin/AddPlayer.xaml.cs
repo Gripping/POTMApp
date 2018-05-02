@@ -15,6 +15,7 @@ namespace Potm.pages.admin
         public AddPlayer()
         {
             NavigationPage.SetBackButtonTitle(this, "Menu");
+            NavigationPage.SetHasNavigationBar(this, false);
 
             InitializeComponent();
         }

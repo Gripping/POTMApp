@@ -12,6 +12,7 @@ namespace Potm.pages
         public Filter()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
 
             var myCarousel = new CarouselViewControl();
             myCarousel.ItemsSource = new ObservableCollection<int> { 1, 2, 3, 4, 5 };

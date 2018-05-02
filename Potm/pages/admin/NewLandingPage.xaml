@@ -5,7 +5,7 @@
              Title="VELKOMMEN!"
              BackgroundColor="#F4F4F4"
              BackgroundImage="Images/background.png"
-              ControlTemplate="{DynamicResource userTemplate}"
+              ControlTemplate="{DynamicResource adminTemplate}"
 
              >
     <ContentPage.Content>

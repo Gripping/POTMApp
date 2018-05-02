@@ -9,6 +9,7 @@ namespace Potm.pages
     {
         public Favorites()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
         }
     }

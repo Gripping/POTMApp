@@ -9,6 +9,7 @@ namespace Potm.pages
     {
         public FrontPage()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
         }
     }

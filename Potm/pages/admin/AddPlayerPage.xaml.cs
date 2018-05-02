@@ -9,6 +9,7 @@ namespace Potm.pages.admin
     {
         public AddPlayerPage()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
         }
     }

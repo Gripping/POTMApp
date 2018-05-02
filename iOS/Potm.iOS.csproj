@@ -153,6 +153,9 @@
     <BundleResource Include="Resources\Images\filterIcon.png" />
     <BundleResource Include="Resources\Images\logoutIcon.png" />
     <BundleResource Include="Resources\Images\starIcon.png" />
+    <BundleResource Include="Resources\Images\backArrow.png" />
+    <BundleResource Include="Resources\Images\addPlayerIcon.png" />
+    <BundleResource Include="Resources\Images\playersIcon.png" />
   </ItemGroup>
   <Import Project="..\Potm\Potm.projitems" Label="Shared" Condition="Exists('..\Potm\Potm.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

@@ -121,10 +121,18 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="70"/>
                             <RowDefinition Height="*"/>
-                            <RowDefinition Height="55"/>
+                            <RowDefinition Height="70"/>
                         </Grid.RowDefinitions>
+                        <Button Image="Images/backArrow.png"
+                                Clicked="backButton"
+                                Grid.Column="0"
+                                Grid.Row="0"
+                                HorizontalOptions="Start"
+                                VerticalOptions="End"
+                                Margin="20, 0, 0, 0"/>
+                        
                         <ScrollView Grid.Row="1"
                                     Grid.Column="0">
                             <ContentPresenter HorizontalOptions="FillAndExpand"
@@ -132,7 +140,8 @@
                         </ScrollView>
                         
                         <Grid Grid.Row="2"  BackgroundColor="White"
-                              HorizontalOptions="FillAndExpand">
+                              HorizontalOptions="FillAndExpand"
+                              VerticalOptions="FillAndExpand">
                             <Grid.RowDefinitions>
                                 <RowDefinition/>
                             </Grid.RowDefinitions>
@@ -142,15 +151,18 @@
                                 <ColumnDefinition Width="1*"/>
                                        
                             </Grid.ColumnDefinitions>
-                             <Button Grid.Row="0" 
+                             <Button VerticalOptions="Start"
+                                     Grid.Row="0" 
                                         Grid.Column="1" 
                                         Image="Images/filterIcon.png"
                                                     Clicked="filterPage"/>
-                                         <Button Grid.Row="0" 
+                             <Button VerticalOptions="Start"
+                                     Grid.Row="0" 
                                         Grid.Column="0" 
                                         Image="Images/starIcon.png"
                                                  Clicked="favoritesPage"/>
-                                        <Button Grid.Row="0" 
+                              <Button VerticalOptions="Start"
+                                      Grid.Row="0" 
                                         Grid.Column="2" 
                                         Image="Images/logoutIcon.png"
                                                 Clicked="logoutPage"/>
@@ -159,6 +171,70 @@
                     </Grid>
                 </StackLayout>
                </ControlTemplate>
+
+            <ControlTemplate x:Key="adminTemplate">
+
+                <StackLayout HorizontalOptions="FillAndExpand"
+                           VerticalOptions="FillAndExpand"
+                             > 
+                    <Grid HorizontalOptions="FillAndExpand"
+                          VerticalOptions="FillAndExpand"
+                          >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="70"/>
+                        </Grid.RowDefinitions>
+                        <Button Image="Images/backArrow.png"
+                                Clicked="backButton"
+                                Grid.Column="0"
+                                Grid.Row="0"
+                                HorizontalOptions="Start"
+                                VerticalOptions="End"
+                                Margin="20, 0, 0, 0"/>
+                        
+                        <ScrollView Grid.Row="1"
+                                    Grid.Column="0">
+                            <ContentPresenter HorizontalOptions="FillAndExpand"
+                                              VerticalOptions="FillAndExpand"/> 
+                        </ScrollView>
+                        
+                        <Grid Grid.Row="2"  BackgroundColor="White"
+                              HorizontalOptions="FillAndExpand"
+                              VerticalOptions="FillAndExpand">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                       
+                            </Grid.ColumnDefinitions>
+                             <Button VerticalOptions="Start"
+                                     Grid.Row="0" 
+                                        Grid.Column="1" 
+                                        Image="Images/addPlayerIcon.png"
+                                                    Clicked="addPlayerPage"/>
+                             <Button VerticalOptions="Start"
+                                     Grid.Row="0" 
+                                        Grid.Column="0" 
+                                        Image="Images/playersIcon.png"
+                                                 Clicked="allPlayersPage"/>
+                              <Button VerticalOptions="Start"
+                                      Grid.Row="0" 
+                                        Grid.Column="2" 
+                                        Image="Images/logoutIcon.png"
+                                                Clicked="logoutAdminPage"/>
+                        </Grid>
+                        
+                    </Grid>
+                </StackLayout>
+               </ControlTemplate>
+            
                <!-- <AbsoluteLayout BackgroundColor="Transparent">
                  
 

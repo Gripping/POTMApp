@@ -9,6 +9,7 @@ namespace Potm.pages.admin
     {
         public LogoutAdmin()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
         }
     }

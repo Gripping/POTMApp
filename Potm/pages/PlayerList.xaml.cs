@@ -14,6 +14,7 @@ namespace Potm.pages
     {
         public PlayerList()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
 
         }

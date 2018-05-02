@@ -15,6 +15,7 @@ namespace Potm
     {
         public App()
         {
+            
             InitializeComponent();
 
             var navPage = new NavigationPage(new AllTeams());
@@ -23,6 +24,8 @@ namespace Potm
             navPage.BarTextColor = Color.White;
 
             MainPage = navPage;
+
+           
 
 
 
@@ -56,6 +59,26 @@ namespace Potm
         public async void logoutPage(object sender, EventArgs e)
         {
             await ((NavigationPage)Application.Current.MainPage).PushAsync(new Logout());
+        }
+
+        public async void backButton(object sender, EventArgs e)
+        {
+            await ((NavigationPage)Application.Current.MainPage).PopAsync();
+        }
+
+        public async void addPlayerPage(object sender, EventArgs e)
+        {
+            await ((NavigationPage)Application.Current.MainPage).PushAsync(new AddPlayer());
+        }
+
+        public async void allPlayersPage(object sender, EventArgs e)
+        {
+            await ((NavigationPage)Application.Current.MainPage).PushAsync(new AllTeams());
+        }
+
+        public async void logoutAdminPage(object sender, EventArgs e)
+        {
+            await ((NavigationPage)Application.Current.MainPage).PushAsync(new LogoutAdmin());
         }
     }
 } 

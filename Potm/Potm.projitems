@@ -170,5 +170,8 @@
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\filterIcon.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\logoutIcon.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\starIcon.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\backArrow.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\addPlayerIcon.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\playersIcon.png" />
   </ItemGroup>
 </Project>

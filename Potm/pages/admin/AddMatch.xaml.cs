@@ -9,6 +9,7 @@ namespace Potm.pages.admin
     {
         public AddMatch()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
         }
     }

@@ -14,6 +14,7 @@ namespace Potm.pages.admin
     {
         public AdminAddTeam()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
 
         }

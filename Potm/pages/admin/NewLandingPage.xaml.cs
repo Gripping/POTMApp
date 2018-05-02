@@ -13,6 +13,7 @@ namespace Potm.pages.admin
         {
             //NavigationPage.SetHasBackButton(this, false);
             NavigationPage.SetBackButtonTitle(this, "Menu");
+            NavigationPage.SetHasNavigationBar(this, false);
 
             InitializeComponent();
         }

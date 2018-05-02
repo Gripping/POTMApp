@@ -163,6 +163,9 @@
     <AndroidResource Include="Resources\drawable\filterIcon.png" />
     <AndroidResource Include="Resources\drawable\logoutIcon.png" />
     <AndroidResource Include="Resources\drawable\starIcon.png" />
+    <AndroidResource Include="Resources\drawable\backArrow.png" />
+    <AndroidResource Include="Resources\drawable\addPlayerIcon.png" />
+    <AndroidResource Include="Resources\drawable\playersIcon.png" />
   </ItemGroup>
   <Import Project="..\Potm\Potm.projitems" Label="Shared" Condition="Exists('..\Potm\Potm.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
