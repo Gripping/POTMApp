@@ -15,7 +15,7 @@ namespace Potm
     {
         public App()
         {
-            
+
             InitializeComponent();
 
             var navPage = new NavigationPage(new LandingPage());
@@ -24,11 +24,6 @@ namespace Potm
             navPage.BarTextColor = Color.White;
 
             MainPage = navPage;
-
-           
-
-
-
         }
 
         protected override void OnStart()
@@ -81,4 +76,4 @@ namespace Potm
             await ((NavigationPage)Application.Current.MainPage).PushAsync(new LogoutAdmin());
         }
     }
-} 
+}
