@@ -50,6 +50,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)pages\AllTeams.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -67,6 +68,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)pages\Favorites.xaml">
+=======
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)pages\admin\LoginPage.xaml">
+>>>>>>> 54702e6ffdd454b22c1e4ec70504d64168a231cb
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -109,6 +113,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)pages\admin\AddMatch.xaml.cs">
       <DependentUpon>AddMatch.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)pages\admin\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
     <Compile Include="$(MSBuildThisFileDirectory)pages\AllTeams.xaml.cs">
       <DependentUpon>AllTeams.xaml</DependentUpon>
     </Compile>
@@ -163,6 +169,7 @@
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\BtnWhite.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\BtnWhite1.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\StaticPicture.png" />
+<<<<<<< HEAD
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\FodboldSport.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\DHG.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\klub2.png" />
@@ -173,5 +180,7 @@
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\backArrow.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\addPlayerIcon.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\playersIcon.png" />
+=======
+>>>>>>> 54702e6ffdd454b22c1e4ec70504d64168a231cb
   </ItemGroup>
 </Project>

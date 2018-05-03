@@ -13,23 +13,14 @@ namespace Potm
 {
     public partial class LandingPage : ContentPage
     {
-        
+
         public LandingPage()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
+
             InitializeComponent();
 
-            var EmptyClubId = 1102;
-            var FullClubId = 1075;
-
-            GetFullCollection.Clicked += (s, e) => Navigation.PushAsync(new OldLandingPage(FullClubId));
-            GetEmptyCollection.Clicked += (s, e) => Navigation.PushAsync(new OldLandingPage(EmptyClubId));
-            AddPlayer.Clicked += (s, e) => Navigation.PushAsync(new AddPlayer());
-
-
-        }
-        public async void filterPage(){
-            await Navigation.PushAsync(new Filter());
+            managerLogin.Clicked += (s, e) => Navigation.PushAsync(new LoginPage());
         }
     }
-
 }

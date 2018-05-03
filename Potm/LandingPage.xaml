@@ -2,12 +2,71 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Potm.LandingPage"
-             Title="POTM app">
+             Title="POTM app"
+             BackgroundImage="Images/background.png">
      <ContentPage.Content>
-        <StackLayout>
-            <Button x:Name="GetFullCollection" Text="Get full collection"></Button>
-            <Button x:Name="GetEmptyCollection" Text="Get empty collection"></Button>
-            <Button x:Name="AddPlayer" Text="Add player"></Button>
+        <StackLayout HorizontalOptions="Center"
+                     VerticalOptions="Center"
+                     Margin="20">
+
+             <Label Style="{StaticResource FPBig2}"
+                   FontAttributes="Bold"
+                   XAlign="Center">
+                <Label.Text>
+                    POTM
+
+                </Label.Text>
+            </Label>
+            <Label Style="{StaticResource FPBig}"
+                   XAlign="Center"
+                   Margin="0, -30, 0, 0">
+                <Label.Text>
+                    PLAYER OF THE MATCH
+
+                </Label.Text>
+            </Label>
+            <Grid Margin="0, -7, 0, 70"
+                  VerticalOptions="Center"
+                  HorizontalOptions="Center"
+                  RowSpacing="20"
+                  ColumnSpacing="15">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="33" />
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="33" />
+                    <ColumnDefinition Width="33" />
+                    <ColumnDefinition Width="33" />
+                    <ColumnDefinition Width="33" />
+                </Grid.ColumnDefinitions>
+                <Image Grid.Row="0" Grid.Column="0" Source="Images/soccer-ball-variant.png" />
+                <Image Grid.Row="0" Grid.Column="1" Source="Images/football.png" />
+                <Image Grid.Row="0" Grid.Column="2" Source="Images/puck.png" />
+                <Image Grid.Row="0" Grid.Column="3" Source="Images/basketball.png" />
+            </Grid>
+
+
+
+
+             <Button x:Name="facebookLogin"
+                     Text="FACEBOOK LOGIN"
+                     Style="{StaticResource buttonFP}"
+                     />
+            <Button x:Name="guestLogin"
+                     Text="GÆST"
+                     Style="{StaticResource button2FP}"
+                     Margin="0, 3"
+                     />
+            <Button x:Name="managerLogin"
+                     Text="MANAGER"
+                     Style="{StaticResource button2FP}"
+                     BackgroundColor="Transparent"
+                     BorderColor="{StaticResource orange}"
+                     BorderWidth="1"
+                     />
+
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
