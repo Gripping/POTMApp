@@ -169,7 +169,6 @@
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\BtnWhite.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\BtnWhite1.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\StaticPicture.png" />
-<<<<<<< HEAD
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\FodboldSport.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\DHG.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\klub2.png" />
@@ -180,7 +179,5 @@
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\backArrow.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\addPlayerIcon.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\playersIcon.png" />
-=======
->>>>>>> 54702e6ffdd454b22c1e4ec70504d64168a231cb
   </ItemGroup>
 </Project>
