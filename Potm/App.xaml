@@ -6,17 +6,17 @@
             <Color x:Key="textBlack">#2E2F34</Color>
             <Color x:Key="textWhite">#FFFFFF</Color>
             <Color x:Key="darkRed">#8B2727</Color>
-            <Color x:Key="orange">#FF8B36</Color>
+            <Color x:Key="orange">#F07500</Color>
             <Color x:Key="green">#469528</Color>
 
 
             <Style x:Key="FPBig" TargetType="Label">
-                <Setter Property="FontSize" Value="43" />
+                <Setter Property="FontSize" Value="26" />
                 <Setter Property="FontFamily" Value="BebasNeue"/>
                 <Setter Property="TextColor" Value="{StaticResource textWhite}"/>
             </Style>
             <Style x:Key="FPBig2" TargetType="Label">
-                <Setter Property="FontSize" Value="93" />
+                <Setter Property="FontSize" Value="103" />
                 <Setter Property="FontFamily" Value="BebasNeue"/>
                 <Setter Property="TextColor" Value="{StaticResource textWhite}"/>
             </Style>
@@ -79,7 +79,7 @@
 
                 <Setter Property="FontSize" Value="{StaticResource std}"/>
                 <Setter Property="FontFamily" Value="Oswald"/>
-                <Setter Property="TextColor" Value="{StaticResource darkRed}"/>
+                <Setter Property="TextColor" Value="{StaticResource orange}"/>
                 <Setter Property="WidthRequest" Value="141"/>
                 <Setter Property="HeightRequest" Value="34"/>
                 <Setter Property="BackgroundColor" Value="{StaticResource textWhite}"/>

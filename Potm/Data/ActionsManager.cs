@@ -21,7 +21,7 @@ namespace Potm.Data
             };
 
             HttpClient client = new HttpClient();
-            var response = await client.PostAsync(Url + "managerCreatePlayer?clubId=1130", 
+            var response = await client.PostAsync(Url + "managerCreatePlayer?clubId=1130",
                                 new StringContent(
                                     JsonConvert.SerializeObject(player),
                                     Encoding.UTF8, "application/json"));
@@ -30,5 +30,17 @@ namespace Potm.Data
                 await response.Content.ReadAsStringAsync());
         }
 
+        public async Task<manager> managerLogin(string username, string password)
+        {
+            HttpClient client = new HttpClient();
+            var content = new StringContent(JsonConvert.SerializeObject(username));
+            var response = await client.PostAsync(Url + "managerLogin?username=" + username + "&password=" + password, content);
+
+            manager clubId = new manager();
+            clubId = JsonConvert.DeserializeObject<manager>(
+                await response.Content.ReadAsStringAsync());
+            
+            return clubId;
+        }
     }
 }
