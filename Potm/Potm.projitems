@@ -115,6 +115,7 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)pages\admin\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)pages\AllTeams.xaml.cs">
       <DependentUpon>AllTeams.xaml</DependentUpon>
     </Compile>
