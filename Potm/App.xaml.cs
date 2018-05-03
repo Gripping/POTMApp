@@ -24,7 +24,6 @@ namespace Potm
             navPage.BarTextColor = Color.White;
 
             MainPage = navPage;
-            
         }
 
         protected override void OnStart()
