@@ -15,7 +15,7 @@ namespace Potm.pages.admin
 
         public LoginPage()
         {
-            //NavigationPage.SetHasNavigationBar(this, false);
+            NavigationPage.SetHasNavigationBar(this, false);
 
             InitializeComponent();
         }

@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Potm.pages.admin.LoginPage"
-             BackgroundImage="Images/background.png">
+             BackgroundImage="Images/background.png"
+             ControlTemplate="{DynamicResource loginTemplate}">
     <ContentPage.Content>
         <StackLayout Margin="20">
             <Label Style="{StaticResource h1}"
