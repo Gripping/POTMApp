@@ -142,7 +142,9 @@
     <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
-    <AndroidResource Include="Resources\drawable\background.png" />
+    <AndroidResource Include="Resources\drawable\background.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
     <AndroidResource Include="Resources\drawable\basketball.png" />
     <AndroidResource Include="Resources\drawable\football.png" />
     <AndroidResource Include="Resources\drawable\puck.png" />
@@ -166,6 +168,11 @@
     <AndroidResource Include="Resources\drawable\backArrow.png" />
     <AndroidResource Include="Resources\drawable\addPlayerIcon.png" />
     <AndroidResource Include="Resources\drawable\playersIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fonts\BebasNeue.otf" />
+    <AndroidAsset Include="Assets\fonts\Oswald-Bold.ttf" />
+    <AndroidAsset Include="Assets\fonts\Oswald.ttf" />
   </ItemGroup>
   <Import Project="..\Potm\Potm.projitems" Label="Shared" Condition="Exists('..\Potm\Potm.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

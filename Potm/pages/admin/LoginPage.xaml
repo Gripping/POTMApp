@@ -46,7 +46,8 @@
 
                 <Entry x:Name="password"
                        IsPassword="true"
-                       FontSize="12"/>
+                       FontSize="12"
+                       Placeholder="********"/>
 
                 <Label x:Name="eMessage"
                        TextColor="Red"

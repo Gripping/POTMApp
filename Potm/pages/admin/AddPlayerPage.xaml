@@ -1,100 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Potm.pages.admin.AddPlayerPage"
              BackgroundImage="Images/background.png"
-              ControlTemplate="{DynamicResource adminTemplate}"
-            >
-        <ContentPage.Content>
-        <ScrollView>
-     <StackLayout HorizontalOptions="Center"
-                     Margin="20">
+             ControlTemplate="{DynamicResource adminTemplate}">
+  <ContentPage.Content>
+    <StackLayout HorizontalOptions="Center" Margin="20">
 
-                      <Label Style="{StaticResource h1}"
-                   FontAttributes="Bold">
-                <Label.Text>
-                    Tilføj spiller
+      <Label Style="{StaticResource h1}" FontAttributes="Bold">
+        <Label.Text>
+          Tilføj spiller
 
-                </Label.Text>
-            </Label>
-            <BoxView Style="{StaticResource linje}"/>
-            
-     
-         
-                <Grid Margin="0, 0, 0, 0"
-                      RowSpacing="20">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="1*"/>
-                        <ColumnDefinition Width="1*"/>
-                        <ColumnDefinition Width="1*"/>
+        </Label.Text>
+      </Label>
+      <BoxView Style="{StaticResource linje}"/>
 
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition/> 
-                         
-                    </Grid.RowDefinitions>
-                    <Image Grid.Row="0" Grid.Column="0" Source="Images/StaticPicture.png"/>
-                    <Label Margin="25, 35, 0, 0" 
-                           Grid.Row="0" 
-                           Grid.Column="0" 
-                           Style="{DynamicResource orangeText-sm}" 
-                           Text="INDSÆT BILLEDE" />
-                </Grid>
-
-
-                  <Grid HorizontalOptions="Center"
-              VerticalOptions="Center"
-              RowSpacing="0"
-              Margin="0, 0, 0 , 30">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="40"/>
-            <RowDefinition  Height="50"/>
-            <RowDefinition  Height="40"/>
-            <RowDefinition  Height="50"/>
-            <RowDefinition  Height="40"/>
-            <RowDefinition  Height="50"/>
-            <RowDefinition  Height="50"/>
-        </Grid.RowDefinitions>
-                
+      <Grid Margin="0, 0, 0, 0" RowSpacing="20">
         <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*"/>
-                   
+          <ColumnDefinition Width="1*"/>
+          <ColumnDefinition Width="1*"/>
+          <ColumnDefinition Width="1*"/>
 
-                </Grid.ColumnDefinitions>       
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+          <RowDefinition/>
 
-       <Label Grid.Row="0" Grid.Column="0" Margin="0, 30, 0, 0" Text="Navn" Style="{StaticResource orangeText-sm}"/>                
-        <Entry Grid.Row="1" Grid.Column="0"  Margin="-20, 0, 0, 0" Style="{StaticResource textInput}"/>
+        </Grid.RowDefinitions>
+
+        <Image Grid.Row="0" Grid.Column="0" Source="Images/StaticPicture.png"/>
+        <Label Margin="25, 35, 0, 0" Grid.Row="0" Grid.Column="0" Style="{DynamicResource orangeText-sm}" Text="INDSÆT BILLEDE"/>
+      </Grid>
+
+      <Grid HorizontalOptions="Center" VerticalOptions="Center" RowSpacing="0" Margin="0, 0, 0 , 30">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="40"/>
+          <RowDefinition Height="50"/>
+          <RowDefinition Height="40"/>
+          <RowDefinition Height="50"/>
+          <RowDefinition Height="40"/>
+          <RowDefinition Height="50"/>
+          <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="1*"/>
+
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Margin="0, 30, 0, 0" Text="Navn" Style="{StaticResource orangeText-sm}"/>
+        <Entry Grid.Row="1" Grid.Column="0" Margin="-20, 0, 0, 0" Style="{StaticResource textInput}"
+               x:Name="playerName"/>
 
         <Label Grid.Row="2" Grid.Column="0" Margin="0, 30, 0, 0" Text="Nr." Style="{StaticResource orangeText-sm}"/>
-        <Entry Grid.Row="3" Grid.Column="0" Margin="-20, 0, 0, 0" Style="{StaticResource textInput}"/>
-                
-        <Label Grid.Row="4" Grid.Column="0" Margin="0, 30, 0, 0" Text="Position" Style="{StaticResource orangeText-sm}"/>        
-        <Entry Grid.Row="5" Grid.Column="0"  Margin="-20, 0, 0, 0" Style="{StaticResource textInput}"/>
-        <Label Grid.Row="6" Grid.Column="0" Margin="0, 30, 0, 0" Text="Alder" Style="{StaticResource orangeText-sm}"/>                
-        <Entry Grid.Row="7" Grid.Column="0"  Margin="-20, 0, 0, 0" Style="{StaticResource textInput}"/>    
-       
+        <Entry Grid.Row="3" Grid.Column="0" Margin="-20, 0, 0, 0" Style="{StaticResource textInput}"
+               x:Name="playerNumber"/>
 
-       
-    </Grid>
+        <Label Grid.Row="4" Grid.Column="0" Margin="0, 30, 0, 0" Text="Position" Style="{StaticResource orangeText-sm}"/>
+        <Entry Grid.Row="5" Grid.Column="0" Margin="-20, 0, 0, 0" Style="{StaticResource textInput}"
+               x:Name=""/>
                 
+        <Label Grid.Row="6" Grid.Column="0" Margin="0, 30, 0, 0" Text="Fødselsdag" Style="{StaticResource orangeText-sm}"/>
+        <Entry Grid.Row="7" Grid.Column="0" Margin="-20, 0, 0, 0" Style="{StaticResource textInput}" Placeholder="xx-xx-xxxx"
+               />
 
-                
-                <Button BackgroundColor="{StaticResource green}"
-                        Text="GODKEND" 
-                        FontFamily="OSWALD"
-                        TextColor="{StaticResource textWhite}"
-                        WidthRequest="200"
-                        HeightRequest="30"
-                        HorizontalOptions="Center"
-                        VerticalOptions="Center"
-                        Margin="0, 0, 0 ,0"/>
-                
-                
-                
+      </Grid>
 
-            </StackLayout>
-            </ScrollView>
-        
-  
-    </ContentPage.Content>
+      <Button BackgroundColor="{StaticResource green}" Text="GODKEND" FontFamily="OSWALD" TextColor="{StaticResource textWhite}" WidthRequest="200" HeightRequest="30" HorizontalOptions="Center" VerticalOptions="Center" Margin="0, 0, 0 ,0"/>
+
+    </StackLayout>
+
+  </ContentPage.Content>
 </ContentPage>

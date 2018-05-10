@@ -13,6 +13,8 @@ namespace Potm
 {
     public partial class App : Application
     {
+        readonly int clubId;
+
         public App()
         {
 
@@ -24,6 +26,9 @@ namespace Potm
             navPage.BarTextColor = Color.White;
 
             MainPage = navPage;
+
+
+            clubId = 1128;
         }
 
         protected override void OnStart()
@@ -43,17 +48,28 @@ namespace Potm
 
         public async void filterPage(object sender, EventArgs e)
         {
-            await ((NavigationPage)Application.Current.MainPage).PushAsync(new Filter());
+            string page = Application.Current.MainPage.Navigation.NavigationStack.Last().ToString();
+            if (page != "Potm.pages.Filter") {
+				await ((NavigationPage)Application.Current.MainPage).PushAsync(new Filter());
+            }
         }
 
         public async void favoritesPage(object sender, EventArgs e)
         {
-            await ((NavigationPage)Application.Current.MainPage).PushAsync(new Favorites());
+            string page = Application.Current.MainPage.Navigation.NavigationStack.Last().ToString();
+            if (page != "Potm.pages.Favorites")
+            {
+                await ((NavigationPage)Application.Current.MainPage).PushAsync(new Favorites());
+            }
         }
 
         public async void logoutPage(object sender, EventArgs e)
         {
-            await ((NavigationPage)Application.Current.MainPage).PushAsync(new Logout());
+            string page = Application.Current.MainPage.Navigation.NavigationStack.Last().ToString();
+            if (page != "Potm.pages.Logout")
+            {
+                await ((NavigationPage)Application.Current.MainPage).PushAsync(new Logout());
+            }
         }
 
         public async void backButton(object sender, EventArgs e)
@@ -63,17 +79,29 @@ namespace Potm
 
         public async void addPlayerPage(object sender, EventArgs e)
         {
-            await ((NavigationPage)Application.Current.MainPage).PushAsync(new AddPlayer());
+            string page = Application.Current.MainPage.Navigation.NavigationStack.Last().ToString();
+            if (page != "Potm.pages.admin.AddPlayerPage")
+            {
+                await ((NavigationPage)Application.Current.MainPage).PushAsync(new AddPlayerPage());
+            }
         }
 
         public async void allPlayersPage(object sender, EventArgs e)
         {
-            await ((NavigationPage)Application.Current.MainPage).PushAsync(new AllTeams());
+            string page = Application.Current.MainPage.Navigation.NavigationStack.Last().ToString();
+            if (page != "Potm.pages.admin.OldLandingPage")
+            {
+                await ((NavigationPage)Application.Current.MainPage).PushAsync(new OldLandingPage(clubId));
+            }
         }
 
         public async void logoutAdminPage(object sender, EventArgs e)
         {
-            await ((NavigationPage)Application.Current.MainPage).PushAsync(new LogoutAdmin());
+            string page = Application.Current.MainPage.Navigation.NavigationStack.Last().ToString();
+            if (page != "Potm.pages.admin.LogoutAdmin")
+            {
+                await ((NavigationPage)Application.Current.MainPage).PushAsync(new LogoutAdmin());
+            }
         }
     }
 }

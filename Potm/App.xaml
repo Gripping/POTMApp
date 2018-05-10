@@ -9,6 +9,7 @@
             <Color x:Key="orange">#F07500</Color>
             <Color x:Key="green">#469528</Color>
 
+            <OnPlatform x:TypeArguments="Font" Android="Oswald.ttf" iOS="Oswald" x:Key="BtnFontFamily" />
 
             <Style x:Key="FPBig" TargetType="Label">
                 <Setter Property="FontSize" Value="26" />
@@ -77,14 +78,17 @@
                 <Setter Property="HorizontalOptions" Value="Center"/>
                 <Setter Property="VerticalOptions" Value="Center"/>
 
+                <Setter Property="Font" Value="{StaticResource BtnFontFamily}"/>
                 <Setter Property="FontSize" Value="{StaticResource std}"/>
-                <Setter Property="FontFamily" Value="Oswald"/>
                 <Setter Property="TextColor" Value="{StaticResource orange}"/>
                 <Setter Property="WidthRequest" Value="141"/>
-                <Setter Property="HeightRequest" Value="34"/>
                 <Setter Property="BackgroundColor" Value="{StaticResource textWhite}"/>
                 <Setter Property="BorderRadius" Value="5"/>
-
+                <Setter Property="HeightRequest">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:Double" Android="50" iOS="34" />
+                    </Setter.Value>
+                </Setter>
             </Style>
 
             <Style x:Key="textInput" TargetType="Entry">
@@ -271,29 +275,62 @@
                 </StackLayout>
                </ControlTemplate>
 
-               <!-- <AbsoluteLayout BackgroundColor="Transparent">
+               <ControlTemplate x:Key="adminHome">
 
-
-                    <Grid BackgroundColor="White"
-
-                           AbsoluteLayout.LayoutBounds=".5,1,1,.07"
-                           AbsoluteLayout.LayoutFlags="All">
+                <StackLayout HorizontalOptions="FillAndExpand"
+                           VerticalOptions="FillAndExpand"
+                             >
+                    <Grid HorizontalOptions="FillAndExpand"
+                          VerticalOptions="FillAndExpand"
+                          >
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="1*"/>
-                             <ColumnDefinition Width="1*"/>
-                             <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
-                            <RowDefinition/>
+                            <RowDefinition Height="70"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="70"/>
                         </Grid.RowDefinitions>
 
+
+                        <ScrollView Grid.Row="1"
+                                    Grid.Column="0">
+                            <ContentPresenter HorizontalOptions="FillAndExpand"
+                                              VerticalOptions="FillAndExpand"/>
+                        </ScrollView>
+
+                        <Grid Grid.Row="2"  BackgroundColor="White"
+                              HorizontalOptions="FillAndExpand"
+                              VerticalOptions="FillAndExpand">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+
+                            </Grid.ColumnDefinitions>
+                             <Button VerticalOptions="Start"
+                                     Grid.Row="0"
+                                        Grid.Column="1"
+                                        Image="Images/addPlayerIcon.png"
+                                                    Clicked="addPlayerPage"/>
+                             <Button VerticalOptions="Start"
+                                     Grid.Row="0"
+                                        Grid.Column="0"
+                                        Image="Images/playersIcon.png"
+                                                 Clicked="allPlayersPage"/>
+                              <Button VerticalOptions="Start"
+                                      Grid.Row="0"
+                                        Grid.Column="2"
+                                        Image="Images/logoutIcon.png"
+                                                Clicked="logoutAdminPage"/>
+                        </Grid>
+                       
                     </Grid>
-                </AbsoluteLayout>-->
-
-
-
-
-
+                </StackLayout>
+               </ControlTemplate>
 
         </ResourceDictionary>
 
