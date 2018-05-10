@@ -16,7 +16,7 @@ namespace Potm.Data
         public string clubName { get; set; }
         public string sport { get; set; }
         public string gender { get; set; }
-        public manager coach { get; set; }      
+        public tManager coach { get; set; }      
     }
 
     public class team
@@ -56,7 +56,7 @@ namespace Potm.Data
         public int expires_in { get; set; }
     }
 
-	public class manager
+	public class tManager
     {
         public int id { get; set; }
         public string name { get; set; }

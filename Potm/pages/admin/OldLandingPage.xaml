@@ -27,7 +27,7 @@
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="Start"
                 x:Name="flowListTest" FlowColumnCount="1" RowHeight="80" SeparatorVisibility="None" HasUnevenRows="false"
-                FlowRowBackgroundColor="Transparent" BackgroundColor="Transparent" >
+                FlowRowBackgroundColor="Transparent" BackgroundColor="Transparent" FlowItemTapped="Handle_FlowItemTapped" >
 
     <flv:FlowListView.FlowColumnTemplate>
         <DataTemplate>
@@ -49,27 +49,29 @@
                     <Label
                           Grid.Row="0"
                           Grid.Column="0"
-                          Style="{DynamicResource std-sm}"
-                          Text="ESPORT"/>
+                          Style="{DynamicResource std}"
+                          Text="{Binding sport}"/>
                     <Label
                           Grid.Row="0"
                           HorizontalOptions="End"
                           Grid.Column="1"
-                          Style="{DynamicResource std-sm}"
-                          Text="ASTRALIS"/>
+                          Style="{DynamicResource std}"
+                          Text="{Binding clubName}"/>
                     <Label
                           Grid.Row="1"
                           Grid.Column="0"
-                          Style="{DynamicResource std-sm}"
-                          Text="NICLAS LORT"/>
+                          Style="{DynamicResource std}"
+                          Text="{Binding coach.name}"/>
                     <Label
                           Grid.Row="1"
                           Grid.Column="1"
                           HorizontalOptions="End"
-                          Style="{DynamicResource std-sm}"
+                          Style="{DynamicResource std}"
                           Text="{Binding name}"/>
                       
                     <BoxView Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="White" />
+                                <Image Source="Images/rightArrow"
+                                       Grid.Row="0" Grid.RowSpan="2" Grid.Column="2"/>
                 </Grid>
         </DataTemplate>
     </flv:FlowListView.FlowColumnTemplate>

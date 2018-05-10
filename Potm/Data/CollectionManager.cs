@@ -31,5 +31,14 @@ namespace Potm.Data
             List<teams> response = JsonConvert.DeserializeObject<List<teams>>(await result.Content.ReadAsStringAsync());
             return response;
         }
+
+		public async Task<team> GetTeam(int teamId)
+		{
+			HttpClient client = new HttpClient();
+			var result = await client.GetAsync(Url + "GetTeam?teamId=" + teamId);
+			team response = JsonConvert.DeserializeObject<team>(await result.Content.ReadAsStringAsync());
+            return response;
+		}
+
     }
 }

@@ -74,6 +74,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)pages\admin\SingleTeam.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
@@ -131,6 +135,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)pages\Favorites.xaml.cs">
       <DependentUpon>Favorites.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)pages\admin\SingleTeam.xaml.cs">
+      <DependentUpon>SingleTeam.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Data\" />
@@ -181,5 +188,6 @@
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\addPlayerIcon.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\playersIcon.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\logoutWhiteIcon.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\rightArrow.png" />
   </ItemGroup>
 </Project>
