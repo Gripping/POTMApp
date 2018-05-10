@@ -8,6 +8,7 @@
             <Color x:Key="darkRed">#8B2727</Color>
             <Color x:Key="orange">#F07500</Color>
             <Color x:Key="green">#469528</Color>
+            <Color x:Key="matBlue">#355B70</Color>
 
             <OnPlatform x:TypeArguments="Font" Android="Oswald.ttf" iOS="Oswald" x:Key="BtnFontFamily" />
 
@@ -300,8 +301,8 @@
                                 VerticalOptions="End"
                                 Margin="0, 30, 20, 0"/>
                         
-                        <ScrollView Grid.Row="1"
-                                    Grid.Column="0">
+                        <ScrollView Grid.Row="0"
+                                    Grid.Column="2">
                             <ContentPresenter HorizontalOptions="FillAndExpand"
                                               VerticalOptions="FillAndExpand"/>
                         </ScrollView>
@@ -310,7 +311,7 @@
                 </StackLayout>
                </ControlTemplate>
 
-               <!-- <AbsoluteLayout BackgroundColor="Transparent">
+   
 
 
                <ControlTemplate x:Key="adminHome">
@@ -369,7 +370,7 @@
                        
                     </Grid>
                 </StackLayout>
-               </ControlTemplate> -->
+               </ControlTemplate>
 
         </ResourceDictionary>
 
