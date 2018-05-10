@@ -4,12 +4,14 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using Potm.Data;
 using Xamarin.Forms;
+using DLToolkit.Forms.Controls;
+using DLToolkit.Forms;
 
 namespace Potm.pages.admin
 {
     public partial class OldLandingPage : ContentPage
     {
-        readonly IList<teams> teams = new ObservableCollection<teams>();
+        public FlowObservableCollection<teams> flowTeams = new FlowObservableCollection<teams>(); 
         readonly CollectionManager manager = new CollectionManager();
         readonly int clubId;
 
@@ -21,7 +23,7 @@ namespace Potm.pages.admin
             //NavigationPage.SetHasBackButton(this, false);
             this.clubId = clubId;
 
-            BindingContext = teams;
+
             InitializeComponent();
 			this.OnViewShown();
         }
@@ -30,20 +32,29 @@ namespace Potm.pages.admin
         {
             var teamsCollection = await manager.GetTeams(clubId);
 
+
             if (teamsCollection.Count != 0)
             {
                 foreach (teams team in teamsCollection)
                 {
-                    if (teams.All(t => t.name != team.name))
+                    if (flowTeams.All(t => t.name != team.name))
                     {
-                        teams.Add(team);
+                        flowTeams.Add(team);
                     }
                 }
+                flowListTest.FlowItemsSource = flowTeams;
+
             }
             else
             {
                 await Navigation.PushAsync(new NewLandingPage());
             }
         }
+
+        //async void OnClubSelect(object sender, ItemTappedEventArgs e)
+        //{
+        //    await Navigation.PushAsync(new ((team)e.Item));
+
+        //}
     }
 }

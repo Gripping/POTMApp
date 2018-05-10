@@ -275,7 +275,6 @@
                 </StackLayout>
                </ControlTemplate>
 
-<<<<<<< HEAD
 
                  <ControlTemplate x:Key="newUserTemplate">
 
@@ -313,9 +312,9 @@
 
                <!-- <AbsoluteLayout BackgroundColor="Transparent">
 
-=======
+
                <ControlTemplate x:Key="adminHome">
->>>>>>> 59b1f5f7ceef09bd429c0532b380449fe08c8a91
+
 
                 <StackLayout HorizontalOptions="FillAndExpand"
                            VerticalOptions="FillAndExpand"
@@ -370,7 +369,7 @@
                        
                     </Grid>
                 </StackLayout>
-               </ControlTemplate>
+               </ControlTemplate> -->
 
         </ResourceDictionary>
 

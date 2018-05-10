@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Potm.pages.admin;
 using Potm.pages;
+using DLToolkit.Forms.Controls;
+using DLToolkit.Forms;
 
 namespace Potm
 {
@@ -19,8 +21,9 @@ namespace Potm
         {
 
             InitializeComponent();
+            FlowListView.Init(); 
 
-            var navPage = new NavigationPage(new LandingPage());
+            var navPage = new NavigationPage(new OldLandingPage(1128));
 
             navPage.BarBackgroundColor = Color.Transparent;
             navPage.BarTextColor = Color.White;

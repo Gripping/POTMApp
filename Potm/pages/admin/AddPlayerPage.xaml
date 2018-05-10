@@ -57,11 +57,11 @@
 
         <Label Grid.Row="4" Grid.Column="0" Margin="0, 30, 0, 0" Text="Position" Style="{StaticResource orangeText-sm}"/>
         <Entry Grid.Row="5" Grid.Column="0" Margin="-20, 0, 0, 0" Style="{StaticResource textInput}"
-               x:Name=""/>
+               x:Name="playerPosition"/>
                 
         <Label Grid.Row="6" Grid.Column="0" Margin="0, 30, 0, 0" Text="Fødselsdag" Style="{StaticResource orangeText-sm}"/>
         <Entry Grid.Row="7" Grid.Column="0" Margin="-20, 0, 0, 0" Style="{StaticResource textInput}" Placeholder="xx-xx-xxxx"
-               />
+               x:Name="playerBirthday"/>
 
       </Grid>
 
