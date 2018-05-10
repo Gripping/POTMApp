@@ -11,8 +11,12 @@ namespace Potm.Data
 
     public class teams
     {
-        public int id { get; set; }
+		public int id { get; set; }
         public string name { get; set; }
+        public string clubName { get; set; }
+        public string sport { get; set; }
+        public string gender { get; set; }
+        public manager coach { get; set; }      
     }
 
     public class team
@@ -50,5 +54,11 @@ namespace Potm.Data
         public string access_token { get; set; }
         public string token_type { get; set; }
         public int expires_in { get; set; }
+    }
+
+	public class manager
+    {
+        public int id { get; set; }
+        public string name { get; set; }
     }
 }
