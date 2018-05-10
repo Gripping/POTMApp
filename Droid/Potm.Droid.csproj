@@ -50,14 +50,14 @@
     <Reference Include="Com.ViewPagerIndicator">
       <HintPath>..\packages\Xamarin.Android.CirclePageIndicator.1.0.2\lib\MonoAndroid\Com.ViewPagerIndicator.dll</HintPath>
     </Reference>
-    <Reference Include="Com.Android.DeskClock">
-      <HintPath>..\packages\Xamarin.Android.VerticalViewPager.1.0.1\lib\MonoAndroid\Com.Android.DeskClock.dll</HintPath>
-    </Reference>
     <Reference Include="CarouselView.FormsPlugin.Abstractions">
       <HintPath>..\packages\CarouselView.FormsPlugin.5.2.0\lib\MonoAndroid\CarouselView.FormsPlugin.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="CarouselView.FormsPlugin.Android">
       <HintPath>..\packages\CarouselView.FormsPlugin.5.2.0\lib\MonoAndroid\CarouselView.FormsPlugin.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Com.Android.DeskClock">
+      <HintPath>..\packages\Xamarin.Android.VerticalViewPager.1.0.1\lib\MonoAndroid\Com.Android.DeskClock.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Android.Support.Annotations">
       <HintPath>..\packages\Xamarin.Android.Support.Annotations.25.4.0.2\lib\MonoAndroid70\Xamarin.Android.Support.Annotations.dll</HintPath>
@@ -142,7 +142,9 @@
     <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
-    <AndroidResource Include="Resources\drawable\background.png" />
+    <AndroidResource Include="Resources\drawable\background.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
     <AndroidResource Include="Resources\drawable\basketball.png" />
     <AndroidResource Include="Resources\drawable\football.png" />
     <AndroidResource Include="Resources\drawable\puck.png" />
@@ -167,6 +169,11 @@
     <AndroidResource Include="Resources\drawable\addPlayerIcon.png" />
     <AndroidResource Include="Resources\drawable\playersIcon.png" />
     <AndroidResource Include="Resources\drawable\logoutWhiteIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fonts\BebasNeue.otf" />
+    <AndroidAsset Include="Assets\fonts\Oswald-Bold.ttf" />
+    <AndroidAsset Include="Assets\fonts\Oswald.ttf" />
   </ItemGroup>
   <Import Project="..\Potm\Potm.projitems" Label="Shared" Condition="Exists('..\Potm\Potm.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

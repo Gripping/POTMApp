@@ -1,25 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Potm.pages.admin.OldLandingPage"
-             Title="VELKOMMEN!"
-              ControlTemplate="{DynamicResource adminTemplate}">
-    <ContentPage.Content>
-        <StackLayout>
-            <StackLayout>
-                <ScrollView>   
-                   <ListView ItemsSource="{Binding}"
-                      >
-                <ListView.ItemTemplate>
-                  <DataTemplate>
-                    <TextCell Text="{Binding name}">
-                      
-                    </TextCell>
-                  </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-                </ScrollView>
-            </StackLayout>
-        </StackLayout>
-    </ContentPage.Content>
+<ContentPage
+  xmlns="http://xamarin.com/schemas/2014/forms"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  x:Class="Potm.pages.admin.OldLandingPage"
+  Title="VELKOMMEN!"
+  BackgroundImage="Images/background.png"
+  ControlTemplate="{DynamicResource adminHome}">
+  <ContentPage.Content>
+    <StackLayout>
+      <StackLayout Margin="20">
+        <Label Style="{StaticResource h1}" FontAttributes="Bold">
+          <Label.Text>
+            Oprettede hold
+          </Label.Text>
+        </Label>
+        <BoxView Style="{StaticResource linje}"/>
+        <ListView ItemsSource="{Binding}">
+          <ListView.ItemTemplate>
+            <DataTemplate>
+              <TextCell Text="{Binding name}"></TextCell>
+            </DataTemplate>
+          </ListView.ItemTemplate>
+        </ListView>
+      </StackLayout>
+    </StackLayout>
+  </ContentPage.Content>
 </ContentPage>

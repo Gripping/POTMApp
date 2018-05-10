@@ -21,6 +21,7 @@ namespace Potm
             InitializeComponent();
 
             managerLogin.Clicked += (s, e) => Navigation.PushAsync(new LoginPage());
+            guestLogin.Clicked += (s, e) => Navigation.PushAsync(new Filter());
         }
     }
 }
