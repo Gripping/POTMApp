@@ -123,7 +123,7 @@
                         <Grid.RowDefinitions>
                             <RowDefinition Height="70"/>
                             <RowDefinition Height="*"/>
-                            <RowDefinition Height="70"/>
+                            <RowDefinition Height="55"/>
                         </Grid.RowDefinitions>
                         <Button Image="Images/backArrow.png"
                                 Clicked="backButton"
@@ -186,7 +186,7 @@
                         <Grid.RowDefinitions>
                             <RowDefinition Height="70"/>
                             <RowDefinition Height="*"/>
-                            <RowDefinition Height="70"/>
+                            <RowDefinition Height="55"/>
                         </Grid.RowDefinitions>
                         <Button Image="Images/backArrow.png"
                                 Clicked="backButton"
@@ -251,7 +251,7 @@
                         <Grid.RowDefinitions>
                             <RowDefinition Height="70"/>
                             <RowDefinition Height="*"/>
-                            <RowDefinition Height="70"/>
+
                         </Grid.RowDefinitions>
                         <Button Image="Images/backArrow.png"
                                 Clicked="backButton"
@@ -261,6 +261,41 @@
                                 VerticalOptions="End"
                                 Margin="20, 0, 0, 0"/>
 
+                        <ScrollView Grid.Row="1"
+                                    Grid.Column="0">
+                            <ContentPresenter HorizontalOptions="FillAndExpand"
+                                              VerticalOptions="FillAndExpand"/>
+                        </ScrollView>
+                       
+                    </Grid>
+                </StackLayout>
+               </ControlTemplate>
+
+
+                 <ControlTemplate x:Key="newUserTemplate">
+
+                <StackLayout HorizontalOptions="FillAndExpand"
+                           VerticalOptions="FillAndExpand"
+                             >
+                    <Grid HorizontalOptions="FillAndExpand"
+                          VerticalOptions="FillAndExpand"
+                          BackgroundColor="Transparent">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70"/>
+                            <RowDefinition Height="*"/>
+
+                        </Grid.RowDefinitions>
+                        <Button Image="Images/logoutWhiteIcon.png"
+                                Clicked="backButton"
+                                Grid.Column="0"
+                                Grid.Row="0"
+                                HorizontalOptions="End"
+                                VerticalOptions="End"
+                                Margin="0, 30, 20, 0"/>
+                        
                         <ScrollView Grid.Row="1"
                                     Grid.Column="0">
                             <ContentPresenter HorizontalOptions="FillAndExpand"

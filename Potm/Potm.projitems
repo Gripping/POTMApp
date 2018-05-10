@@ -180,5 +180,6 @@
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\backArrow.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\addPlayerIcon.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\playersIcon.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\logoutWhiteIcon.png" />
   </ItemGroup>
 </Project>
