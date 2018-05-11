@@ -53,7 +53,7 @@
                 VerticalOptions="FillAndExpand"
                         HeightRequest="300"
                 x:Name="flowTeamMatches" FlowColumnCount="1"  RowHeight="60" SeparatorVisibility="None" HasUnevenRows="false"
-                FlowRowBackgroundColor="Transparent" BackgroundColor="Transparent"  >
+                FlowRowBackgroundColor="Transparent" BackgroundColor="Transparent" FlowItemTapped="matchTapped" >
 
     <flv:FlowListView.FlowColumnTemplate>
         <DataTemplate>
