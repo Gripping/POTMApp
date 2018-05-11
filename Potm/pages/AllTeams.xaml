@@ -1,100 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-            
-             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
-             x:Class="Potm.pages.AllTeams"
-             BackgroundImage="Images/background.png"
-             ControlTemplate="{DynamicResource userTemplate}"
-             >
-    <ContentPage.Content>
-        
-           
-     <StackLayout HorizontalOptions="Center"
-                     Margin="20">
-                
-                      <Label Style="{StaticResource h1}"
-                   FontAttributes="Bold">
-                <Label.Text>
-                    VÆLG KLUB
-                </Label.Text>
-            </Label>
-           <BoxView Style="{StaticResource linje}"
-                     WidthRequest="500"/>
+<ContentPage
+  xmlns="http://xamarin.com/schemas/2014/forms"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+  x:Class="Potm.pages.AllTeams"
+  BackgroundImage="Images/background.png"
+  ControlTemplate="{DynamicResource userTemplate}">
+  <ContentPage.Content>
 
-         <StackLayout  BackgroundColor="Transparent"
-                                     HorizontalOptions="FillAndExpand"> 
+    <StackLayout HorizontalOptions="Center" Margin="20">
 
-            <flv:FlowListView
-                x:Name="clubList"
-                    FlowColumnCount="1" 
-                HorizontalOptions="FillAndExpand"
-                VerticalOptions="Start"
-                RowHeight="100" SeparatorVisibility="None"
-                 HasUnevenRows="false"
-                FlowRowBackgroundColor="Transparent" BackgroundColor="Transparent" FlowItemTapped="FlowItemTapped"  >
+      <Label Style="{StaticResource h1}" FontAttributes="Bold">
+        <Label.Text>
+          VÆLG KLUB
+        </Label.Text>
+      </Label>
+      <BoxView Style="{StaticResource linje}" WidthRequest="500"/>
 
-            <flv:FlowListView.FlowColumnTemplate>
-                <DataTemplate>
-                    <Frame
-                                BackgroundColor="{StaticResource matBlue}"
-                           CornerRadius="5"
-                           Margin="0, 0, 0, 20">        
-                      <Grid Margin="10, 0, 10, 0"
-                            RowSpacing="0"
+      <StackLayout BackgroundColor="Transparent" HorizontalOptions="FillAndExpand">
 
-                            VerticalOptions="FillAndExpand"
-                            BackgroundColor="Transparent"
-                            HorizontalOptions="FillAndExpand">
-                                
-                            <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="3*"/>
-                                    <ColumnDefinition Width="3*"/>
-                                    <ColumnDefinition Width="3*"/>
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                    <RowDefinition Height="*"/>
+        <flv:FlowListView
+          x:Name="clubList"
+          FlowColumnCount="1"
+          HorizontalOptions="FillAndExpand"
+          VerticalOptions="Start"
+          RowHeight="100"
+          SeparatorVisibility="None"
+          HasUnevenRows="false"
+          FlowRowBackgroundColor="Transparent"
+          BackgroundColor="Transparent"
+          FlowItemTapped="FlowItemTapped">
 
-                                   
-                            </Grid.RowDefinitions>
-                                <Image
-                                      Grid.Row="0"
-                                      Grid.Column="0"
-                                      WidthRequest="30"
-                                        HeightRequest="30"
-                                      HorizontalOptions="Start"
-                                      Scale="2"
-                                      VerticalOptions="Center"
-                                      Source="{Binding clubImage}"
-                                      />
-                                <Label
-                                      Grid.Row="0"
-                                      HorizontalOptions="Center"
-                                      VerticalOptions="Center"
-                                      Grid.Column="1"
-                                      Style="{DynamicResource std}"
-                                      Text="{Binding name}"/>
-                                 <Image
-                                      Grid.Row="0"
-                                      Grid.Column="2"
-                                      HorizontalOptions="End"
-                                      VerticalOptions="Center"
-                                      Source="Images/rightArrow.png"/>
-                               
-                                
-                                  
-                                
-                                            
-                      </Grid>
-                    </Frame>
-                 </DataTemplate>
-            </flv:FlowListView.FlowColumnTemplate>
-                    
-            
+          <flv:FlowListView.FlowColumnTemplate>
+            <DataTemplate>
+              <Frame BackgroundColor="{StaticResource matBlue}" CornerRadius="5" Margin="0, 0, 0, 20">
+                <Grid Margin="10, 0, 10, 0" RowSpacing="0" VerticalOptions="FillAndExpand" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand">
 
-</flv:FlowListView>
-                </StackLayout>
-                    </StackLayout>
-                
-    </ContentPage.Content>
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="3*"/>
+                  </Grid.ColumnDefinitions>
+                  <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+
+                  </Grid.RowDefinitions>
+                  <Image Grid.Row="0" Grid.Column="0" WidthRequest="30" HeightRequest="30" HorizontalOptions="Start" Scale="2" VerticalOptions="Center" Source="{Binding clubImage}"/>
+                  <Label Grid.Row="0" HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="1" Style="{DynamicResource std}" Text="{Binding name}"/>
+                  <Image Grid.Row="0" Grid.Column="2" HorizontalOptions="End" VerticalOptions="Center" Source="Images/rightArrow.png"/>
+
+                </Grid>
+              </Frame>
+            </DataTemplate>
+          </flv:FlowListView.FlowColumnTemplate>
+
+        </flv:FlowListView>
+      </StackLayout>
+    </StackLayout>
+
+  </ContentPage.Content>
 </ContentPage>

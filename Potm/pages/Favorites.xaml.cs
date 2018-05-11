@@ -27,17 +27,7 @@ namespace Potm.pages
                 favs.Add(fav);
             }
             favList.FlowItemsSource = favs;
-        }
 
-        public async void AddToFavourites(object sender, EventArgs e)
-        {
-            Button FavBtn = (Button)sender;
-            int message = int.Parse(FavBtn.CommandParameter.ToString());
-
-            favTeam t = new favTeam();
-            t.clubId = message;
-
-            await App.FavRepo.addFav(t);
         }
 
         public async void FavDelete(object sender, ItemTappedEventArgs e)
