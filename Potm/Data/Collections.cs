@@ -71,4 +71,13 @@ namespace Potm.Data
         public object clubImage { get; set; }
         public List<teams> clubTeams { get; set; }
     }
+
+    public class favTeam
+    {
+        public int clubId { get; set; }
+        public string clubName { get; set; }
+        public string clubLogo { get; set; }
+        public string teamName { get; set; }
+        public string teamGender { get; set; }
+    }
 }

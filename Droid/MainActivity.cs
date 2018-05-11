@@ -24,7 +24,8 @@ namespace Potm.Droid
 
             CarouselView.FormsPlugin.Android.CarouselViewRenderer.Init();
 
-            LoadApplication(new App());
+            string dbPath = FileAccessHelper.GetLocalFilePath("favs.db3");
+            LoadApplication(new App(dbPath));
         }
     }
 }

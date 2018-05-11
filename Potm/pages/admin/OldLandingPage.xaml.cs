@@ -33,7 +33,6 @@ namespace Potm.pages.admin
         {
             var teamsCollection = await manager.GetTeams(clubId);
 
-
             if (teamsCollection.Count != 0)
             {
                 foreach (teams team in teamsCollection)

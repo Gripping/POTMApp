@@ -145,6 +145,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)pages\ClubPage.xaml.cs">
       <DependentUpon>ClubPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Data\favourites.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\FavRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Data\" />
