@@ -8,6 +8,7 @@ using Potm.Data;
 using DLToolkit.Forms;
 using DLToolkit.Forms.Controls;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace Potm.pages
 {
@@ -41,7 +42,11 @@ namespace Potm.pages
 
             foreach (var sport in allSports)
             {
-                flowSports.Add(sport);
+                if (flowSports.All(x => x.id != sport.id))
+                {
+					flowSports.Add(sport);
+                }
+
             }
 
             carousel.ItemsSource = flowSports;
