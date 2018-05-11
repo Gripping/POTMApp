@@ -1,62 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-              xmlns:controls="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
-             x:Class="Potm.pages.Filter"
-              BackgroundImage="Images/background.png"
-              ControlTemplate="{DynamicResource userTemplate}">
-    <ContentPage.Content>
-           
-     <StackLayout HorizontalOptions="Center"
-                     Margin="20">
+<ContentPage
+  xmlns="http://xamarin.com/schemas/2014/forms"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:controls="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
+  x:Class="Potm.pages.Filter"
+  BackgroundImage="Images/background.png"
+  ControlTemplate="{DynamicResource userTemplate}">
+  <ContentPage.Content>
 
-                      <Label Style="{StaticResource h1}"
-                   FontAttributes="Bold">
-                <Label.Text>
-                    TILFØJ KAMP
+    <StackLayout HorizontalOptions="Center" Margin="20">
 
-                </Label.Text>
-            </Label>
-            <BoxView Style="{StaticResource linje}"
-                     WidthRequest="500"/>
-                <Label Margin="0, -20, 0 ,0" Style="{DynamicResource std}">
-                    VÆLG DIN SPORT
-                </Label>
+      <Label Style="{StaticResource h1}" FontAttributes="Bold">
+        <Label.Text>
+          TILFØJ KAMP
 
-                <StackLayout HorizontalOptions="Center"
-                             VerticalOptions="Center"
-                             Margin="0, 40, 0 ,0">
+        </Label.Text>
+      </Label>
+      <BoxView Style="{StaticResource linje}" WidthRequest="500"/>
+      <Label Margin="0, -20, 0 ,0" Style="{DynamicResource std}">
+        VÆLG DIN SPORT
+      </Label>
 
-                <controls:CarouselViewControl   x:Name="carousel"
-                                                InterPageSpacing="0"
-                                                ShowArrows="false"
-                                                ShowIndicators="true"
-                                                Scrolled="Handle_Scrolled"
-                                                Orientation="Horizontal"
-                                                HorizontalOptions="Center"
-                                                VerticalOptions="Center"
-                                                HeightRequest="300"
-                                                WidthRequest="300"
-                                                ItemsSource="{Binding MyItemsSource}">
+      <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Margin="0, 40, 0 ,0">
 
-                            <controls:CarouselViewControl.ItemTemplate>
-                                <DataTemplate>
-                                    <Image Source="{Binding sportImage}" />
-                                </DataTemplate>
-                            </controls:CarouselViewControl.ItemTemplate>
+        <controls:CarouselViewControl
+          x:Name="carousel"
+          InterPageSpacing="0"
+          ShowArrows="false"
+          ShowIndicators="true"
+          Scrolled="Handle_Scrolled"
+          Orientation="Horizontal"
+          HorizontalOptions="Center"
+          PositionSelected="Handle_PositionSelected"
+          VerticalOptions="Center"
+          HeightRequest="300"
+          WidthRequest="300"
+          ItemsSource="{Binding MyItemsSource}">
 
-                </controls:CarouselViewControl>
-                    </StackLayout>
+          <controls:CarouselViewControl.ItemTemplate>
+            <DataTemplate>
+                <Image Source="{Binding sportImage}" />
+            </DataTemplate>
+          </controls:CarouselViewControl.ItemTemplate>
 
-                <Label Style="{DynamicResource std}" Text="INDEN FOR RADIUS AF" Margin="0,25,0,0"/>
-                    <Slider x:Name="slider2"  
-                            Minimum="0" 
-                            Maximum="10"
-                             />
-   
-              
-     </StackLayout>
-       
+        </controls:CarouselViewControl>
+      </StackLayout>
 
-    </ContentPage.Content>
+      <Label Style="{DynamicResource std}" Text="INDEN FOR RADIUS AF" Margin="0,25,0,0"/>
+      <Slider x:Name="slider2" Minimum="0" Maximum="10"/>
+
+      <Button Style="{StaticResource button2FP}"
+              Clicked="onFilterSearch"
+              x:Name="filterSearchBtn">
+        <Button.Text>
+            Søg            
+        </Button.Text>      
+      </Button>
+            
+    </StackLayout>
+
+  </ContentPage.Content>
 </ContentPage>
