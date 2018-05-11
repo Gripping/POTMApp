@@ -62,4 +62,12 @@ namespace Potm.Data
         public int id { get; set; }
         public string name { get; set; }
     }
+
+	public class singleClub
+    {
+        public int clubId { get; set; }
+        public string clubName { get; set; }
+        public object clubImage { get; set; }
+        public List<teams> clubTeams { get; set; }
+    }
 }

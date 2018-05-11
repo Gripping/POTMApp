@@ -23,7 +23,7 @@ namespace Potm
             InitializeComponent();
             FlowListView.Init(); 
 
-			var navPage = new NavigationPage(new ClubPage(1075));
+			var navPage = new NavigationPage(new LandingPage());
 
             navPage.BarBackgroundColor = Color.Transparent;
             navPage.BarTextColor = Color.White;

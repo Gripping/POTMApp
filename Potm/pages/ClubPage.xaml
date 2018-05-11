@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Potm.pages.ClubPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Potm.pages.ClubPage"
+             ControlTemplate="{DynamicResource userTemplate}"
+             BackgroundImage="Images/background.png">
     <ContentPage.Content>
-        <Label x:Name="test" Text="{Binding name}" />
+        <Label x:Name="test" TextColor="Black" Text="{Binding clubName}" />
     </ContentPage.Content>
 </ContentPage>

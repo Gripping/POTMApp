@@ -19,7 +19,7 @@
                     VÆLG KLUB
                 </Label.Text>
             </Label>
-            <BoxView Style="{StaticResource linje}"
+           ª <BoxView Style="{StaticResource linje}"
                      WidthRequest="500"/>
 
          <StackLayout  BackgroundColor="Transparent"
@@ -30,14 +30,15 @@
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="Start"
                 x:Name="clubList" FlowColumnCount="1" 
-                RowHeight="90" SeparatorVisibility="None" HasUnevenRows="false"
+                RowHeight="90" SeparatorVisibility="None"
+                 HasUnevenRows="false"
                 FlowRowBackgroundColor="Transparent" BackgroundColor="Transparent" FlowItemTapped="FlowItemTapped"  >
 
             <flv:FlowListView.FlowColumnTemplate>
                 <DataTemplate>
                     <Frame BackgroundColor="{StaticResource matBlue}"
                            CornerRadius="5"
-                           Margin="0">        
+                           Margin="0, 0, 0, 20">        
                       <Grid Margin="10, 0, 10, 0"
                             RowSpacing="0"
 

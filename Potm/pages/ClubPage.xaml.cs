@@ -14,13 +14,22 @@ namespace Potm.pages
 		readonly club club = new club();
         readonly CollectionManager manager = new CollectionManager();
         readonly int clubId;
+		readonly int sportId;
         
-		public ClubPage(club clubs)
+		public ClubPage(club c, int sId)
         {
+			NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
-			var cClub = await manager.GetClub(clubId);
-			BindingContext = cClub;
+			clubId = c.id;
+			sportId = sId;
 
         }
+
+		protected override async void OnAppearing()
+		{
+			var cClub = await manager.GetClub(clubId, sportId);
+
+			BindingContext = cClub;
+		}
     }
 }
