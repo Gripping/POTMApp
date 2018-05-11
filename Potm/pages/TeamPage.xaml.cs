@@ -39,5 +39,11 @@ namespace Potm.pages
         
 
 		}
+
+
+		public async void matchTapped(object sender, Xamarin.Forms.ItemTappedEventArgs e)
+		{
+			await Navigation.PushAsync(new PlayersFromMatch((match) e.Item));
+		}
     }
 }

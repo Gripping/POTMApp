@@ -86,6 +86,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)pages\PlayersFromMatch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
@@ -157,6 +161,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Data\favourites.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\FavRepository.cs" />
 
+    <Compile Include="$(MSBuildThisFileDirectory)pages\PlayersFromMatch.xaml.cs">
+      <DependentUpon>PlayersFromMatch.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Data\" />
