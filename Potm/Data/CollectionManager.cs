@@ -44,11 +44,18 @@ namespace Potm.Data
         {
             HttpClient client = new HttpClient();
             var result = await client.GetAsync(Url + "GetAllSports");
-			List<sport> response = JsonConvert.DeserializeObject<List<sport>>(await result.Content.ReadAsStringAsync());
+            List<sport> response = JsonConvert.DeserializeObject<List<sport>>(await result.Content.ReadAsStringAsync());
 
             return response;
         }
 
+		public async Task<List<club>> GetFilteredClubs(int sportId)
+        {
+            HttpClient client = new HttpClient();
+            var result = await client.GetAsync(Url + "GetFilteredClubs?sportsId=" + sportId);
+			List<club> response = JsonConvert.DeserializeObject<List<club>>(await result.Content.ReadAsStringAsync());
+            return response;
+        }
 
     }
 }
