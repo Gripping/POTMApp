@@ -43,10 +43,11 @@ namespace Potm.Data
         public string matchTime { get; set; }
     }
 
-    public class sport
+	public class sport
     {
         public int id { get; set; }
         public string sportName { get; set; }
+        public object sportImage { get; set; }
     }
 
     public class AuthToken

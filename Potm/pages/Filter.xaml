@@ -6,7 +6,7 @@
               BackgroundImage="Images/background.png"
               ControlTemplate="{DynamicResource userTemplate}">
     <ContentPage.Content>
-           <ScrollView>
+           
      <StackLayout HorizontalOptions="Center"
                      Margin="20">
 
@@ -23,42 +23,40 @@
                     VÆLG DIN SPORT
                 </Label>
 
-        <StackLayout HorizontalOptions="Center"
-                     VerticalOptions="Center"
-                     Margin="0, 40, 0 ,0">
+                <StackLayout HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             Margin="0, 40, 0 ,0">
 
-        <controls:CarouselViewControl  x:Name="carousel"
-                                       InterPageSpacing="0"
-        ShowArrows="true"
-        ShowIndicators="true"
-        Scrolled="Handle_Scrolled"
-        Orientation="Horizontal"
-                           
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center"
-                            HeightRequest="300"
-                            WidthRequest="300">
+                <controls:CarouselViewControl   x:Name="carousel"
+                                                InterPageSpacing="0"
+                                                ShowArrows="false"
+                                                ShowIndicators="true"
+                                                Scrolled="Handle_Scrolled"
+                                                Orientation="Horizontal"
+                                                HorizontalOptions="Center"
+                                                VerticalOptions="Center"
+                                                HeightRequest="300"
+                                                WidthRequest="300"
+                                                ItemsSource="{Binding MyItemsSource}">
 
-        <controls:CarouselViewControl.ItemsSource>
-           <x:Array Type="{x:Type View}">  
-                <Image HorizontalOptions="Center" Margin="50, 150, 50, 0" VerticalOptions="Center"  Source="Images/FodboldSport.png" Aspect="AspectFill" />
-                <Image Source="Images/FodboldSport.png" Margin="0, 150, 0, 0" Aspect="AspectFill" />
-                <Image  Source="Images/FodboldSport.png" Margin="0, 150, 0, 0" Aspect="AspectFill" />
-           </x:Array>
-        </controls:CarouselViewControl.ItemsSource>
+                            <controls:CarouselViewControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Image Source="{Binding sportImage}" />
+                                </DataTemplate>
+                            </controls:CarouselViewControl.ItemTemplate>
 
-    </controls:CarouselViewControl>
-            </StackLayout>
+                </controls:CarouselViewControl>
+                    </StackLayout>
 
-<Label Style="{DynamicResource std}" Text="INDEN FOR RADIUS AF" Margin="0,25,0,0"/>
-    <Slider x:Name="slider2"  
-            Minimum="0" 
-            Maximum="10"
-             />
+                <Label Style="{DynamicResource std}" Text="INDEN FOR RADIUS AF" Margin="0,25,0,0"/>
+                    <Slider x:Name="slider2"  
+                            Minimum="0" 
+                            Maximum="10"
+                             />
    
               
-                </StackLayout>
-            </ScrollView>
+     </StackLayout>
+       
 
     </ContentPage.Content>
 </ContentPage>

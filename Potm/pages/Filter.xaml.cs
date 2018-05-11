@@ -5,19 +5,20 @@ using System.Collections.ObjectModel;
 using Xamarin.Forms;
 using System.Diagnostics;
 using Potm.Data;
+using DLToolkit.Forms;
+using DLToolkit.Forms.Controls;
 
 namespace Potm.pages
 {
     public partial class Filter : ContentPage
     {
 		readonly CollectionManager manager = new CollectionManager();
-        
+		public FlowObservableCollection<sport> flowSports = new FlowObservableCollection<sport>(); 
+
         public Filter()
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
-
-            
         }
         void Handle_PositionSelected(object sender, CarouselView.FormsPlugin.Abstractions.PositionSelectedEventArgs e)
         {
@@ -29,11 +30,16 @@ namespace Potm.pages
             Debug.WriteLine("Scrolled to " + e.NewValue + " percent.");
             Debug.WriteLine("Direction = " + e.Direction);
         }
-		protected override async void OnAppearing()
+        protected override async void OnAppearing()
         {
-			BindingContext = await manager.GetAllSports();
-        }
-        
+			var allSports = await manager.GetAllSports();
 
+			foreach (var sport in allSports)
+			{
+				flowSports.Add(sport);
+			}
+
+			carousel.ItemsSource = flowSports;
+        }
     }
 }
