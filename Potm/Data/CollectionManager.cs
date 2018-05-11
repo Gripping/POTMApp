@@ -57,5 +57,13 @@ namespace Potm.Data
             return response;
         }
 
+		public async Task<club> GetClub(int clubId)
+        {
+            HttpClient client = new HttpClient();
+            var result = await client.GetAsync(Url + "GetClub?clubId=" + clubId);
+			team response = JsonConvert.DeserializeObject<club>(await result.Content.ReadAsStringAsync());
+            return response;
+        }
+
     }
 }

@@ -78,6 +78,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)pages\ClubPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
@@ -137,6 +141,9 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)pages\admin\SingleTeam.xaml.cs">
       <DependentUpon>SingleTeam.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)pages\ClubPage.xaml.cs">
+      <DependentUpon>ClubPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

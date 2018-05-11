@@ -38,7 +38,7 @@ namespace Potm.pages
 
 		public async void FlowItemTapped(object sender, ItemTappedEventArgs e)
         {
-            await Navigation.PushAsync(new SingleTeam((teams)e.Item));
+            await Navigation.PushAsync(new ClubPage((club) e.Item));
         }
     }
 }
