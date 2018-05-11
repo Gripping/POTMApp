@@ -16,8 +16,9 @@ namespace Potm
     public partial class App : Application
     {
         readonly int clubId;
+        public static FavRepository FavRepo { get; private set; }
 
-        public App()
+        public App(string dbPath)
         {
 
             InitializeComponent();
@@ -30,7 +31,7 @@ namespace Potm
 
             MainPage = navPage;
 
-
+            FavRepo = new FavRepository(dbPath);
             clubId = 1128;
         }
 
