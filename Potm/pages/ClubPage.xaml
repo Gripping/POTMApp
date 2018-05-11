@@ -9,8 +9,10 @@
                      Margin="20">
             
                      <StackLayout 
+               
                 Orientation="Horizontal" 
-                HorizontalOptions="FillAndExpand">
+                HorizontalOptions="FillAndExpand"
+                Spacing="150">
                 
                       <Label Style="{StaticResource h1}"
                              FontAttributes="Bold"
@@ -18,65 +20,111 @@
                              HorizontalOptions="Start"/>
 
                         <Image Source="{Binding clubImage}"
-                               HorizontalOptions="End"/>
+                               HorizontalOptions="End"
+                               VerticalOptions="Start"
+                               WidthRequest="35"
+                               HeightRequest="35"
+                               Scale="2"
+                               Margin="0, 0, 0 ,20"/>
                 
                     </StackLayout>
                 
            
             <BoxView Style="{StaticResource linje}"/>
+
+
+             <Label Style="{StaticResource h1}"
+                            FontSize="25"
+                             FontAttributes="Italic"
+                             Text="VÆLG HOLD"
+                             HorizontalOptions="FillAndExpand"
+                    XAlign="Center"
+                         
+                        Margin="0, 40, 0, 20"/>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center"
+                         VerticalOptions="FillAndExpand" WidthRequest="210"
+                         Margin="0, 0, 0, 40">
+                <Button Style="{DynamicResource buttonFP2}"
+                        FontSize="9"
+                        Text="HERRER"
+                        BackgroundColor="{StaticResource orange}"
+                        HorizontalOptions="Start"
+                        WidthRequest="100"
+                        HeightRequest="25"
+                        TextColor="{DynamicResource textWhite}"
+                        VerticalOptions="Center"/>
+                <Button Style="{DynamicResource buttonFP2}"
+                        FontSize="9"
+                        WidthRequest="100"
+                        HeightRequest="25"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Start"
+                        Text="DAMER"
+                        TextColor="{StaticResource textBlack}"
+                        BackgroundColor="{StaticResource textWhite}"/>
+            </StackLayout>
             
-          <StackLayout  BackgroundColor="{StaticResource matBlue}"
-                                     HorizontalOptions="FillAndExpand">   
-       <flv:FlowListView
-                    Margin="20, 20, 0, 20"
+          <StackLayout  BackgroundColor="Transparent"
+                                     HorizontalOptions="FillAndExpand"
+                        Margin="0, 0, 0 ,40">   
+                        <Frame CornerRadius="5"
+                               Margin="0"
+                               HorizontalOptions="FillAndExpand"
+                               VerticalOptions="FillAndExpand"
+                               HasShadow="false"
+                               BackgroundColor="{StaticResource matBlue}">
+                <flv:FlowListView
+
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="Start"
-                x:Name="flowAllTeams" FlowColumnCount="1" RowHeight="80" SeparatorVisibility="None" HasUnevenRows="false"
+                x:Name="flowAllTeams" FlowColumnCount="1" RowHeight="40" SeparatorVisibility="None" HasUnevenRows="false"
                 FlowRowBackgroundColor="Transparent" BackgroundColor="Transparent"  >
 
     <flv:FlowListView.FlowColumnTemplate>
         <DataTemplate>
-                 <Grid Margin="0, 0, 0, 10"
-                       RowSpacing="0"
-                       BackgroundColor="Transparent" 
+                 <Grid Margin="0, 0, 0, 0"
+                       RowSpacing="5"
+                       BackgroundColor="Transparent"
+
+
                        HorizontalOptions="FillAndExpand">
                 <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="2*"/>
                         <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="1*"/>
                                     
                         <ColumnDefinition Width="20"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                        <RowDefinition Height="20"/>
-                        <RowDefinition Height="29"/>
+                        <RowDefinition Height="30"/>
+
                         <RowDefinition Height="1"/>
                 </Grid.RowDefinitions>
                     <Label
                           Grid.Row="0"
                           Grid.Column="0"
                           Style="{DynamicResource std}"
-                          Text="{Binding sport}"/>
-                    <Label
+                                        VerticalOptions="Center"
+                          Text="{Binding name}"/>
+                    <Image
                           Grid.Row="0"
                           HorizontalOptions="End"
+                                        VerticalOptions="Center"
                           Grid.Column="1"
-                          Style="{DynamicResource std}"
-                          Text="{Binding clubName}"/>
-                    <Label
-                          Grid.Row="1"
-                          Grid.Column="0"
-                          Style="{DynamicResource std}"
-                          Text="{Binding coach.name}"/>
-                    <Label
-                          Grid.Row="1"
-                          Grid.Column="1"
-                          HorizontalOptions="End"
-                          Style="{DynamicResource std}"
-                          Text="{Binding name}"/>
+                          Source="Images/favoritIcon.png"
+                          />
+                   
+
+
+                          <Image Grid.Column="2"
+                                 Grid.Row="0"
+                                 Grid.RowSpan="2"
+                                 VerticalOptions="Center"
+                                 Source="Images/rightArrow.png"
+                                 Margin="0, -7 , 0, 0"/>
                       
-                    <BoxView Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="White" />
-                                <Image Source="Images/rightArrow"
-                                       Grid.Row="0" Grid.RowSpan="2" Grid.Column="2"/>
+                    <BoxView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="White" />
+                                
                 </Grid>
         </DataTemplate>
     </flv:FlowListView.FlowColumnTemplate>
@@ -84,6 +132,7 @@
             
 
 </flv:FlowListView>
+                    </Frame>
                 </StackLayout>
 
        </StackLayout>

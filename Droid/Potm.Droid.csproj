@@ -173,6 +173,7 @@
     <AndroidResource Include="Resources\drawable\playersIcon.png" />
     <AndroidResource Include="Resources\drawable\logoutWhiteIcon.png" />
     <AndroidResource Include="Resources\drawable\rightArrow.png" />
+    <AndroidResource Include="Resources\drawable\favoritIcon.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\fonts\BebasNeue.otf" />

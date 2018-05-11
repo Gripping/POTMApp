@@ -162,6 +162,7 @@
     <BundleResource Include="Resources\Images\playersIcon.png" />
     <BundleResource Include="Resources\Images\logoutWhiteIcon.png" />
     <BundleResource Include="Resources\Images\rightArrow.png" />
+    <BundleResource Include="Resources\Images\favoritIcon.png" />
   </ItemGroup>
   <Import Project="..\Potm\Potm.projitems" Label="Shared" Condition="Exists('..\Potm\Potm.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
