@@ -17,7 +17,8 @@ namespace Potm.pages
         readonly int clubId;
 		readonly int sportId;
         public string teamName;
-        public string teamGender;
+		public string teamGender;
+        public string sportName;
         public FlowObservableCollection<teams> flowClubTeams = new FlowObservableCollection<teams>();
 
 		public ClubPage(club c, int sId)
@@ -62,14 +63,16 @@ namespace Potm.pages
 
             foreach (var team in cClub.clubTeams) {
                 if (message == team.id) {
-                    teamName = team.gender;
-                    teamGender = team.name;
+					teamName = team.name;
+					teamGender = team.gender;
+					sportName = team.sport.sportName;
                 }
             }
             t.teamName = teamName;
             t.teamGender = teamGender;
+			t.sportName = sportName;
 
-            await App.FavRepo.addFav(t);
+			await App.FavRepo.addFav(t);
         }
     }
 }

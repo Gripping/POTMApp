@@ -216,5 +216,6 @@
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\logoutWhiteIcon.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\rightArrow.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\favoritIcon.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\filleStar.png" />
   </ItemGroup>
 </Project>

@@ -21,5 +21,7 @@ namespace Potm.Data
 
         [MaxLength(250)]
         public string teamGender { get; set; }
+
+		public string sportName { get; set; }
     }
 }

@@ -79,5 +79,8 @@ namespace Potm.Data
         public string clubLogo { get; set; }
         public string teamName { get; set; }
         public string teamGender { get; set; }
+		public string sportName { get; set; }
     }
+
+    
 }
