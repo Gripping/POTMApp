@@ -1,8 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Potm.pages.ClubPage"
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+ xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Potm.pages.ClubPage"
              ControlTemplate="{DynamicResource userTemplate}"
              BackgroundImage="Images/background.png">
     <ContentPage.Content>
-        <Label x:Name="test" TextColor="Black" Text="{Binding clubName}" />
+              <StackLayout HorizontalOptions="Center"
+                     Margin="20">
+            
+                     <StackLayout 
+                Orientation="Horizontal" 
+                HorizontalOptions="FillAndExpand">
+                
+                      <Label Style="{StaticResource h1}"
+                             FontAttributes="Bold"
+                             Text="{Binding clubName}"
+                             HorizontalOptions="Start"/>
+
+                        <Image Source="{Binding clubImage}"
+                               HorizontalOptions="End"/>
+                
+                    </StackLayout>
+                
+           
+            <BoxView Style="{StaticResource linje}"/>
+            
+          <StackLayout  BackgroundColor="{StaticResource matBlue}"
+                                     HorizontalOptions="FillAndExpand">   
+       <flv:FlowListView
+                    Margin="20, 20, 0, 20"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Start"
+                x:Name="flowAllTeams" FlowColumnCount="1" RowHeight="80" SeparatorVisibility="None" HasUnevenRows="false"
+                FlowRowBackgroundColor="Transparent" BackgroundColor="Transparent"  >
+
+    <flv:FlowListView.FlowColumnTemplate>
+        <DataTemplate>
+                 <Grid Margin="0, 0, 0, 10"
+                       RowSpacing="0"
+                       BackgroundColor="Transparent" 
+                       HorizontalOptions="FillAndExpand">
+                <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="3*"/>
+                                    
+                        <ColumnDefinition Width="20"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="29"/>
+                        <RowDefinition Height="1"/>
+                </Grid.RowDefinitions>
+                    <Label
+                          Grid.Row="0"
+                          Grid.Column="0"
+                          Style="{DynamicResource std}"
+                          Text="{Binding sport}"/>
+                    <Label
+                          Grid.Row="0"
+                          HorizontalOptions="End"
+                          Grid.Column="1"
+                          Style="{DynamicResource std}"
+                          Text="{Binding clubName}"/>
+                    <Label
+                          Grid.Row="1"
+                          Grid.Column="0"
+                          Style="{DynamicResource std}"
+                          Text="{Binding coach.name}"/>
+                    <Label
+                          Grid.Row="1"
+                          Grid.Column="1"
+                          HorizontalOptions="End"
+                          Style="{DynamicResource std}"
+                          Text="{Binding name}"/>
+                      
+                    <BoxView Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="White" />
+                                <Image Source="Images/rightArrow"
+                                       Grid.Row="0" Grid.RowSpan="2" Grid.Column="2"/>
+                </Grid>
+        </DataTemplate>
+    </flv:FlowListView.FlowColumnTemplate>
+                    
+            
+
+</flv:FlowListView>
+                </StackLayout>
+
+       </StackLayout>
+            
+
     </ContentPage.Content>
 </ContentPage>

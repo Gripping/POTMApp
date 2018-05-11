@@ -83,22 +83,6 @@
 
        </StackLayout>
             
-    <!--  <StackLayout Margin="20">
-        <Label Style="{StaticResource h1}" FontAttributes="Bold">
-          <Label.Text>
-            Oprettede hold
-          </Label.Text>
-        </Label>
-        <BoxView Style="{StaticResource linje}"/>
-        <ListView ItemsSource="{Binding}">
-          <ListView.ItemTemplate>
-            <DataTemplate>
-              <TextCell Text="{Binding name}"></TextCell>
-            </DataTemplate>
-          </ListView.ItemTemplate>
-        </ListView>
-      </StackLayout>
--->
 
             
     

@@ -87,7 +87,8 @@ namespace Potm.pages
 
         public async void FlowItemTapped(object sender, ItemTappedEventArgs e)
         {
-          await Navigation.PushAsync(new ClubPage((club) e.Item));
+			club c = (club) e.Item;
+			await Navigation.PushAsync(new ClubPage(c, sportId));
         }   
     }
 }
