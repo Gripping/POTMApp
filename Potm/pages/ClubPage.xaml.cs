@@ -37,5 +37,10 @@ namespace Potm.pages
 			BindingContext = cClub;
 			flowAllTeams.FlowItemsSource = flowClubTeams;
 		}
+
+		public async void FlowSingleClubTapped(object sender, ItemTappedEventArgs e)
+        {
+			await Navigation.PushAsync(new TeamPage((teams)e.Item));
+        }
     }
 }

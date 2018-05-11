@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
- xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Potm.pages.ClubPage"
+             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Potm.pages.TeamPage"
              ControlTemplate="{DynamicResource userTemplate}"
              BackgroundImage="Images/background.png">
     <ContentPage.Content>
-              <StackLayout HorizontalOptions="Center"
+         <StackLayout HorizontalOptions="Center"
                      Margin="20">
             
                      <StackLayout 
@@ -16,7 +17,7 @@
                 
                       <Label Style="{StaticResource h1}"
                              FontAttributes="Bold"
-                             Text="{Binding clubName}"
+                             Text="{Binding name}"
                              HorizontalOptions="Start"/>
 
                         <Image Source="{Binding clubImage}"
@@ -32,40 +33,7 @@
            
             <BoxView Style="{StaticResource linje}"/>
 
-
-             <Label Style="{StaticResource h1}"
-                            FontSize="25"
-                             FontAttributes="Italic"
-                             Text="VÆLG HOLD"
-                             HorizontalOptions="FillAndExpand"
-                    XAlign="Center"
-                         
-                        Margin="0, 40, 0, 20"/>
-
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center"
-                         VerticalOptions="FillAndExpand" WidthRequest="210"
-                         Margin="0, 0, 0, 40">
-                <Button Style="{DynamicResource buttonFP2}"
-                        FontSize="9"
-                        Text="HERRER"
-                        BackgroundColor="{StaticResource orange}"
-                        HorizontalOptions="Start"
-                        WidthRequest="100"
-                        HeightRequest="25"
-                        TextColor="{DynamicResource textWhite}"
-                        VerticalOptions="Center"/>
-                <Button Style="{DynamicResource buttonFP2}"
-                        FontSize="9"
-                        WidthRequest="100"
-                        HeightRequest="25"
-                        VerticalOptions="Center"
-                        HorizontalOptions="Start"
-                        Text="DAMER"
-                        TextColor="{StaticResource textBlack}"
-                        BackgroundColor="{StaticResource textWhite}"/>
-            </StackLayout>
-            
-          <StackLayout  BackgroundColor="Transparent"
+           <StackLayout  BackgroundColor="Transparent"
                                      HorizontalOptions="FillAndExpand"
                         Margin="0, 0, 0 ,40">   
                         <Frame CornerRadius="5"
@@ -79,8 +47,8 @@
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="FillAndExpand"
                         HeightRequest="300"
-                x:Name="flowAllTeams" FlowColumnCount="1"  RowHeight="40" SeparatorVisibility="None" HasUnevenRows="false"
-                FlowRowBackgroundColor="Transparent" BackgroundColor="Transparent" FlowItemTapped="FlowSingleClubTapped"   >
+                x:Name="flowTeamMatches" FlowColumnCount="1"  RowHeight="40" SeparatorVisibility="None" HasUnevenRows="false"
+                FlowRowBackgroundColor="Transparent" BackgroundColor="Transparent"  >
 
     <flv:FlowListView.FlowColumnTemplate>
         <DataTemplate>
@@ -107,7 +75,7 @@
                           Grid.Column="0"
                           Style="{DynamicResource std}"
                                         VerticalOptions="Center"
-                          Text="{Binding name}"/>
+                          Text="{Binding matchLocation}"/>
                     <Image
                           Grid.Row="0"
                           HorizontalOptions="End"
@@ -137,9 +105,6 @@
 </flv:FlowListView>
                     </Frame>
                 </StackLayout>
-
-       </StackLayout>
-            
-
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
