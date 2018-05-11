@@ -49,7 +49,7 @@ namespace Potm.pages
 
         public async void onFilterSearch(object sender, EventArgs e)
         {
-            var radius = slider2.Value;
+            
 
             for (int i = count; i < flowSports.Count; i++)
             {   

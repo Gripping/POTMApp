@@ -7,6 +7,7 @@ namespace Potm.Data
     {
         public int id { get; set; }
         public string name { get; set; }
+		public object clubImage { get; set; }
     }
 
     public class teams
@@ -14,7 +15,7 @@ namespace Potm.Data
 		public int id { get; set; }
         public string name { get; set; }
         public string clubName { get; set; }
-        public string sport { get; set; }
+		public string sport { get; set; }
         public string gender { get; set; }
         public tManager coach { get; set; }      
     }

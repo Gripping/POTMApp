@@ -57,10 +57,10 @@ namespace Potm.Data
             return response;
         }
 
-		public async Task<singleClub> GetClub(int clubId, int sportId)
+		public async Task<singleClub> GetClub(int clubId)
         {
             HttpClient client = new HttpClient();
-			var result = await client.GetAsync(Url + "GetClub?clubId=" + clubId + "&sportId=" + sportId);
+			var result = await client.GetAsync(Url + "GetClub?clubId=" + clubId);
 			singleClub response = JsonConvert.DeserializeObject<singleClub>(await result.Content.ReadAsStringAsync());
             return response;
         }
