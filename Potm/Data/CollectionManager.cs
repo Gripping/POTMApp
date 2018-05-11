@@ -40,5 +40,15 @@ namespace Potm.Data
             return response;
 		}
 
+		public async Task<List<sport>> GetAllSports()
+        {
+            HttpClient client = new HttpClient();
+            var result = await client.GetAsync(Url + "GetAllSports");
+			List<sport> response = JsonConvert.DeserializeObject<List<sport>>(await result.Content.ReadAsStringAsync());
+
+            return response;
+        }
+
+
     }
 }
