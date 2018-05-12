@@ -17,6 +17,7 @@ namespace Potm.pages
 
 		public PlayersFromMatch(match m)
         {
+			NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
 
 			match = m;
@@ -24,12 +25,11 @@ namespace Potm.pages
         
         protected override async void OnAppearing()
 		{
-
+            
 			BindingContext = match;
-				
-               
 
-                
+			flowListPlayers.FlowItemsSource = match.matchPlayers;
+
 		}
         
     }

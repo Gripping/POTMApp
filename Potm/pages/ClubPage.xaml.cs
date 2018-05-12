@@ -48,7 +48,7 @@ namespace Potm.pages
 
 		public async void FlowSingleClubTapped(object sender, ItemTappedEventArgs e)
         {
-			await Navigation.PushAsync(new TeamPage((teams)e.Item));
+			await Navigation.PushAsync(new TeamPage((teams)e.Item, cClub.clubName, cClub.clubImage));
         }
 
         public async void AddToFavourites(object sender, EventArgs e)
@@ -59,7 +59,7 @@ namespace Potm.pages
             favTeam t = new favTeam();
             t.clubId = message;
             t.clubName = cClub.clubName;
-            t.clubLogo = cClub.clubImage.ToString();
+			t.clubLogo = cClub.clubImage.ToString();
 
             foreach (var team in cClub.clubTeams) {
                 if (message == team.id) {

@@ -23,25 +23,33 @@ namespace Potm.Data
     public class team
     {
         public string name { get; set; }
-        public List<player> players { get; set; }
+        //public List<player> players { get; set; }
         public List<match> matches { get; set; }
         public int managerId { get; set; }
         public sport sport { get; set; }
     }
 
-    public class player
+	public class player
     {
         public int id { get; set; }
         public string playerName { get; set; }
         public int playerNumber { get; set; }
         public string playerAge { get; set; }
         public object playerPicture { get; set; }
+        public string playerPosition { get; set; }
     }
 
-    public class match
+	public class match
     {
         public string matchLocation { get; set; }
         public string matchTime { get; set; }
+        public List<player> matchPlayers { get; set; }
+        public string enemyTeam { get; set; }
+        public int homeGoal { get; set; }
+        public int enemyGoal { get; set; }
+        public string status { get; set; }
+		public string clubName { get; set; }
+		public object clubImage { get; set; }
     }
 
 	public class sport

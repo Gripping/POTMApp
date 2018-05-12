@@ -1,5 +1,171 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Potm.pages.PlayersFromMatch">
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+             x:Class="Potm.pages.PlayersFromMatch"
+             BackgroundImage="Images/background.png"
+             ControlTemplate="{DynamicResource userTemplate}">
     <ContentPage.Content>
+          <StackLayout HorizontalOptions="Center"
+                     Margin="20">
+            
+                     <StackLayout 
+               
+                Orientation="Horizontal" 
+                HorizontalOptions="FillAndExpand"
+                Spacing="150">
+                
+                      <Label Style="{StaticResource h1}"
+                             FontAttributes="Bold"
+                             Text="{Binding clubName}"
+                             HorizontalOptions="Start"/>
+
+                        <Image Source="{Binding clubImage}"
+                               HorizontalOptions="End"
+                               VerticalOptions="Start"
+                               WidthRequest="35"
+                               HeightRequest="35"
+                               Scale="2"
+                               Margin="0, 0, 0 ,20"/>
+                
+                    </StackLayout>
+                
+           
+            <BoxView Style="{StaticResource linje}"/>
+
+
+            <StackLayout 
+                         Grid.Column="0"
+                         Grid.Row="1"
+                         Orientation="Horizontal"
+                         HorizontalOptions="StartAndExpand"
+                         VerticalOptions="End"
+                         Spacing="2"
+                              
+                        
+                         Margin="0, 0, 0, 0"> 
+                                            <Label
+                                              Style="{DynamicResource std}"
+                                            
+
+                                              Text="{Binding clubName}"
+
+                                              XAlign="Start"/>
+                                            
+                                            <Label Text="VS."
+                                                   
+                                         Style="{DynamicResource std}"
+
+                                        
+                                    XAlign="Center"/>
+                                            
+                                    <Label Text="{Binding enemyTeam}"
+                                           
+                                           XAlign="End"
+                                        Style="{DynamicResource std}"
+                                        />
+                                            
+                                   
+                                            
+                    </StackLayout>
+            
+
+          <StackLayout  BackgroundColor="Transparent"
+                                     HorizontalOptions="FillAndExpand"
+                        Margin="0, 0, 0 ,40">   
+                       
+                <flv:FlowListView
+
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                      
+                        x:Name="flowListPlayers"
+                   
+                FlowColumnCount="2"  RowHeight="200" SeparatorVisibility="None" HasUnevenRows="false"
+                FlowRowBackgroundColor="Transparent" BackgroundColor="Transparent"  >
+
+    <flv:FlowListView.FlowColumnTemplate>
+        <DataTemplate>
+                               
+                 <Grid Margin="10"
+                       RowSpacing="5"
+                       ColumnSpacing="10"
+                       BackgroundColor="Transparent"
+
+
+                       HorizontalOptions="FillAndExpand">
+                <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+
+                                    
+                       
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>                    
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                         <RowDefinition Height="1*"/>
+                                    
+                </Grid.RowDefinitions>
+                                     <Image     Grid.Row="1"
+                                                   Grid.RowSpan="6"
+                                                   Grid.Column="0"
+                                                   Source="Images/gradientBox.png"/>
+                                        <Image Grid.Row="0" Grid.RowSpan="7" 
+                                               
+                                               Source="{Binding playerPicture}" />
+                                        <BoxView Color="White" Opacity="0.8"  Grid.Row="3" Grid.Column="0" Grid.RowSpan="3" HorizontalOptions="FillAndExpand"
+                                         VerticalOptions="FillAndExpand"/>
+                                        <StackLayout Grid.Row="3"
+                                                     Grid.RowSpan="3"
+                                                     Grid.Column="0"
+                                                     Spacing="0"
+                                                     HorizontalOptions="FillAndExpand"
+                                                     VerticalOptions="FillAndExpand">
+                                            <Label Style="{DynamicResource std}"
+                                                   TextColor="{StaticResource textBlack}"
+                                                   Text="{Binding playerName}"
+                                                   XAlign="Center"
+                                                   VerticalOptions="Center"
+                                                   HorizontalOptions="Center"/>
+
+                                            <Label Style="{DynamicResource std}"
+                                                   TextColor="{StaticResource textBlack}"
+                                                   Text="{Binding playerNumber}"
+                                                   XAlign="Center"
+                                                   VerticalOptions="Center"
+                                                   HorizontalOptions="Center"/>
+
+                                            <Label Style="{DynamicResource std}"
+                                                   TextColor="{StaticResource textBlack}"
+                                                   Text="{Binding playerPosition}"
+                                                   XAlign="Center"
+                                                   VerticalOptions="Center"
+                                                   HorizontalOptions="Center"/>
+                                        </StackLayout>
+                   <!-- 
+                       <BoxView Color="Red"  Grid.Row="0" Grid.Column="0" Grid.RowSpan="7" Opacity="0.5" HorizontalOptions="FillAndExpand"
+                                         VerticalOptions="FillAndExpand"/>
+                                <BoxView Color="Green"  Grid.Row="1" Grid.Column="0" Grid.RowSpan="6" HorizontalOptions="FillAndExpand"
+                                         VerticalOptions="FillAndExpand"/>
+                                
+                                <BoxView Color="Blue"  Grid.Row="3" Grid.Column="0" Grid.RowSpan="3" HorizontalOptions="FillAndExpand"
+                                         VerticalOptions="FillAndExpand"/>-->
+                                
+                                
+                </Grid>
+                                    
+        </DataTemplate>
+    </flv:FlowListView.FlowColumnTemplate>
+                    
+            
+
+</flv:FlowListView>
+                    
+                </StackLayout>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

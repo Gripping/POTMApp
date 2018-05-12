@@ -14,13 +14,17 @@ namespace Potm.pages
 		int teamId;
 		readonly CollectionManager manager = new CollectionManager();
 		public FlowObservableCollection<match> flowSingleTeam = new FlowObservableCollection<match>();
+		public string clubName;
+		public object clubImage;
 
-		public TeamPage(teams tId)
+		public TeamPage(teams tId, string cName, object cImage)
         {
 			NavigationPage.SetHasNavigationBar(this, false);
 
             InitializeComponent();
 			teamId = tId.id;
+			clubName = cName;
+			clubImage = cImage;
         }
 
 
@@ -30,11 +34,13 @@ namespace Potm.pages
 
 			foreach (var t in singleTeam.matches)
 			{
+				t.clubName = clubName;
+				t.clubImage = clubImage;
 				flowSingleTeam.Add(t);
 			}
 
 			BindingContext = singleTeam;
-
+            
 			flowTeamMatches.FlowItemsSource = flowSingleTeam;
         
 
