@@ -22,13 +22,15 @@ namespace Potm.Data
 
             try {
 
-                result = await conn.InsertAsync(new Favourite
-                {
-                    clubId = t.clubId,
-                    clubLogo = t.clubLogo,
-                    clubName = t.clubName,
-                    teamName = t.teamName,
-                    teamGender = t.teamGender
+				result = await conn.InsertAsync(new Favourite
+				{
+					clubId = t.clubId,
+					clubLogo = t.clubLogo,
+					clubName = t.clubName,
+					teamName = t.teamName,
+					teamGender = t.teamGender,
+					sportName = t.sportName
+					              
                 });
                 
             }

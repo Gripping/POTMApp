@@ -193,6 +193,8 @@
     <AndroidResource Include="Resources\drawable\logoutWhiteIcon.png" />
     <AndroidResource Include="Resources\drawable\rightArrow.png" />
     <AndroidResource Include="Resources\drawable\favoritIcon.png" />
+    <AndroidResource Include="Resources\drawable\filleStar.png" />
+    <AndroidResource Include="Resources\drawable\gradientBox.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\fonts\BebasNeue.otf" />

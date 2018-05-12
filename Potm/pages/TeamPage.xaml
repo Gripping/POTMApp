@@ -46,7 +46,7 @@
                                HorizontalOptions="FillAndExpand"
                                VerticalOptions="FillAndExpand"
                                HasShadow="false"
-                               BackgroundColor="{StaticResource matBlue}">
+                               BackgroundColor="{StaticResource textWhite}">
                 <flv:FlowListView
 
                 HorizontalOptions="FillAndExpand"
@@ -66,7 +66,7 @@
 
                        HorizontalOptions="FillAndExpand">
                 <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="9*"/>
                         <ColumnDefinition Width="1*"/>
                                     
                        
@@ -81,30 +81,79 @@
                           Grid.Row="0"
                           Grid.Column="0"
                           Style="{DynamicResource std}"
-                                            FontSize="10"
-                                            Opacity="80"
+                          FontSize="10"
+                          Opacity="0.45"
                           VerticalOptions="Start"
-                          Text="{Binding matchTime}"/>
-                     <Label
-                          Grid.Row="1"
-                          Grid.Column="0"
-                          Style="{DynamicResource std}"
-                          VerticalOptions="Center"
-                          Text="{Binding matchLocation}"/>
+                          TextColor="{StaticResource textBlack}"
+                          Text="{Binding matchTime}"
+                           />
+
+                    <StackLayout 
+                         Grid.Column="0"
+                         Grid.Row="1"
+                         Orientation="Horizontal"
+                         HorizontalOptions="StartAndExpand"
+                         VerticalOptions="End"
+                         Spacing="2"
+                              
+                        
+                         Margin="0, 0, 0, 0"> 
+                                            <Label
+                                              Style="{DynamicResource std}"
+                                              TextColor="{StaticResource matBlue}"
+
+                                              Text="{Binding clubName}"
+
+                                              XAlign="Start"/>
+                                            
+                                            <Label Text="VS."
+                                                   
+                                         Style="{DynamicResource std}"
+                                          TextColor="{StaticResource matBlue}"
+                                        
+                                    XAlign="Center"/>
+                                            
+                                    <Label Text="{Binding enemyTeam}"
+                                           
+                                           XAlign="End"
+                                        Style="{DynamicResource std}"
+                                        TextColor="{StaticResource matBlue}"/>
+                                            
+                                   
+                                            
+                    </StackLayout>
+
+                                        
                    
                    
 
 
-                          <Label Grid.Column="1"
-                                 Style="{DynamicResource std}"
-                                 Grid.Row="1"
+                   <StackLayout 
+                         Grid.Column="1"
+                         Grid.Row="1"
+                         Orientation="Horizontal"
+                         HorizontalOptions="EndAndExpand"
+                         VerticalOptions="End"
+                         Spacing="2"
+                              
+                        
+                         Margin="0, 0, 0, 0"> 
+                            <Label Text="{Binding homeGoal}"
+                                   Style="{DynamicResource std}"
+                                   TextColor="{StaticResource textBlack}"
 
-                                 HorizontalOptions="End"
-                                 VerticalOptions="End"
-                                 Text="NAN/NAN"
-                                 Margin="0, 0, 0, 0"/>
-                      
-                    <BoxView Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="White" />
+                                XAlign="Start"/>
+                                    <Label Text=" - "
+                                           XAlign="Center"
+                                Style="{DynamicResource std}"
+                                TextColor="{StaticResource textBlack}"/>
+                                    <Label Text="{Binding enemyGoal}"
+                                           XAlign="End"
+                                Style="{DynamicResource std}"
+                                TextColor="{StaticResource textBlack}"/>
+                    </StackLayout>
+              
+                    <BoxView Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="{StaticResource textBlack}" />
                                 
                 </Grid>
                                     </ScrollView>

@@ -46,7 +46,9 @@
                 <ScrollView>
                   <Grid Margin="0, 0, 0, 0" RowSpacing="5" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand">
                     <Grid.ColumnDefinitions>
-                      <ColumnDefinition Width="3*"/>
+                      <ColumnDefinition Width="2*"/>
+                      <ColumnDefinition Width="1*"/>
+                                            
                       <ColumnDefinition Width="1*"/>
 
                       <ColumnDefinition Width="20"/>
@@ -57,10 +59,11 @@
                       <RowDefinition Height="1"/>
                     </Grid.RowDefinitions>
                     <Label Grid.Row="0" Grid.Column="0" Style="{DynamicResource std}" VerticalOptions="Center" Text="{Binding name}"/>
+                                        <Label Grid.Row="0" Grid.Column="1" Style="{DynamicResource std}" VerticalOptions="Center" Text="{Binding sport.name}"/>
 
-                    <Button Clicked="AddToFavourites" CommandParameter="{Binding id}" Style="{DynamicResource buttonFP2}" Margin="25, 0, 0,0"  TextColor="Transparent" Image="Images/favoritIcon.png" Grid.Row="0"  HorizontalOptions="End" VerticalOptions="Center" Grid.Column="1" />
+                    <Button Clicked="AddToFavourites" CommandParameter="{Binding id}" Style="{DynamicResource buttonFP2}" Margin="25, 0, 0,0"  TextColor="Transparent" Image="Images/favoritIcon.png" Grid.Row="0"  HorizontalOptions="End" VerticalOptions="Center" Grid.Column="2" />
                                         
-                    <Image Grid.Column="2" Grid.Row="0" Grid.RowSpan="2" VerticalOptions="Center" Source="Images/rightArrow.png" Margin="0, -7 , 0, 0"/>
+                    <Image Grid.Column="3" Grid.Row="0" Grid.RowSpan="2" VerticalOptions="Center" Source="Images/rightArrow.png" Margin="0, -7 , 0, 0"/>
 
                     <BoxView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="White"/>
 

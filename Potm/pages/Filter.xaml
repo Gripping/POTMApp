@@ -46,8 +46,6 @@
         </controls:CarouselViewControl>
       </StackLayout>
 
-      <Label Style="{DynamicResource std}" Text="INDEN FOR RADIUS AF" Margin="0,25,0,0"/>
-      <Slider x:Name="slider2" Minimum="0" Maximum="10"/>
 
       <Button Style="{StaticResource button2FP}"
               Clicked="onFilterSearch"
