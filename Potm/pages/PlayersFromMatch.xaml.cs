@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Potm.Data;
 using DLToolkit.Forms.Controls;
 using DLToolkit.Forms;
-
 using Xamarin.Forms;
 
 namespace Potm.pages
@@ -17,20 +16,17 @@ namespace Potm.pages
 
 		public PlayersFromMatch(match m)
         {
-			NavigationPage.SetHasNavigationBar(this, false);
-            InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
+			InitializeComponent();
 
 			match = m;
         }
         
-        protected override async void OnAppearing()
-		{
-            
+        protected override void OnAppearing()
+		{   
 			BindingContext = match;
 
 			flowListPlayers.FlowItemsSource = match.matchPlayers;
-
 		}
-        
     }
 }
