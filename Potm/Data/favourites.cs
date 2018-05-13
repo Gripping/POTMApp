@@ -24,4 +24,10 @@ namespace Potm.Data
 
 		public string sportName { get; set; }
     }
+
+    public class deviceId
+    {
+        [PrimaryKey, Unique]
+        public string id { get; set; }
+    }
 }

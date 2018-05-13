@@ -1,6 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Potm.pages.admin.SingleTeam">
-    <ContentPage.Content>
-        <Label x:Name="testLabel" Text="{Binding name}"></Label>
-    </ContentPage.Content>
+<ContentPage
+  xmlns="http://xamarin.com/schemas/2014/forms"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  x:Class="Potm.pages.admin.SingleTeam"
+  xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+  Title="single team"
+  BackgroundImage="Images/background.png"
+  ControlTemplate="{DynamicResource adminTemplate}">
+  <ContentPage.Content>
+    <StackLayout Margin="20">
+      <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="FillAndExpand">
+        <Label Style="{StaticResource h1}" FontAttributes="Bold" x:Name="cName"/>
+        <Label Style="{StaticResource h1}" FontAttributes="Bold" x:Name="tSport"/>
+      </StackLayout>
+      <BoxView Style="{StaticResource linje}"/>
+      <StackLayout Orientation="Horizontal" Margin="0, 20, 0, 20">
+        <Button Text="SE SPILLERE" Style="{StaticResource button2FP}" BackgroundColor="{StaticResource orange}" FontSize="12" HorizontalOptions="CenterAndExpand" TextColor="{StaticResource textWhite}"/>
+
+        <Button Text="OPRET KAMP" Style="{StaticResource button2FP}" BackgroundColor="{StaticResource orange}" FontSize="12" HorizontalOptions="CenterAndExpand" TextColor="{StaticResource textWhite}"/>
+      </StackLayout>
+
+      <Frame BackgroundColor="{StaticResource matBlue}" HasShadow="false" Margin="0" Padding="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+
+        <StackLayout Margin="0" Padding="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+          <Grid RowSpacing="0" Margin="25, 10, 25, 10">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="5*"/>
+              <ColumnDefinition Width="5*"/>
+            </Grid.ColumnDefinitions>
+            <StackLayout Grid.Row="0" Grid.Column="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+              <Label Text="{Binding sport.sportName}" Style="{DynamicResource std}"/>
+              <Label x:Name="tM" Style="{DynamicResource std}"/>
+            </StackLayout>
+
+            <StackLayout Grid.Row="0" Grid.Column="1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+              <Label x:Name="cName2" Style="{DynamicResource std}" HorizontalOptions="End"/>
+              <Label Text="{Binding name}" Style="{DynamicResource std}" HorizontalOptions="End"/>
+            </StackLayout>
+          </Grid>
+          <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+              <flv:FlowListView
+              HorizontalOptions="FillAndExpand"
+              VerticalOptions="Start"
+              x:Name="flowListAllMatches"
+              FlowColumnCount="1"
+              RowHeight="80"
+              SeparatorVisibility="None"
+              HasUnevenRows="false"
+              FlowRowBackgroundColor="{StaticResource textWhite}"
+              BackgroundColor="Transparent">
+
+              <flv:FlowListView.FlowColumnTemplate>
+                <DataTemplate>
+                  <Label Text="{matchLocation}" />
+                  <!--<Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />                    
+                        <ColumnDefinition Width="30" />                    
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40" />                    
+                        <RowDefinition Height="40" />                    
+                    </Grid.RowDefinitions>
+                    <Label Text="{Binding matchLocation}" />
+                    <BoxView BackgroundColor="Green" Grid.Column="0" Grid.Row="0" />
+                    <BoxView BackgroundColor="Red" Grid.Column="0" Grid.Row="1" />>
+                    <BoxView BackgroundColor="Blue" Grid.Column="1" Grid.Row="1" />
+                  </Grid>-->
+                </DataTemplate>
+              </flv:FlowListView.FlowColumnTemplate>
+
+            </flv:FlowListView>       
+          </StackLayout>
+        </StackLayout>
+
+      </Frame>
+    </StackLayout>
+  </ContentPage.Content>
 </ContentPage>

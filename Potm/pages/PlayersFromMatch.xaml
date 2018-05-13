@@ -48,30 +48,28 @@
           SeparatorVisibility="None"
           HasUnevenRows="false"
           FlowRowBackgroundColor="Transparent"
-          BackgroundColor="Transparent">
+          BackgroundColor="Transparent"
+          FlowItemTapped="GetSinglePlayer">
 
           <flv:FlowListView.FlowColumnTemplate>
             <DataTemplate>
 
-              <Grid Margin="10" RowSpacing="5" ColumnSpacing="10" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand">
+              <Grid Margin="10" RowSpacing="5" ColumnSpacing="10" HeightRequest="200" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand">
                 <Grid.ColumnDefinitions>
                   <ColumnDefinition Width="*"/>
-
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                  <RowDefinition Height="1*"/>
-                  <RowDefinition Height="1*"/>
-                  <RowDefinition Height="1*"/>
-                  <RowDefinition Height="1*"/>
-                  <RowDefinition Height="1*"/>
-                  <RowDefinition Height="1*"/>
-                  <RowDefinition Height="1*"/>
+                  <RowDefinition Height="20"/>
+                  <RowDefinition Height="80"/>
+                  <RowDefinition Height="20"/>
+                  <RowDefinition Height="40"/>
+                  <RowDefinition Height="40"/>
 
                 </Grid.RowDefinitions>
-                <Image Grid.Row="1" Grid.RowSpan="6" Grid.Column="0" Source="Images/gradientBox.png"/>
-                <Image Grid.Row="0" Grid.RowSpan="7" Source="{Binding playerPicture}"/>
-                <BoxView Color="White" Opacity="0.8" Grid.Row="3" Grid.Column="0" Grid.RowSpan="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
-                <StackLayout Grid.Row="3" Grid.RowSpan="3" Grid.Column="0" Spacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Image Grid.Row="1" Grid.RowSpan="5" Grid.Column="0" Source="Images/gradientBox.png" Aspect="AspectFit"/>
+                <Image Grid.Row="0" Grid.RowSpan="5" Source="{Binding playerPicture}" Aspect="Fill" Margin="10, 10, 10, 0"/>
+                <BoxView Color="White" Opacity="0.8" Grid.Row="2" Grid.Column="0" Grid.RowSpan="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                <StackLayout Grid.Row="2" Grid.RowSpan="2" Grid.Column="0" Spacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                   <Label Style="{DynamicResource std}" TextColor="{StaticResource textBlack}" Text="{Binding playerName}" XAlign="Center" VerticalOptions="Center" HorizontalOptions="Center"/>
 
                   <Label Style="{DynamicResource std}" TextColor="{StaticResource textBlack}" Text="{Binding playerNumber}" XAlign="Center" VerticalOptions="Center" HorizontalOptions="Center"/>

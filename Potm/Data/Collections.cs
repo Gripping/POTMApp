@@ -27,6 +27,11 @@ namespace Potm.Data
         public List<match> matches { get; set; }
         public int managerId { get; set; }
         public sport sport { get; set; }
+
+        public static implicit operator team(teams v)
+        {
+            throw new NotImplementedException();
+        }
     }
 
 	public class player
@@ -41,6 +46,7 @@ namespace Potm.Data
 
 	public class match
     {
+        public int id { get; set; }
         public string matchLocation { get; set; }
         public string matchTime { get; set; }
         public List<player> matchPlayers { get; set; }
@@ -90,5 +96,11 @@ namespace Potm.Data
 		public string sportName { get; set; }
     }
 
+    public class vote
+    {
+        public int matchId { get; set; }
+        public int playerId { get; set; }
+        public string deviceId { get; set; }
+    }
     
 }

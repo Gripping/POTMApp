@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using Potm.Data;
 using DLToolkit.Forms.Controls;
 using DLToolkit.Forms;
-
-
 using Xamarin.Forms;
 using System.Linq;
 
@@ -13,6 +11,7 @@ namespace Potm.pages
     public partial class ClubPage : ContentPage
     {
         public singleClub cClub = new singleClub();
+        public List<teams> cTeams = new List<teams>();
         readonly CollectionManager manager = new CollectionManager();
         readonly int clubId;
 		readonly int sportId;
@@ -35,7 +34,9 @@ namespace Potm.pages
             
             cClub = await manager.GetClub(clubId, sportId);
 
-			foreach (var t in cClub.clubTeams)
+            cTeams = cClub.clubTeams;
+
+            foreach (var t in cTeams)
 			{
                 if (flowClubTeams.All(x => x.id != t.id))
                 {

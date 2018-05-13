@@ -20,11 +20,11 @@ namespace Potm.pages.admin
             InitializeComponent();
         }
 
-        private async void btnCreatePlayer(object sender, EventArgs e)
-        {
-            var name = playerName.Text;
+        //private async void btnCreatePlayer(object sender, EventArgs e)
+        //{
+        //    var name = playerName.Text;
 
-            await manager.managerCreatePlayer(name);
-        }
+        //    await manager.managerCreatePlayer(name);
+        //}
     }
 }

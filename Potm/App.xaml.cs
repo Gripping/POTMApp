@@ -17,6 +17,7 @@ namespace Potm
     {
         readonly int clubId;
         public static FavRepository FavRepo { get; private set; }
+        public static VoteRepo VoteRepo { get; private set; }
 
         public App(string dbPath)
         {
@@ -32,6 +33,7 @@ namespace Potm
             MainPage = navPage;
 
             FavRepo = new FavRepository(dbPath);
+            VoteRepo = new VoteRepo(dbPath);
             clubId = 1128;
         }
 
@@ -53,7 +55,13 @@ namespace Potm
         public async void filterPage(object sender, EventArgs e)
         {
             string page = Application.Current.MainPage.Navigation.NavigationStack.Last().ToString();
-            if (page != "Potm.pages.Filter") {
+            if (page != "Potm.pages.Filter")
+            {
+                var modalPop = Application.Current.MainPage.Navigation.ModalStack;
+                if (modalPop.Count() != 0)
+                {
+                    await ((NavigationPage)Application.Current.MainPage).Navigation.PopModalAsync();
+                }
 				await ((NavigationPage)Application.Current.MainPage).PushAsync(new Filter());
             }
         }
@@ -63,6 +71,11 @@ namespace Potm
             string page = Application.Current.MainPage.Navigation.NavigationStack.Last().ToString();
             if (page != "Potm.pages.Favorites")
             {
+                var modalPop = Application.Current.MainPage.Navigation.ModalStack;
+                if (modalPop.Count() != 0)
+                {
+                    await ((NavigationPage)Application.Current.MainPage).Navigation.PopModalAsync();
+                }
                 await ((NavigationPage)Application.Current.MainPage).PushAsync(new Favorites());
             }
         }
@@ -72,13 +85,26 @@ namespace Potm
             string page = Application.Current.MainPage.Navigation.NavigationStack.Last().ToString();
             if (page != "Potm.pages.Logout")
             {
+                var modalPop = Application.Current.MainPage.Navigation.ModalStack;
+                if (modalPop.Count() != 0)
+                {
+                    await ((NavigationPage)Application.Current.MainPage).Navigation.PopModalAsync();
+                }
                 await ((NavigationPage)Application.Current.MainPage).PushAsync(new Logout());
             }
         }
 
         public async void backButton(object sender, EventArgs e)
         {
-            await ((NavigationPage)Application.Current.MainPage).PopAsync();
+            var modalPop = Application.Current.MainPage.Navigation.ModalStack;
+            if (modalPop.Count() != 0)
+            {
+                await ((NavigationPage)Application.Current.MainPage).Navigation.PopModalAsync();
+            }
+            else
+            {
+				await ((NavigationPage)Application.Current.MainPage).PopAsync();
+            }
         }
 
         public async void addPlayerPage(object sender, EventArgs e)

@@ -12,14 +12,8 @@ namespace Potm.Data
     {
         const string Url = "https://potm.bootsmann.dk/Umbraco/Api/Action/";
 
-        public async Task<player> managerCreatePlayer(string name)
+        public async Task<player> managerCreatePlayer(player player)
         {
-
-            player player = new player()
-            {
-                playerName = name
-            };
-
             HttpClient client = new HttpClient();
             var response = await client.PostAsync(Url + "managerCreatePlayer?clubId=1130",
                                 new StringContent(
@@ -41,6 +35,17 @@ namespace Potm.Data
                 await response.Content.ReadAsStringAsync());
             
             return clubId;
+        }
+
+        public async Task<bool> votingHandler(vote newVote)
+        {
+            HttpClient client = new HttpClient();
+            vote nVote = new vote();
+            var content = new StringContent(JsonConvert.SerializeObject(newVote), Encoding.UTF8, "application/json");
+            var response = await client.PutAsync(Url + "votingHandler", content);
+
+            return JsonConvert.DeserializeObject<bool>(
+                await response.Content.ReadAsStringAsync());
         }
     }
 }

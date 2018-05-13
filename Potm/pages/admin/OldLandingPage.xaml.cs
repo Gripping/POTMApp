@@ -20,12 +20,10 @@ namespace Potm.pages.admin
         public OldLandingPage(int clubId)
         {
             NavigationPage.SetHasNavigationBar(this, false);
-			NavigationPage.SetBackButtonTitle(this, "Menu");
             //NavigationPage.SetHasBackButton(this, false);
             this.clubId = clubId;
-
-
             InitializeComponent();
+
 			this.OnViewShown();
         }
 

@@ -5,6 +5,7 @@ using DLToolkit.Forms;
 using DLToolkit.Forms.Controls;
 using Xamarin.Forms;
 using Potm.pages;
+using System.Linq;
 
 namespace Potm.pages
 {
@@ -36,7 +37,10 @@ namespace Potm.pages
 			{
 				t.clubName = clubName;
 				t.clubImage = clubImage;
-				flowSingleTeam.Add(t);
+                if (flowSingleTeam.All(x => x.matchTime != t.matchTime))
+                {
+					flowSingleTeam.Add(t);
+                }
 			}
 
 			BindingContext = singleTeam;

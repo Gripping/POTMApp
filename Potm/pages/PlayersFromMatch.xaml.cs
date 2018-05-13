@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using Potm.Data;
-using DLToolkit.Forms.Controls;
 using DLToolkit.Forms;
+using DLToolkit.Forms.Controls;
 using Xamarin.Forms;
 
 namespace Potm.pages
@@ -28,5 +28,11 @@ namespace Potm.pages
 
 			flowListPlayers.FlowItemsSource = match.matchPlayers;
 		}
+
+        public async void GetSinglePlayer(object sender, ItemTappedEventArgs e)
+        {
+            var PlayerDetail = new PlayerDetail((player) e.Item, match.clubImage.ToString(), match.clubName, match.id);
+            await Navigation.PushModalAsync(PlayerDetail);
+        }
     }
 }

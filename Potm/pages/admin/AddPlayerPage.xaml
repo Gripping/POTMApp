@@ -49,19 +49,19 @@
 
         <Label Grid.Row="0" Grid.Column="0" Margin="0, 30, 0, 0" Text="Navn" Style="{StaticResource orangeText-sm}"/>
         <Entry Grid.Row="1" Grid.Column="0" Margin="-20, 0, 0, 0" Style="{StaticResource textInput}"
-               x:Name="playerName"/>
+               x:Name="pName"/>
 
         <Label Grid.Row="2" Grid.Column="0" Margin="0, 30, 0, 0" Text="Nr." Style="{StaticResource orangeText-sm}"/>
         <Entry Grid.Row="3" Grid.Column="0" Margin="-20, 0, 0, 0" Style="{StaticResource textInput}"
-               x:Name="playerNumber"/>
+               x:Name="pNumber"/>
 
         <Label Grid.Row="4" Grid.Column="0" Margin="0, 30, 0, 0" Text="Position" Style="{StaticResource orangeText-sm}"/>
         <Entry Grid.Row="5" Grid.Column="0" Margin="-20, 0, 0, 0" Style="{StaticResource textInput}"
-               x:Name="playerPosition"/>
+               x:Name="pPosition"/>
                 
         <Label Grid.Row="6" Grid.Column="0" Margin="0, 30, 0, 0" Text="Fødselsdag" Style="{StaticResource orangeText-sm}"/>
         <Entry Grid.Row="7" Grid.Column="0" Margin="-20, 0, 0, 0" Style="{StaticResource textInput}" Placeholder="xx-xx-xxxx"
-               x:Name="playerBirthday"/>
+               x:Name="pAge"/>
 
       </Grid>
 
