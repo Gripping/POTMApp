@@ -12,7 +12,7 @@
 
       <Label Style="{StaticResource h1}" FontAttributes="Bold">
         <Label.Text>
-          TILFØJ KAMP
+          VÆLG SPORT
 
         </Label.Text>
       </Label>
