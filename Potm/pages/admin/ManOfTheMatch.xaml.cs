@@ -18,12 +18,11 @@ namespace Potm.pages.admin
         {
             InitializeComponent();
 
-			nameOfWinner.Text = playerName;
-			numberOfVotes.Text = "Med: " + __votes__ + " Stemmer";
+			//nameOfWinner.Text = playerName;
+			//numberOfVotes.Text = "Med: " + __votes__ + " Stemmer";
 
 
         }
-
 
 		public async void OnAppearing()
 		{
@@ -32,6 +31,5 @@ namespace Potm.pages.admin
 			flowListTest.FlowItemsSource = flowTeams;
 
 		}
-        }
     }
 }

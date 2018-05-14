@@ -8,27 +8,8 @@
         <StackLayout HorizontalOptions="Center"
                      VerticalOptions="Center"
                      Margin="20">
-            <Image Source="Images/logoImg.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
-            <Grid Margin="0, -7, 0, 70"
-                  VerticalOptions="Center"
-                  HorizontalOptions="Center"
-                  RowSpacing="20"
-                  ColumnSpacing="15">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="33" />
+            <Image Source="Images/logo.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="0, 0, 0, 100"/>
 
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="33" />
-                    <ColumnDefinition Width="33" />
-                    <ColumnDefinition Width="33" />
-                    <ColumnDefinition Width="33" />
-                </Grid.ColumnDefinitions>
-                <Image Grid.Row="0" Grid.Column="0" Source="Images/soccer-ball-variant.png" />
-                <Image Grid.Row="0" Grid.Column="1" Source="Images/football.png" />
-                <Image Grid.Row="0" Grid.Column="2" Source="Images/puck.png" />
-                <Image Grid.Row="0" Grid.Column="3" Source="Images/basketball.png" />
-            </Grid>
 
 
 
