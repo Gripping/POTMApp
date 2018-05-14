@@ -44,31 +44,44 @@ namespace Potm.pages.admin
 				sportId = sId               
 
             };
-
-
-
-			bool status = await manager.managerCreateTeam(team, clubId);
-
-            if (status == true)
+            
+			if (coachPassword.Text == coachPassword2.Text && coachPassword.Text.Length > 9)
             {
-				string username = teamName.Text.Replace(" ", "").ToLower();
-				teamName.Text = "";
-				coachName.Text = "";
-				coachPassword.Text = "";
-				coachPassword2.Text = "";
-				managerEmail.Text = "";
+				bool status = await manager.managerCreateTeam(team, clubId);
 
-                eMessage.Text = "Hold Tilføjet" +
-					            "";
-                eMessage.TextColor = Color.Green;
-				eMessage2.Text = "Hold leder login: " + username + " SKRIV DETTE NED ";
-                eMessage2.TextColor = Color.Green;
+				if (status == true)
+                {
+					string username = coachName.Text.Replace(" ", "").ToLower();
+                    teamName.Text = "";
+                    coachName.Text = "";
+                    coachPassword.Text = "";
+                    coachPassword2.Text = "";
+                    managerEmail.Text = "";
+
+                    eMessage.Text = "Hold Tilføjet" +
+                                    "";
+                    eMessage.TextColor = Color.Green;
+                    eMessage2.Text = "Hold leder login: " + username + " SKRIV DETTE NED ";
+                    eMessage2.TextColor = Color.Green;
+                }
+                else
+                {
+                    eMessage.Text = "Ups! Noget gik galt, prøv igen";
+
+                }
             }
             else
             {
-                eMessage.Text = "Ups! Noget gik galt, prøv igen";
-
+				wrongPassword.Text = "Passwords skal være ens eller indeholde over 10 tegn";
             }
+
+
+           
+        }
+
+		private async void addPlayersToTeam(object sender, EventArgs e)
+        {
+			await Navigation.PushAsync(new ChoosePlayers(clubId));
         }
        
     }

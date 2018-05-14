@@ -8,6 +8,7 @@ namespace Potm.Data
         public int id { get; set; }
         public string name { get; set; }
 		public object clubImage { get; set; }
+        
     }
 
     public class teams
@@ -28,10 +29,7 @@ namespace Potm.Data
         public int managerId { get; set; }
         public sport sport { get; set; }
 
-        public static implicit operator team(teams v)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 
 	public class player
