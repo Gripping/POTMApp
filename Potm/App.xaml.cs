@@ -112,7 +112,7 @@ namespace Potm
             string page = Application.Current.MainPage.Navigation.NavigationStack.Last().ToString();
             if (page != "Potm.pages.admin.AddPlayerPage")
             {
-                await ((NavigationPage)Application.Current.MainPage).PushAsync(new AddPlayerPage());
+                await ((NavigationPage)Application.Current.MainPage).PushAsync(new AddPlayerPage(1128));
             }
         }
 

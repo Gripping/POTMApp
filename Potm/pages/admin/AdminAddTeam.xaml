@@ -23,13 +23,21 @@
               RowSpacing="0"
               Margin="0, -30, 0 ,0">
         <Grid.RowDefinitions>
-            <RowDefinition Height="40"/>
-            <RowDefinition  Height="50"/>
             <RowDefinition  Height="40"/>
             <RowDefinition  Height="50"/>
             <RowDefinition  Height="40"/>
             <RowDefinition  Height="50"/>
+            <RowDefinition  Height="40"/>
             <RowDefinition  Height="50"/>
+            <RowDefinition  Height="50"/>
+            <RowDefinition  Height="50"/>
+            <RowDefinition  Height="40"/>
+            <RowDefinition  Height="50"/>
+            <RowDefinition  Height="50"/>
+            <RowDefinition  Height="50"/>
+            <RowDefinition  Height="50"/>
+           
+                        
         </Grid.RowDefinitions>
                 
         <Grid.ColumnDefinitions>
@@ -46,35 +54,40 @@
                 HeightRequest="40"
                 WidthRequest="320"
                 Margin="-20, 0, 0, 0"
-                SelectedIndex="1" > 
+                x:Name="listOfSports"
+                SelectedItem="{Binding id}"
+                ItemDisplayBinding="{Binding sportName}"> 
 
-        <Picker.Items>
-                      <x:String>hello</x:String>
-                      <x:String>hello1</x:String>
-                      <x:String>hello2</x:String>
-                    </Picker.Items>
-                </Picker>
-        <Label Grid.Row="2" Grid.Column="0" Margin="0, 30, 0, 0" Text="Holdnavn" Style="{StaticResource orangeText-sm}"/>
-        <Entry Grid.Row="3" Grid.Column="0" Margin="-20, 0, 0, 0" Style="{StaticResource textInput}"/>
+           <Picker.ItemsSource>
+                     
+                    </Picker.ItemsSource>
+                </Picker>        
+        <Label Grid.Row="2" Grid.Column="0" Margin="0, 30, 0, 0" Text="Holdnavn" Style="{StaticResource orangeText-sm}" />
+        <Entry Grid.Row="3" Grid.Column="0" Margin="-20, 0, 0, 0" Style="{StaticResource textInput}"
+               x:Name="teamName"/>
                 
         <Label Grid.Row="4" Grid.Column="0" Margin="0, 30, 0, 0" Text="Træner" Style="{StaticResource orangeText-sm}"/>        
-        <Entry Grid.Row="5" Grid.Column="0"  Margin="-20, 0, 0, 0" Style="{StaticResource textInput}"/>
-        <Label Grid.Row="6" Grid.Column="0" Margin="0, 30, 0, 0" Text="Sportsgren" Style="{StaticResource orangeText-sm}"/>                
-        <Picker Grid.Row="7"
-                Grid.Column="0"
-                VerticalOptions="Center"
-                HorizontalOptions="Center"
-                HeightRequest="40"
-                WidthRequest="320"
-                Margin="-20, 0, 0, 0"
-                SelectedIndex="1" > 
+        <Entry Grid.Row="5" Grid.Column="0"  Margin="-20, 0, 0, 0" Style="{StaticResource textInput}"
+               x:Name="coachName"/>
 
-        <Picker.Items>
-                      <x:String>hello</x:String>
-                      <x:String>hello1</x:String>
-                      <x:String>hello2</x:String>
-                    </Picker.Items>
-                </Picker>        
+        <Label Grid.Row="6" Grid.Column="0" Margin="0, 30, 0, 0" Text="Træner email" Style="{StaticResource orangeText-sm}"/>        
+        <Entry Grid.Row="7" Grid.Column="0"  Margin="-20, 0, 0, 0" Style="{StaticResource textInput}"
+               x:Name="managerEmail"/>
+                    
+        <Label Grid.Row="8" Grid.Column="0" Margin="0, 30, 0, 0" Text="Træner kodeord" Style="{StaticResource orangeText-sm}"/>        
+        <Entry Grid.Row="9" Grid.Column="0"  Margin="-20, 0, 0, 0" Style="{StaticResource textInput}"
+               x:Name="coachPassword"/>
+                   
+
+        <Label Grid.Row="10" Grid.Column="0" Margin="0, 30, 0, 0" Text="Gentag kodeord" Style="{StaticResource orangeText-sm}"/>        
+        <Entry Grid.Row="11" Grid.Column="0"  Margin="-20, 0, 0, 0" Style="{StaticResource textInput}"
+               x:Name="coachPassword2"/>
+                     <Label Grid.Row="12" Grid.Column="0" Style="{DynamicResource eMsg}" x:Name="wrongPassword"/>
+                    
+                    
+        
+
+        
        
 
        
@@ -157,6 +170,11 @@
                                />
                     </StackLayout>
                 </Grid>
+
+                <Label x:Name="eMessage" Style="{StaticResource eMsg}" />
+                 <Label x:Name="eMessage2" Style="{StaticResource eMsg}" />
+                <Button x:Name="teamAddBtn" BackgroundColor="{StaticResource green}" Text="ADD TEAM" FontFamily="OSWALD" TextColor="{StaticResource textWhite}" WidthRequest="200" HeightRequest="30" HorizontalOptions="Center" Clicked="btnCreateTeam" VerticalOptions="Center" Margin="0, 0, 0 ,0"/>
+                <Button x:Name="playersAddBtn" BackgroundColor="{StaticResource green}" Text="ADD PLAYERS TO TEAM" FontFamily="OSWALD" TextColor="{StaticResource textWhite}" WidthRequest="200" HeightRequest="30" HorizontalOptions="Center" Clicked="addPlayersToTeam" VerticalOptions="Center" Margin="0, 0, 0 ,0"/>
                 
                 
 

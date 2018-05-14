@@ -5,7 +5,7 @@
              Title="VELKOMMEN!"
              BackgroundColor="#F4F4F4"
              BackgroundImage="Images/background.png"
-             ControlTemplate="{DynamicResource newUserTemplate}"
+
 
 
              >
@@ -55,7 +55,9 @@ Du vil i de næste 4 trin kunne oprette dit hold med spillerinfo, kampinfo og sp
                 <Image Grid.Row="1" Grid.Column="1" Source="Images/cirkel4.png" />
             </Grid>
 
-            <Button x:Name="btnGetStarted" Text="OPRET HOLD"
+            <Button x:Name="btnGetStarted"
+                    Clicked="CreateTeam"
+                    Text="OPRET HOLD"
                     BackgroundColor="{StaticResource orange}"
                     TextColor="White"
                     HorizontalOptions="Center"
@@ -65,16 +67,7 @@ Du vil i de næste 4 trin kunne oprette dit hold med spillerinfo, kampinfo og sp
                     FontFamily="Oswald"
                     BorderRadius="10"
                     />
-            <Button x:Name="btnGetCreateTeam" Text="OPRET KAMP"
-                    BackgroundColor="{StaticResource orange}"
-                    TextColor="White"
-                    HorizontalOptions="Center"
-                    WidthRequest="250"
-                    HeightRequest="34"
-                    Margin="0, 5, 0, 0"
-                    FontFamily="Oswald"
-                    BorderRadius="10"
-                    />
+            
 
         </StackLayout>
     </ContentPage.Content>

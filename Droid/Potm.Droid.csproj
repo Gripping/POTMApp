@@ -195,6 +195,7 @@
     <AndroidResource Include="Resources\drawable\favoritIcon.png" />
     <AndroidResource Include="Resources\drawable\filleStar.png" />
     <AndroidResource Include="Resources\drawable\gradientBox.png" />
+    <AndroidResource Include="Resources\drawable\checkedSign.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\fonts\BebasNeue.otf" />

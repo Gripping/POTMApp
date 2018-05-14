@@ -27,11 +27,13 @@
                 <Setter Property="FontFamily" Value="Oswald"/>
                 <Setter Property="TextColor" Value="{StaticResource textWhite}"/>
             </Style>
+            
             <Style x:Key="std-sm" TargetType="Label">
                 <Setter Property="FontSize" Value="12" />
                 <Setter Property="FontFamily" Value="Oswald"/>
                 <Setter Property="TextColor" Value="{StaticResource textWhite}"/>
             </Style>
+            
             <Style x:Key="h1" TargetType="Label">
                 <Setter Property="FontSize" Value="35" />
                 <Setter Property="FontFamily" Value="BebasNeue"/>
@@ -61,6 +63,14 @@
                 <Setter Property="FontSize" Value="10" />
                 <Setter Property="FontFamily" Value="Oswald"/>
                 <Setter Property="TextColor" Value="{StaticResource orange}"/>
+            </Style>
+            <Style x:Key="eMsg" TargetType="Label">
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="FontFamily" Value="Oswald"/>
+                <Setter Property="TextColor" Value="Red"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                 
             </Style>
 
             <Style x:Key="buttonFP" TargetType="Button">
@@ -117,7 +127,7 @@
             <ControlTemplate x:Key="userTemplate">
 
                 <StackLayout HorizontalOptions="FillAndExpand"
-                           VerticalOptions="FillAndExpand"
+                             VerticalOptions="FillAndExpand"
                              >
                     <Grid HorizontalOptions="FillAndExpand"
                           VerticalOptions="FillAndExpand"

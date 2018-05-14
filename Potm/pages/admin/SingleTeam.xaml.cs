@@ -49,5 +49,10 @@ namespace Potm.pages.admin
 
 		}
 
+		public async void createMatchBtn(object sender, EventArgs e)
+		{
+			await Navigation.PushAsync(new AddMatch(teamId));
+		}
+
     }
 }
