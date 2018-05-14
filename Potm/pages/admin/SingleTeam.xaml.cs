@@ -21,10 +21,10 @@ namespace Potm.pages.admin
         {
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
-			BindingContext = t;
 
             teamId = cT.id;
             cTeam = cT;
+			BindingContext = t;
 
             cName.Text = cT.clubName;
             cName2.Text = cT.clubName;

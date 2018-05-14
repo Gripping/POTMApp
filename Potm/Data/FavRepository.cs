@@ -21,7 +21,6 @@ namespace Potm.Data
             int result = 0;
 
             try {
-
 				result = await conn.InsertAsync(new Favourite
 				{
 					clubId = t.clubId,
@@ -32,14 +31,11 @@ namespace Potm.Data
 					sportName = t.sportName
 					              
                 });
-                
             }
             catch 
             {
                 result = 0;
             }
-
-
         }
 
         public async Task<List<Favourite>> GetFavs()

@@ -63,6 +63,8 @@
         <Entry Grid.Row="7" Grid.Column="0" Margin="-20, 0, 0, 0" Style="{StaticResource textInput}" Placeholder="xx-xx-xxxx"
                x:Name="pAge"/>
 
+        
+
       </Grid>
 
       <Button BackgroundColor="{StaticResource green}" Text="GODKEND" FontFamily="OSWALD" TextColor="{StaticResource textWhite}" WidthRequest="200" HeightRequest="30" HorizontalOptions="Center" VerticalOptions="Center" Margin="0, 0, 0 ,0"/>

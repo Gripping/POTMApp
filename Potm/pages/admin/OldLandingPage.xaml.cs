@@ -52,7 +52,5 @@ namespace Potm.pages.admin
 		public async void Handle_FlowItemTapped(object sender, ItemTappedEventArgs e){
 			await Navigation.PushAsync(new SingleTeam((teams) e.Item));
 		}
-
-       
     }
 }
