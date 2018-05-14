@@ -8,23 +8,7 @@
         <StackLayout HorizontalOptions="Center"
                      VerticalOptions="Center"
                      Margin="20">
-
-             <Label Style="{StaticResource FPBig2}"
-                   FontAttributes="Bold"
-                   XAlign="Center">
-                <Label.Text>
-                    POTM
-
-                </Label.Text>
-            </Label>
-            <Label Style="{StaticResource FPBig}"
-                   XAlign="Center"
-                   Margin="0, -30, 0, 0">
-                <Label.Text>
-                    PLAYER OF THE MATCH
-
-                </Label.Text>
-            </Label>
+            <Image Source="Images/logoImg.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
             <Grid Margin="0, -7, 0, 70"
                   VerticalOptions="Center"
                   HorizontalOptions="Center"

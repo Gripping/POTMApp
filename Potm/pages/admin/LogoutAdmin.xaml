@@ -72,6 +72,7 @@
                      />
              <Button x:Name="btn5" 
                      Text="LOGUD"
+                     Clicked="logoutAdmin"
                      Style="{StaticResource button2FP}"
                      />
 

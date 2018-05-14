@@ -9,12 +9,15 @@ namespace Potm.pages.admin
     public partial class AddMatch : ContentPage
     {
 		public int teamId;
+		public int clubId;
 		readonly ActionsManager manager = new ActionsManager();
-        public AddMatch(int tId)
+
+        public AddMatch(int tId, int cId)
         {
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
 			teamId = tId;
+			clubId = cId;
         }
 
 		public async void createMatch(object sender, EventArgs e)
@@ -32,7 +35,7 @@ namespace Potm.pages.admin
 			int matchId = await manager.managerCreateMatch(newMatch, teamId);
          
 
-			await Navigation.PushAsync(new ChoosePlayers(0, teamId, matchId));
+			await Navigation.PushAsync(new ChoosePlayers(clubId, teamId, matchId));
 		}
         
 
