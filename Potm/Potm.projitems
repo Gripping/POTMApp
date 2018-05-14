@@ -98,6 +98,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)pages\admin\ManOfTheMatch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
@@ -178,6 +182,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Data\VoteRepo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)pages\admin\ChoosePlayers.xaml.cs">
       <DependentUpon>ChoosePlayers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)pages\admin\ManOfTheMatch.xaml.cs">
+      <DependentUpon>ManOfTheMatch.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
