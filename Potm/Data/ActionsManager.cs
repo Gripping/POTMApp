@@ -67,7 +67,7 @@ namespace Potm.Data
 			bool result = false;
 			if (matchId == 0)
 			{
-				var response = await client.PutAsync(Url + "managerChoosePlayers?teamId=" + teamId,
+				var response = await client.PutAsync(Url + "managerChoosePlayer?teamId=" + teamId,
 				                                     new StringContent(
 					                                     JsonConvert.SerializeObject(allPlayers),
 					                                     Encoding.UTF8, "application/json"));
