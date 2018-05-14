@@ -16,41 +16,53 @@ namespace Potm.pages.admin
         readonly CollectionManager cManager = new CollectionManager();
         public List<sport> AllSports = new List<sport>();
         public int clubId;
-        int sportId;
 
-        public AdminAddTeam(int clubId)
+        public AdminAddTeam(int cId)
         {
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
+			clubId = cId;
+        }
 
+		protected override async void OnAppearing()
+        {
+            AllSports = await cManager.GetAllSports();
+			listOfSports.ItemsSource = AllSports;
         }
        
 		private async void btnCreateTeam(object sender, EventArgs e)
         {
+			var picker = listOfSports;
+            sport typeOfSport = (sport)picker.SelectedItem;
+            int sId = typeOfSport.id;
 			newTeam team = new newTeam()
 			{
-				teamName = teamName.Text
+				teamName = teamName.Text,
 				managerName = coachName.Text,
 				managerPass = coachPassword.Text,
-
+				managerEmail = managerEmail.Text,
+				sportId = sId               
 
             };
 
-            var picker = dropDownSport;
-            sport typeOfSport = (sport)picker.SelectedItem;
-            sportId = typeOfSport.id;
 
-            bool status = await manager.managerCreatePlayer(player, clubId, sportId);
+
+			bool status = await manager.managerCreateTeam(team, clubId);
 
             if (status == true)
             {
-                pName.Text = "";
-                pNumber.Text = "";
-                pAge.Text = "";
-                pPosition.Text = "";
+				string username = teamName.Text.Replace(" ", "").ToLower();
+				teamName.Text = "";
+				coachName.Text = "";
+				coachPassword.Text = "";
+				coachPassword2.Text = "";
+				managerEmail.Text = "";
 
-                eMessage.Text = "Spiller tilføjet!";
+                eMessage.Text = "Hold Tilføjet" +
+					            "";
                 eMessage.TextColor = Color.Green;
+				eMessage2.Text = "Hold leder login: " + username + " SKRIV DETTE NED ";
+                eMessage2.TextColor = Color.Green;
             }
             else
             {

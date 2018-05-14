@@ -47,5 +47,20 @@ namespace Potm.Data
             return JsonConvert.DeserializeObject<bool>(
                 await response.Content.ReadAsStringAsync());
         }
+
+		public async Task<bool> managerCreateTeam(newTeam team, int clubId)
+        {
+            HttpClient client = new HttpClient();
+            var response = await client.PutAsync(Url + "managerCreateTeam?clubId=" + clubId,
+                                new StringContent(
+                                    JsonConvert.SerializeObject(team),
+                                    Encoding.UTF8, "application/json"));
+
+            return JsonConvert.DeserializeObject<bool>(
+                await response.Content.ReadAsStringAsync());
+
+
+        }
+
     }
 }
