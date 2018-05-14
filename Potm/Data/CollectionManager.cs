@@ -65,10 +65,10 @@ namespace Potm.Data
             return response;
         }
 
-        public async Task<List<player>> GetAllPlayers(int clubId, int matchId)
+        public async Task<List<player>> GetAllPlayers(int clubId, int teamId)
         {
             List<player> response = new List<player>();
-            if(matchId == 0)
+			if(teamId == 0)
             {
                 HttpClient client = new HttpClient();
                 var result = await client.GetAsync(Url + "GetAllPlayers?clubId=" + clubId);
@@ -78,7 +78,7 @@ namespace Potm.Data
             else
             {
 				HttpClient client = new HttpClient();
-				var result = await client.GetAsync(Url + "GetAllPlayers?clubId=" + clubId + "&matchId=" + matchId);
+				var result = await client.GetAsync(Url + "GetAllPlayers?clubId=" + clubId + "&teamId=" + teamId);
 
                 response = JsonConvert.DeserializeObject<List<player>>(await result.Content.ReadAsStringAsync());
             }   

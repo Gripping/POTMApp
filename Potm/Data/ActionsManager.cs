@@ -75,7 +75,7 @@ namespace Potm.Data
             }
             else
             {
-                var response = await client.PutAsync(Url + "managerChoosePlayers?teamId=" + teamId + "&matchId=" + matchId,
+                var response = await client.PutAsync(Url + "managerChoosePlayer?teamId=" + teamId + "&matchId=" + matchId,
                                                      new StringContent(
                                                          JsonConvert.SerializeObject(allPlayers),
                                                          Encoding.UTF8, "application/json"));

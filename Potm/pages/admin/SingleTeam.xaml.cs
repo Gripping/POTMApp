@@ -16,15 +16,16 @@ namespace Potm.pages.admin
         public team t = new team();
 		readonly CollectionManager manager = new CollectionManager();
         readonly int teamId;
+		public int clubId;
 
-		public SingleTeam(teams cT)
+		public SingleTeam(teams cT, int cId)
         {
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
 
             teamId = cT.id;
             cTeam = cT;
-			BindingContext = t;
+			      clubId = cId;
 
             cName.Text = cT.clubName;
             cName2.Text = cT.clubName;
@@ -51,7 +52,7 @@ namespace Potm.pages.admin
 
 		public async void createMatchBtn(object sender, EventArgs e)
 		{
-			await Navigation.PushAsync(new AddMatch(teamId));
+			await Navigation.PushAsync(new AddMatch(teamId, clubId));
 		}
 
     }

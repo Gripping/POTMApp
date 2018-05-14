@@ -45,9 +45,10 @@ namespace Potm.pages.admin
             }
         }
 
-    		public async void Handle_FlowItemTapped(object sender, ItemTappedEventArgs e){
-    			await Navigation.PushAsync(new SingleTeam((teams) e.Item));
-    		}
+		public async void Handle_FlowItemTapped(object sender, ItemTappedEventArgs e){
+			teams team = (teams)e.Item;
+			await Navigation.PushAsync(new SingleTeam(team, clubId));
+		}
 
     		public async void navAddTeam(object sender, EventArgs e){
     			await Navigation.PushAsync(new AdminAddTeam(clubId));

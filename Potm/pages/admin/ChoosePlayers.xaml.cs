@@ -22,12 +22,12 @@ namespace Potm.pages.admin
 		public int matchId;
 		public int teamId;
 
-		public ChoosePlayers(int cId = 0, int teamId = 0, int mId = 0)
+		public ChoosePlayers(int cId = 0, int tId = 0, int mId = 0)
 		{
 			NavigationPage.SetHasNavigationBar(this, false);
 			InitializeComponent();
 
-
+			teamId = tId;
 			clubId = cId;
 			if (mId != 0)
 			{
@@ -39,9 +39,7 @@ namespace Potm.pages.admin
 
 		protected override async void OnAppearing()
 		{
-			//flowAllPlayers.FlowItemsSource = flowPlayers;
-			flowAllPlayers.FlowItemsSource = await cManager.GetAllPlayers(clubId, matchId);
-
+			flowAllPlayers.FlowItemsSource = await cManager.GetAllPlayers(clubId, teamId);
 		}
 
 		protected async void addPlayerToList(object sender, ItemTappedEventArgs e)
@@ -56,7 +54,15 @@ namespace Potm.pages.admin
 
 		protected async void sendPlayers(object sender, EventArgs e)
 		{
-			await manager.choosePlayers(selectedPlayers, 0, matchId);
+			await manager.choosePlayers(selectedPlayers, teamId, matchId);
+
+			if (teamId != 0){
+				eMessage.Text = "Spillere Tilføjet";
+                eMessage.TextColor = Color.Green;
+			}else{
+				eMessage.Text = "Ups noget gik galt";
+				eMessage.TextColor = Color.Red;
+			}
 		}
 	}
 }
