@@ -39,22 +39,19 @@
 
           <controls:CarouselViewControl.ItemTemplate>
             <DataTemplate>
-                <Image Source="{Binding sportImage}" />
+              <Image Source="{Binding sportImage}"/>
             </DataTemplate>
           </controls:CarouselViewControl.ItemTemplate>
 
         </controls:CarouselViewControl>
       </StackLayout>
 
-
-      <Button Style="{StaticResource button2FP}"
-              Clicked="onFilterSearch"
-              x:Name="filterSearchBtn">
+      <Button Style="{StaticResource button2FP}" Clicked="onFilterSearch" x:Name="filterSearchBtn">
         <Button.Text>
-            Søg            
-        </Button.Text>      
+          Søg
+        </Button.Text>
       </Button>
-            
+
     </StackLayout>
 
   </ContentPage.Content>

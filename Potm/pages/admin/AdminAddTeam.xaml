@@ -1,185 +1,147 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             x:Class="Potm.pages.admin.AdminAddTeam"
-             BackgroundImage="Images/background.png"
-              ControlTemplate="{DynamicResource adminTemplate}">
-    <ContentPage.Content>
-        <ScrollView>
-     <StackLayout HorizontalOptions="Center"
-                     Margin="20">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Potm.pages.admin.AdminAddTeam" BackgroundImage="Images/background.png" ControlTemplate="{DynamicResource adminTemplate}">
+  <ContentPage.Content>
+    <ScrollView>
+      <StackLayout HorizontalOptions="Center" Margin="20">
 
-                      <Label Style="{StaticResource h1}"
-                   FontAttributes="Bold">
-                <Label.Text>
-                    Indtast Oplysninger
+        <Label Style="{StaticResource h1}" FontAttributes="Bold">
+          <Label.Text>
+            Indtast Oplysninger
 
-                </Label.Text>
-            </Label>
-            <BoxView Style="{StaticResource linje}"/>
-            
-        <Grid HorizontalOptions="Center"
-              VerticalOptions="Center"
-              RowSpacing="0"
-              Margin="0, -30, 0 ,0">
-        <Grid.RowDefinitions>
-            <RowDefinition  Height="40"/>
-            <RowDefinition  Height="50"/>
-            <RowDefinition  Height="40"/>
-            <RowDefinition  Height="50"/>
-            <RowDefinition  Height="40"/>
-            <RowDefinition  Height="50"/>
-            <RowDefinition  Height="50"/>
-            <RowDefinition  Height="50"/>
-            <RowDefinition  Height="40"/>
-            <RowDefinition  Height="50"/>
-            <RowDefinition  Height="50"/>
-            <RowDefinition  Height="50"/>
-            <RowDefinition  Height="50"/>
-           
-                        
-        </Grid.RowDefinitions>
-                
-        <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*"/>
-                   
+          </Label.Text>
+        </Label>
+        <BoxView Style="{StaticResource linje}"/>
 
-                </Grid.ColumnDefinitions>       
+        <Grid HorizontalOptions="Center" VerticalOptions="Center" RowSpacing="0" Margin="0, -30, 0 ,0">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
 
-       <Label Grid.Row="0" Grid.Column="0" Margin="0, 30, 0, 0" Text="Sportsgren" Style="{StaticResource orangeText-sm}"/>                
-        <Picker Grid.Row="1"
-                Grid.Column="0"
-                VerticalOptions="Center"
-                HorizontalOptions="Center"
-                HeightRequest="40"
-                WidthRequest="320"
-                Margin="-20, 0, 0, 0"
-                x:Name="listOfSports"
-                SelectedItem="{Binding id}"
-                ItemDisplayBinding="{Binding sportName}"> 
+          </Grid.RowDefinitions>
 
-           <Picker.ItemsSource>
-                     
-                    </Picker.ItemsSource>
-                </Picker>        
-        <Label Grid.Row="2" Grid.Column="0" Margin="0, 30, 0, 0" Text="Holdnavn" Style="{StaticResource orangeText-sm}" />
-        <Entry Grid.Row="3" Grid.Column="0" Margin="-20, 0, 0, 0" Style="{StaticResource textInput}"
-               x:Name="teamName"/>
-                
-        <Label Grid.Row="4" Grid.Column="0" Margin="0, 30, 0, 0" Text="Træner" Style="{StaticResource orangeText-sm}"/>        
-        <Entry Grid.Row="5" Grid.Column="0"  Margin="-20, 0, 0, 0" Style="{StaticResource textInput}"
-               x:Name="coachName"/>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
 
-        <Label Grid.Row="6" Grid.Column="0" Margin="0, 30, 0, 0" Text="Træner email" Style="{StaticResource orangeText-sm}"/>        
-        <Entry Grid.Row="7" Grid.Column="0"  Margin="-20, 0, 0, 0" Style="{StaticResource textInput}"
-               x:Name="managerEmail"/>
-                    
-        <Label Grid.Row="8" Grid.Column="0" Margin="0, 30, 0, 0" Text="Træner kodeord" Style="{StaticResource orangeText-sm}"/>        
-        <Entry Grid.Row="9" Grid.Column="0"  Margin="-20, 0, 0, 0" Style="{StaticResource textInput}"
-               x:Name="coachPassword"/>
-                   
+          </Grid.ColumnDefinitions>
 
-        <Label Grid.Row="10" Grid.Column="0" Margin="0, 30, 0, 0" Text="Gentag kodeord" Style="{StaticResource orangeText-sm}"/>        
-        <Entry Grid.Row="11" Grid.Column="0"  Margin="-20, 0, 0, 0" Style="{StaticResource textInput}"
-               x:Name="coachPassword2"/>
-                     <Label Grid.Row="12" Grid.Column="0" Style="{DynamicResource eMsg}" x:Name="wrongPassword"/>
-                    
-                    
-        
+          <Label Grid.Row="0" Grid.Column="0" Margin="0, 30, 0, 0" Text="Sportsgren" Style="{StaticResource orangeText-sm}"/>
+          <Picker Grid.Row="1" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="40" WidthRequest="320" Margin="-20, 0, 0, 0" x:Name="listOfSports" SelectedItem="{Binding id}" ItemDisplayBinding="{Binding sportName}">
 
-        
-       
+            <Picker.ItemsSource></Picker.ItemsSource>
+          </Picker>
+          <Label Grid.Row="2" Grid.Column="0" Margin="0, 30, 0, 0" Text="Holdnavn" Style="{StaticResource orangeText-sm}"/>
+          <Entry Grid.Row="3" Grid.Column="0" Margin="-20, 0, 0, 0" Style="{StaticResource textInput}" x:Name="teamName"/>
 
-       
-    </Grid>
+          <Label Grid.Row="4" Grid.Column="0" Margin="0, 30, 0, 0" Text="Træner" Style="{StaticResource orangeText-sm}"/>
+          <Entry Grid.Row="5" Grid.Column="0" Margin="-20, 0, 0, 0" Style="{StaticResource textInput}" x:Name="coachName"/>
 
-           <Grid  HorizontalOptions="Center"
-                   VerticalOptions="Center"
-                   RowSpacing="0"
-                   Margin="0, 20, 0 ,0"
-                  
-                  
-                  >
-                <Grid.RowDefinitions>
-                    <RowDefinition />
-                     
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="1*"/>
-                </Grid.ColumnDefinitions>
+          <Label Grid.Row="6" Grid.Column="0" Margin="0, 30, 0, 0" Text="Træner email" Style="{StaticResource orangeText-sm}"/>
+          <Entry Grid.Row="7" Grid.Column="0" Margin="-20, 0, 0, 0" Style="{StaticResource textInput}" x:Name="managerEmail"/>
 
-                <Button Grid.Row="0"
-                        Grid.Column="0"
-                        HorizontalOptions="Center"
-                        VerticalOptions="Center"
-                        Text="DAMER"
-                        TextColor="{StaticResource textBlack}"
-                        FontFamily="Oswald"
-                        BorderRadius="5"
-                        BackgroundColor="{StaticResource textWhite}"
-                        WidthRequest="100"
-                        HeightRequest="24"
-                        
-                       
-                        
+          <Label Grid.Row="8" Grid.Column="0" Margin="0, 30, 0, 0" Text="Træner kodeord" Style="{StaticResource orangeText-sm}"/>
+          <Entry Grid.Row="9" Grid.Column="0" Margin="-20, 0, 0, 0" Style="{StaticResource textInput}" x:Name="coachPassword"/>
 
-                        />
-                     <Button
-                        Grid.Row="0"
-                        Grid.Column="1"
-                        HorizontalOptions="Center"
-                        VerticalOptions="Center"
-                        TextColor="{StaticResource textWhite}"
-                        FontFamily="Oswald"
-                        Text="MÆND"
-                        BackgroundColor="{StaticResource orange}"
-                        WidthRequest="100"
-                        HeightRequest="24"
-                        Margin="-20, 0 ,0 , 0"
-                        />
-                    
-                    
-           </Grid>
-                <Grid Margin="0, 30, 0, 0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="1*"/>
-                        <ColumnDefinition Width="1*"/>
-                        <ColumnDefinition Width="1*"/>
+          <Label Grid.Row="10" Grid.Column="0" Margin="0, 30, 0, 0" Text="Gentag kodeord" Style="{StaticResource orangeText-sm}"/>
+          <Entry Grid.Row="11" Grid.Column="0" Margin="-20, 0, 0, 0" Style="{StaticResource textInput}" x:Name="coachPassword2"/>
+          <Label Grid.Row="12" Grid.Column="0" Style="{DynamicResource eMsg}" x:Name="wrongPassword"/>
 
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition/>    
-                    </Grid.RowDefinitions>
-                    <Image Grid.Row="0" Grid.Column="0" Source="Images/StaticPicture.png"/>
-                    <Label Margin="25, 35, 0, 0" 
-                           Grid.Row="0" 
-                           Grid.Column="0" 
-                           Style="{DynamicResource orangeText-sm}" 
-                           Text="INDSÆT BILLEDE" />
-                    <StackLayout Grid.Row="0" 
-                               Grid.Column="1">
-                        <Label Style="{DynamicResource sm-info}" 
-                               Text="UPLOAD HOLDLOGO"
-                               Margin="0, 50 ,0 ,0"
-                               />
-                         <Label Style="{DynamicResource sm-info}" 
-                               Text="Filstørrelse max: 0kbs"
-                               Margin="0, 0 ,0 ,0"
-                               />
-                    </StackLayout>
-                </Grid>
+        </Grid>
 
-                <Label x:Name="eMessage" Style="{StaticResource eMsg}" />
-                 <Label x:Name="eMessage2" Style="{StaticResource eMsg}" />
-                <Button x:Name="teamAddBtn" BackgroundColor="{StaticResource green}" Text="ADD TEAM" FontFamily="OSWALD" TextColor="{StaticResource textWhite}" WidthRequest="200" HeightRequest="30" HorizontalOptions="Center" Clicked="btnCreateTeam" VerticalOptions="Center" Margin="0, 0, 0 ,0"/>
-                <Button x:Name="playersAddBtn" BackgroundColor="{StaticResource green}" Text="ADD PLAYERS TO TEAM" FontFamily="OSWALD" TextColor="{StaticResource textWhite}" WidthRequest="200" HeightRequest="30" HorizontalOptions="Center" Clicked="addPlayersToTeam" VerticalOptions="Center" Margin="0, 0, 0 ,0"/>
-                
-                
+        <Grid HorizontalOptions="Center" VerticalOptions="Center" RowSpacing="0" Margin="0, 20, 0 ,0">
+          <Grid.RowDefinitions>
+            <RowDefinition/>
 
-            </StackLayout>
-            </ScrollView>
-        
-    </ContentPage.Content>
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+          </Grid.ColumnDefinitions>
+
+          <Button
+            Grid.Row="0"
+            Grid.Column="0"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Text="DAMER"
+            TextColor="{StaticResource textBlack}"
+            FontFamily="Oswald"
+            BorderRadius="5"
+            BackgroundColor="{StaticResource textWhite}"
+            WidthRequest="100"
+            HeightRequest="24"/>
+          <Button
+            Grid.Row="0"
+            Grid.Column="1"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            TextColor="{StaticResource textWhite}"
+            FontFamily="Oswald"
+            Text="MÆND"
+            BackgroundColor="{StaticResource orange}"
+            WidthRequest="100"
+            HeightRequest="24"
+            Margin="-20, 0 ,0 , 0"/>
+
+        </Grid>
+        <Grid Margin="0, 30, 0, 0">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+
+          </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+            <RowDefinition/>
+          </Grid.RowDefinitions>
+          <Image Grid.Row="0" Grid.Column="0" Source="Images/StaticPicture.png"/>
+          <Label Margin="25, 35, 0, 0" Grid.Row="0" Grid.Column="0" Style="{DynamicResource orangeText-sm}" Text="INDSÆT BILLEDE"/>
+          <StackLayout Grid.Row="0" Grid.Column="1">
+            <Label Style="{DynamicResource sm-info}" Text="UPLOAD HOLDLOGO" Margin="0, 50 ,0 ,0"/>
+            <Label Style="{DynamicResource sm-info}" Text="Filstørrelse max: 0kbs" Margin="0, 0 ,0 ,0"/>
+          </StackLayout>
+        </Grid>
+
+        <Label x:Name="eMessage" Style="{StaticResource eMsg}"/>
+        <Label x:Name="eMessage2" Style="{StaticResource eMsg}"/>
+        <Button
+          x:Name="teamAddBtn"
+          BackgroundColor="{StaticResource green}"
+          Text="ADD TEAM"
+          FontFamily="OSWALD"
+          TextColor="{StaticResource textWhite}"
+          WidthRequest="200"
+          HeightRequest="30"
+          HorizontalOptions="Center"
+          Clicked="btnCreateTeam"
+          VerticalOptions="Center"
+          Margin="0, 0, 0 ,0"/>
+        <Button
+          x:Name="playersAddBtn"
+          BackgroundColor="{StaticResource green}"
+          Text="ADD PLAYERS TO TEAM"
+          FontFamily="OSWALD"
+          TextColor="{StaticResource textWhite}"
+          WidthRequest="200"
+          HeightRequest="30"
+          HorizontalOptions="Center"
+          Clicked="addPlayersToTeam"
+          VerticalOptions="Center"
+          Margin="0, 0, 0 ,0"/>
+
+      </StackLayout>
+    </ScrollView>
+
+  </ContentPage.Content>
 </ContentPage>
