@@ -40,6 +40,9 @@
           <RowDefinition Height="40"/>
           <RowDefinition Height="50"/>
           <RowDefinition Height="50"/>
+          <RowDefinition Height="50"/>
+          <RowDefinition Height="50"/>
+                    
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -60,12 +63,32 @@
                x:Name="pPosition"/>
                 
         <Label Grid.Row="6" Grid.Column="0" Margin="0, 30, 0, 0" Text="Fødselsdag" Style="{StaticResource orangeText-sm}"/>
-        <Entry Grid.Row="7" Grid.Column="0" Margin="-20, 0, 0, 0" Style="{StaticResource textInput}" Placeholder="xx-xx-xxxx"
+        <Entry Grid.Row="7" Grid.Column="0" Margin="-20, 0, 0, 0" Style="{StaticResource textInput}" Placeholder="dd-mm-yyyy"
                x:Name="pAge"/>
+
+        <Label Grid.Row="8" Grid.Column="0" Margin="0, 30, 0, 0" Text="Sport" Style="{StaticResource orangeText-sm}"/>
+        <Picker Grid.Row="9"
+                Grid.Column="0"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                HeightRequest="40"
+                WidthRequest="320"
+                Margin="-20, 0, 0, 0"
+                SelectedIndex="1"
+                x:Name="dropDownSport"
+                ItemDisplayBinding="{Binding sportName}"
+                SelectedItem="{Binding id}"
+                > 
+            <Picker.ItemsSource>
+
+            </Picker.ItemsSource>
+        </Picker>
 
       </Grid>
 
-      <Button BackgroundColor="{StaticResource green}" Text="GODKEND" FontFamily="OSWALD" TextColor="{StaticResource textWhite}" WidthRequest="200" HeightRequest="30" HorizontalOptions="Center" VerticalOptions="Center" Margin="0, 0, 0 ,0"/>
+      <Label x:Name="eMessage" Style="{StaticResource eMsg}" />
+            
+      <Button x:Name="playerAddBtn" BackgroundColor="{StaticResource green}" Text="ADD PLAYER" FontFamily="OSWALD" TextColor="{StaticResource textWhite}" WidthRequest="200" HeightRequest="30" HorizontalOptions="Center" Clicked="btnCreatePlayer" VerticalOptions="Center" Margin="0, 0, 0 ,0"/>
 
     </StackLayout>
 

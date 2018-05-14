@@ -12,15 +12,15 @@ namespace Potm.Data
     {
         const string Url = "https://potm.bootsmann.dk/Umbraco/Api/Action/";
 
-        public async Task<player> managerCreatePlayer(player player)
+        public async Task<bool> managerCreatePlayer(player player, int clubId, int sportId)
         {
             HttpClient client = new HttpClient();
-            var response = await client.PostAsync(Url + "managerCreatePlayer?clubId=1130",
+			var response = await client.PutAsync(Url + "managerCreatePlayer?clubId=" + clubId + "&sportId=" + sportId,
                                 new StringContent(
                                     JsonConvert.SerializeObject(player),
                                     Encoding.UTF8, "application/json"));
 
-            return JsonConvert.DeserializeObject<player>(
+            return JsonConvert.DeserializeObject<bool>(
                 await response.Content.ReadAsStringAsync());
         }
 

@@ -64,6 +64,14 @@
                 <Setter Property="FontFamily" Value="Oswald"/>
                 <Setter Property="TextColor" Value="{StaticResource orange}"/>
             </Style>
+            <Style x:Key="eMsg" TargetType="Label">
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="FontFamily" Value="Oswald"/>
+                <Setter Property="TextColor" Value="Red"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                 
+            </Style>
 
             <Style x:Key="buttonFP" TargetType="Button">
                 <Setter Property="HorizontalOptions" Value="Center"/>

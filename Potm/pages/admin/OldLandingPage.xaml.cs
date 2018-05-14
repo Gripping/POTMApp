@@ -14,7 +14,7 @@ namespace Potm.pages.admin
        
         public FlowObservableCollection<teams> flowTeams = new FlowObservableCollection<teams>(); 
         readonly CollectionManager manager = new CollectionManager();
-        readonly int clubId;
+		public int clubId;
 
 
         public OldLandingPage(int clubId)
@@ -51,6 +51,11 @@ namespace Potm.pages.admin
 
 		public async void Handle_FlowItemTapped(object sender, ItemTappedEventArgs e){
 			await Navigation.PushAsync(new SingleTeam((teams) e.Item));
+		}
+
+		public async void navAddTeam(object sender, EventArgs e){
+			await Navigation.PushAsync(new AdminAddTeam(clubId));
+
 		}
 
        
