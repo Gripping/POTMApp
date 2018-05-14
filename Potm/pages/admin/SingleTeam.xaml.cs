@@ -54,6 +54,10 @@ namespace Potm.pages.admin
 		{
 			await Navigation.PushAsync(new AddMatch(teamId, clubId));
 		}
+		public async void seSpillere(object sender, EventArgs e)
+		{
+			await Navigation.PushAsync(new AdminSeePlayers(teamId, clubId));
+		}
 
     }
 }

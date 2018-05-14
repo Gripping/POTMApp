@@ -15,7 +15,7 @@
       </StackLayout>
       <BoxView Style="{StaticResource linje}"/>
       <StackLayout Orientation="Horizontal" Margin="0, 20, 0, 20">
-        <Button Text="SE SPILLERE" Style="{StaticResource button2FP}" BackgroundColor="{StaticResource orange}" FontSize="12" HorizontalOptions="CenterAndExpand" TextColor="{StaticResource textWhite}"/>
+        <Button Text="SE SPILLERE" Style="{StaticResource button2FP}" Clicked="seSpillere" BackgroundColor="{StaticResource orange}" FontSize="12" HorizontalOptions="CenterAndExpand" TextColor="{StaticResource textWhite}"/>
 
         <Button Text="OPRET KAMP" Style="{StaticResource button2FP}" BackgroundColor="{StaticResource orange}" FontSize="12" HorizontalOptions="CenterAndExpand" TextColor="{StaticResource textWhite}" Clicked="createMatchBtn"/>
       </StackLayout>
