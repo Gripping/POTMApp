@@ -13,7 +13,7 @@ namespace Potm.Data
         public VoteRepo(string dbPath)
         {
             conn = new SQLiteAsyncConnection(dbPath);
-            //conn.CreateTableAsync<deviceId>().Wait();
+            conn.CreateTableAsync<deviceId>().Wait();
         }
 
         public async Task<deviceId> GetDeviceId()

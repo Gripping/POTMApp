@@ -42,7 +42,7 @@
                            Grid.Row="0" 
                            Grid.Column="0"
                            HorizontalOptions="Center"
-                            VerticalOptions="Center"
+                           VerticalOptions="Center"
                            Style="{DynamicResource orangeText-sm}" 
                            Text="INDSÆT BILLEDE" />
                     <Label Grid.Column="1" 
@@ -67,22 +67,7 @@
 
                 <StackLayout Margin="0, 40, 0, 0" HorizontalOptions="Center"
                              VerticalOptions="Center">
-                    <Label Text="JERES HOLD/RÆKKE"
-                           HorizontalOptions="Start"
-                           VerticalOptions="End"
-                           Margin="0, 0, 0, 0"
-                           Style="{DynamicResource orangeText-sm}"/> 
-                    <Picker HeightRequest="39"
-                            VerticalOptions="Center"
-                            HorizontalOptions="Center"
-                            WidthRequest="400"
-                            >
-                        <Picker.Items> 
-                            <x:String>ODENSE HC DIV 1</x:String>
-                            <x:String>ODENSE HC DIV 1</x:String>
-                            <x:String>ODENSE HC DIV 1</x:String>
-                        </Picker.Items>
-                    </Picker>
+                   
 
                     <Label Text="MODSTANDER"
                            HorizontalOptions="Start"
@@ -92,7 +77,8 @@
                     <Entry HorizontalOptions="Center"
                            VerticalOptions="Center"
                            WidthRequest="400"
-                           HeightRequest="39"/>
+                           HeightRequest="39"
+                           x:Name="enemyTeam"/>
 
 
                     <Label Text="ADRESSE"
@@ -103,24 +89,27 @@
                     <Entry HorizontalOptions="Center"
                            VerticalOptions="Center"
                            WidthRequest="400"
-                           HeightRequest="39"/>
+                           HeightRequest="39"
+                           x:Name="matchLocation"/>
 
 
 
-                    <Label Text="JERES HOLD/RÆKKE"
+                    <Label Text="DATO"
                            HorizontalOptions="Start"
                            VerticalOptions="End"
                            Margin="0, 20, 0, 0"
-                           Style="{DynamicResource orangeText-sm}"/> 
+                           Style="{DynamicResource orangeText-sm}"
+                           /> 
                     <DatePicker HorizontalOptions="Center"
                                 VerticalOptions="Center"
                                 WidthRequest="400"
                                 HeightRequest="39"
+                                x:Name="date"
                                 />
 
 
 
-                    <Label Text="JERES HOLD/RÆKKE"
+                    <Label Text="TID"
                            HorizontalOptions="Start"
                            VerticalOptions="End"
                            Margin="0, 20, 0, 0"
@@ -130,19 +119,20 @@
                                 VerticalOptions="Center"
                                 WidthRequest="400"
                                 HeightRequest="39"
-                    />
+                                x:Name="time"/>
 
                     
                 </StackLayout>
                 <Button BackgroundColor="{StaticResource green}"
-                        Text="GODKEND" 
+                        Text="VÆLG SPILLERE" 
                         FontFamily="OSWALD"
                         TextColor="{StaticResource textWhite}"
                         WidthRequest="135"
                         HeightRequest="34"
                         HorizontalOptions="Center"
                         VerticalOptions="Center"
-                        Margin="0, 20, 0 ,0"/>
+                        Margin="0, 20, 0 ,0" 
+                        Clicked="createMatch"/>
                 </StackLayout>
 
             </ScrollView>

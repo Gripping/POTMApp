@@ -27,8 +27,9 @@ namespace Potm.pages.admin
             manager manager;
 
             if( u != "" && p != null){
-				manager = await actionsManager.managerLogin(u, p);
-				
+                manager = await actionsManager.managerLogin(u, p);
+                
+				App.LoggedInClubId = manager.clubId;
 				if(manager.clubId != 0)
 				{
                     var teamsCollection = await collectionManager.GetTeams(manager.clubId);
@@ -39,7 +40,7 @@ namespace Potm.pages.admin
                     }
                     else
                     {
-                        await Navigation.PushAsync(new NewLandingPage());
+						await Navigation.PushAsync(new NewLandingPage(manager.clubId));
                     }
                 }
                 else{
@@ -50,5 +51,7 @@ namespace Potm.pages.admin
                 eMessage.Text = "Udfyld venligst brugernavn og adgangskode";
             }
         }
+
+
     }
 }

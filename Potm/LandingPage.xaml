@@ -8,43 +8,8 @@
         <StackLayout HorizontalOptions="Center"
                      VerticalOptions="Center"
                      Margin="20">
+            <Image Source="Images/logo.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="0, 0, 0, 100"/>
 
-             <Label Style="{StaticResource FPBig2}"
-                   FontAttributes="Bold"
-                   XAlign="Center">
-                <Label.Text>
-                    POTM
-
-                </Label.Text>
-            </Label>
-            <Label Style="{StaticResource FPBig}"
-                   XAlign="Center"
-                   Margin="0, -30, 0, 0">
-                <Label.Text>
-                    PLAYER OF THE MATCH
-
-                </Label.Text>
-            </Label>
-            <Grid Margin="0, -7, 0, 70"
-                  VerticalOptions="Center"
-                  HorizontalOptions="Center"
-                  RowSpacing="20"
-                  ColumnSpacing="15">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="33" />
-
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="33" />
-                    <ColumnDefinition Width="33" />
-                    <ColumnDefinition Width="33" />
-                    <ColumnDefinition Width="33" />
-                </Grid.ColumnDefinitions>
-                <Image Grid.Row="0" Grid.Column="0" Source="Images/soccer-ball-variant.png" />
-                <Image Grid.Row="0" Grid.Column="1" Source="Images/football.png" />
-                <Image Grid.Row="0" Grid.Column="2" Source="Images/puck.png" />
-                <Image Grid.Row="0" Grid.Column="3" Source="Images/basketball.png" />
-            </Grid>
 
 
 

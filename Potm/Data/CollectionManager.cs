@@ -32,15 +32,15 @@ namespace Potm.Data
             return response;
         }
 
-		public async Task<team> GetTeam(int teamId)
-		{
-			HttpClient client = new HttpClient();
-			var result = await client.GetAsync(Url + "GetTeam?teamId=" + teamId);
-			team response = JsonConvert.DeserializeObject<team>(await result.Content.ReadAsStringAsync());
+        public async Task<team> GetTeam(int teamId)
+        {
+            HttpClient client = new HttpClient();
+            var result = await client.GetAsync(Url + "GetTeam?teamId=" + teamId);
+            team response = JsonConvert.DeserializeObject<team>(await result.Content.ReadAsStringAsync());
             return response;
-		}
+        }
 
-		public async Task<List<sport>> GetAllSports()
+        public async Task<List<sport>> GetAllSports()
         {
             HttpClient client = new HttpClient();
             var result = await client.GetAsync(Url + "GetAllSports");
@@ -49,19 +49,39 @@ namespace Potm.Data
             return response;
         }
 
-		public async Task<List<club>> GetFilteredClubs(int sportId)
+        public async Task<List<club>> GetFilteredClubs(int sportId)
         {
             HttpClient client = new HttpClient();
             var result = await client.GetAsync(Url + "GetFilteredClubs?sportsId=" + sportId);
-			List<club> response = JsonConvert.DeserializeObject<List<club>>(await result.Content.ReadAsStringAsync());
+            List<club> response = JsonConvert.DeserializeObject<List<club>>(await result.Content.ReadAsStringAsync());
             return response;
         }
 
-		public async Task<singleClub> GetClub(int clubId, int sportId)
+        public async Task<singleClub> GetClub(int clubId, int sportId)
         {
             HttpClient client = new HttpClient();
-			var result = await client.GetAsync(Url + "GetClub?clubId=" + clubId + "&sportId=" + sportId);
-			singleClub response = JsonConvert.DeserializeObject<singleClub>(await result.Content.ReadAsStringAsync());
+            var result = await client.GetAsync(Url + "GetClub?clubId=" + clubId + "&sportId=" + sportId);
+            singleClub response = JsonConvert.DeserializeObject<singleClub>(await result.Content.ReadAsStringAsync());
+            return response;
+        }
+
+        public async Task<List<player>> GetAllPlayers(int clubId, int teamId)
+        {
+            List<player> response = new List<player>();
+			if(teamId == 0)
+            {
+                HttpClient client = new HttpClient();
+                var result = await client.GetAsync(Url + "GetAllPlayers?clubId=" + clubId);
+            
+                response = JsonConvert.DeserializeObject<List<player>>(await result.Content.ReadAsStringAsync());
+            }
+            else
+            {
+				HttpClient client = new HttpClient();
+				var result = await client.GetAsync(Url + "GetAllPlayers?clubId=" + clubId + "&teamId=" + teamId);
+
+                response = JsonConvert.DeserializeObject<List<player>>(await result.Content.ReadAsStringAsync());
+            }   
             return response;
         }
 

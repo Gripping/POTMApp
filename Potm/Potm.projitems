@@ -94,6 +94,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)pages\admin\ChoosePlayers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)pages\admin\ManOfTheMatch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
@@ -172,6 +180,12 @@
       <DependentUpon>PlayerDetail.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Data\VoteRepo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)pages\admin\ChoosePlayers.xaml.cs">
+      <DependentUpon>ChoosePlayers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)pages\admin\ManOfTheMatch.xaml.cs">
+      <DependentUpon>ManOfTheMatch.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Data\" />
@@ -226,5 +240,7 @@
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\favoritIcon.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\filleStar.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\gradientBox.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\checkedSign.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\logo.png" />
   </ItemGroup>
 </Project>

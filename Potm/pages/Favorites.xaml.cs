@@ -30,11 +30,23 @@ namespace Potm.pages
 
         }
 
-        public async void FavDelete(object sender, ItemTappedEventArgs e)
+        public async void FavDelete(object sender, EventArgs e)
         {
-            Favourite tappedItem = (Favourite) e.Item;
+            Button deleteBtn = (Button)sender;
+            var Message = int.Parse(deleteBtn.CommandParameter.ToString());
 
-            await App.FavRepo.DeleteFav(tappedItem);
+            Favourite favorit = new Favourite();
+
+            var favsList = await App.FavRepo.GetFavs();
+
+            foreach (var fav in favsList)
+            {
+                if(fav.clubId == Message){
+                    favorit = fav;
+                }
+            }
+
+            await App.FavRepo.DeleteFav(favorit);
 
             refreshList();
 
@@ -48,10 +60,25 @@ namespace Potm.pages
 
             foreach (var fav in newFavsList)
             {
-                newFavs.Add(fav);
+                if (newFavs.All(x => x.clubId != fav.clubId))
+                {
+                    newFavs.Add(fav);
+                }
             }
             favList.FlowItemsSource = newFavs;
 
+        }
+
+        public async void GoToTeam(object sender, ItemTappedEventArgs e)
+        {
+			var fav = (Favourite)e.Item;
+            teams team = new teams();
+            team.id = fav.clubId;
+            team.clubName = fav.clubName;
+            team.name = fav.teamName;
+            team.gender = fav.teamGender;
+
+            await Navigation.PushAsync(new TeamPage(team, fav.clubName, fav.clubLogo));
         }
     }
 }
