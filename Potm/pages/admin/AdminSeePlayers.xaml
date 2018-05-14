@@ -59,10 +59,7 @@
 
                     <Label Style="{DynamicResource std}" TextColor="{StaticResource textBlack}" Text="{Binding playerPosition}" XAlign="Center" VerticalOptions="Center" HorizontalOptions="Center"/>
                   </StackLayout>
-                  <StackLayout Grid.Row="4" Grid.Column="0" Orientation="Vertical" BackgroundColor="{StaticResource textWhite}">
-                    <Label Text="Tilføj spiller" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" XAlign="Center" Style="{DynamicResource orangeText-sm}"/>
-                    <Image IsVisible="false" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="Images/checkedSign.png"/>
-                  </StackLayout>
+
                   <BoxView Color="Transparent" Grid.Row="5" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
                 </Grid>
 

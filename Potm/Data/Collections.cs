@@ -100,5 +100,13 @@ namespace Potm.Data
         public int playerId { get; set; }
         public string deviceId { get; set; }
     }
+
+	public class motmWinner 
+	{
+		public int increment { get; set; }
+		public string name { get; set; }
+		public object image { get; set; }
+
+	}
     
 }

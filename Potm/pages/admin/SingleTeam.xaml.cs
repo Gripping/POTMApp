@@ -59,5 +59,12 @@ namespace Potm.pages.admin
 			await Navigation.PushAsync(new AdminSeePlayers(teamId, clubId));
 		}
 
+		public async void showWinner(object sender, ItemTappedEventArgs e)
+		{
+			match cMatch = (match)e.Item;
+
+			await Navigation.PushAsync(new ManOfTheMatch(cMatch));	
+		}
+
     }
 }

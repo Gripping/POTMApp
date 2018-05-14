@@ -51,7 +51,8 @@
                 SeparatorVisibility="None"
                 HasUnevenRows="false"
                 FlowRowBackgroundColor="Transparent"
-                BackgroundColor="Transparent">
+                BackgroundColor="Transparent"
+                FlowItemTapped="showWinner">
 
                 <flv:FlowListView.FlowColumnTemplate>
                   <DataTemplate>

@@ -132,6 +132,7 @@
           BackgroundColor="{StaticResource green}"
           Text="ADD PLAYERS TO TEAM"
           FontFamily="OSWALD"
+                    IsVisible="false"
           TextColor="{StaticResource textWhite}"
           WidthRequest="200"
           HeightRequest="30"
