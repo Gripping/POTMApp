@@ -16,6 +16,7 @@ namespace Potm.pages.admin
         readonly CollectionManager cManager = new CollectionManager();
         public List<sport> AllSports = new List<sport>();
         public int clubId;
+		public int teamId;
 
         public AdminAddTeam(int cId)
         {
@@ -47,9 +48,9 @@ namespace Potm.pages.admin
             
 			if (coachPassword.Text == coachPassword2.Text && coachPassword.Text.Length > 9)
             {
-				bool status = await manager.managerCreateTeam(team, clubId);
+				teamId = await manager.managerCreateTeam(team, clubId);
 
-				if (status == true)
+				if (teamId != 0)
                 {
 					string username = coachName.Text.Replace(" ", "").ToLower();
                     teamName.Text = "";
@@ -81,7 +82,8 @@ namespace Potm.pages.admin
 
 		private async void addPlayersToTeam(object sender, EventArgs e)
         {
-			await Navigation.PushAsync(new ChoosePlayers(clubId));
+			
+			await Navigation.PushAsync(new ChoosePlayers(clubId, teamId, 0));
         }
        
     }

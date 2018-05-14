@@ -186,6 +186,7 @@
     <BundleResource Include="Resources\Images\favoritIcon.png" />
     <BundleResource Include="Resources\Images\filleStar.png" />
     <BundleResource Include="Resources\Images\gradientBox.png" />
+    <BundleResource Include="Resources\Images\checkedSign.png" />
   </ItemGroup>
   <Import Project="..\Potm\Potm.projitems" Label="Shared" Condition="Exists('..\Potm\Potm.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

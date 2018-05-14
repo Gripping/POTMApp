@@ -43,10 +43,6 @@ namespace Potm.pages.admin
                 flowListTest.FlowItemsSource = flowTeams;
 
             }
-            else
-            {
-                await Navigation.PushAsync(new NewLandingPage());
-            }
         }
 
 		public async void Handle_FlowItemTapped(object sender, ItemTappedEventArgs e){

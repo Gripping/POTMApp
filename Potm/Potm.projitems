@@ -233,5 +233,6 @@
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\favoritIcon.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\filleStar.png" />
     <None Include="$(MSBuildThisFileDirectory)Resources\Images\gradientBox.png" />
+    <None Include="$(MSBuildThisFileDirectory)Resources\Images\checkedSign.png" />
   </ItemGroup>
 </Project>

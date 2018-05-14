@@ -39,7 +39,7 @@ namespace Potm.pages.admin
                     }
                     else
                     {
-                        await Navigation.PushAsync(new NewLandingPage());
+						await Navigation.PushAsync(new NewLandingPage(manager.clubId));
                     }
                 }
                 else{

@@ -1,8 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Potm.pages.admin.ChoosePlayers">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Potm.pages.admin.ChoosePlayers"
+             ControlTemplate="{DynamicResource adminTemplate}"
+             BackgroundImage="Images/background.png">
     <ContentPage.Content>
 
-        
+         <StackLayout HorizontalOptions="Center" Margin="20">
+
+      <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Spacing="150">
+
+        <Label Style="{StaticResource h1}" FontAttributes="Bold" Text="{Binding clubName}" HorizontalOptions="Start"/>
+
+        <Image Source="{Binding clubImage}" HorizontalOptions="End" VerticalOptions="Start" WidthRequest="35" HeightRequest="35" Scale="2" Margin="0, 0, 0 ,20"/>
+
+      </StackLayout>
+
+      <BoxView Style="{StaticResource linje}"/>
+
+      <Label Style="{StaticResource h1}" FontSize="25" FontAttributes="Italic" Text="VÆLG SPILLERE" HorizontalOptions="FillAndExpand" XAlign="Center" Margin="0, 20, 0, 20"/>
+
+
+      <StackLayout BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" Margin="0, 0, 0 ,0">
+          <flv:FlowListView
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand"
+            x:Name="flowAllPlayers"
+            FlowColumnCount="2"
+            FlowItemTapped="addPlayerToList"
+            RowHeight="210"
+            HeightRequest="500"
+            SeparatorVisibility="None"
+            HasUnevenRows="false"
+            FlowRowBackgroundColor="Transparent"
+            BackgroundColor="Transparent"
+            FlowTappedBackgroundColor="Green"
+
+                    
+            >
+          
+            <flv:FlowListView.FlowColumnTemplate>
+            <ScrollView>
+                        <DataTemplate>
+                            
+              <Grid Padding="2" Margin="10" RowSpacing="5" ColumnSpacing="10" HeightRequest="200" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                  <RowDefinition Height="20"/>
+                  <RowDefinition Height="80"/>
+                  <RowDefinition Height="20"/>
+                  <RowDefinition Height="40"/>
+                  <RowDefinition Height="40"/>
+                  <RowDefinition Height="10"/>
+
+                </Grid.RowDefinitions>
+                <Image Grid.Row="1" Grid.RowSpan="5" Grid.Column="0" Source="Images/gradientBox.png" Aspect="AspectFit"/>
+                <Image Grid.Row="0" Grid.RowSpan="5" Source="{Binding playerPicture}" Aspect="Fill" Margin="10, 10, 10, 0"/>
+                <BoxView Color="White" Opacity="0.8" Grid.Row="2" Grid.Column="0" Grid.RowSpan="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                <StackLayout Grid.Row="2" Grid.RowSpan="2" Grid.Column="0" Spacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                  <Label Style="{DynamicResource std}" TextColor="{StaticResource textBlack}" Text="{Binding playerName}" XAlign="Center" VerticalOptions="Center" HorizontalOptions="Center"/>
+
+                  <Label Style="{DynamicResource std}" TextColor="{StaticResource textBlack}" Text="{Binding playerNumber}" XAlign="Center" VerticalOptions="Center" HorizontalOptions="Center"/>
+
+                  <Label Style="{DynamicResource std}" TextColor="{StaticResource textBlack}" Text="{Binding playerPosition}" XAlign="Center" VerticalOptions="Center" HorizontalOptions="Center"/>
+                </StackLayout>
+                <StackLayout Grid.Row="4" Grid.Column="0" Orientation="Vertical" BackgroundColor="{StaticResource textWhite}">
+                                <Label Text="Tilføj spiller" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" XAlign="Center" Style="{DynamicResource orangeText-sm}"/>
+                                <Image  IsVisible="false" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  Source="Images/checkedSign.png"/>
+                </StackLayout>
+                 <BoxView Color="Transparent" Grid.Row="5" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+              </Grid>
+                                
+              </DataTemplate>
+                            </ScrollView>
+            </flv:FlowListView.FlowColumnTemplate>
+
+          </flv:FlowListView>
+       
+      </StackLayout>
+
+            <Button Style="{StaticResource buttonFP2}" Text="TILFØJ SPILLEERE" Clicked="sendPlayers" />
+
+    </StackLayout>
+
         
     </ContentPage.Content>
 </ContentPage>
