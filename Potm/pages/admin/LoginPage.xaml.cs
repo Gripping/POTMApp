@@ -27,8 +27,9 @@ namespace Potm.pages.admin
             manager manager;
 
             if( u != "" && p != null){
-				manager = await actionsManager.managerLogin(u, p);
-				
+                manager = await actionsManager.managerLogin(u, p);
+                
+				App.LoggedInClubId = manager.clubId;
 				if(manager.clubId != 0)
 				{
                     var teamsCollection = await collectionManager.GetTeams(manager.clubId);

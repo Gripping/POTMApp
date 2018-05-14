@@ -18,6 +18,7 @@ namespace Potm
         readonly int clubId;
         public static FavRepository FavRepo { get; private set; }
         public static VoteRepo VoteRepo { get; private set; }
+        public static int LoggedInClubId;
 
         public App(string dbPath)
         {
@@ -34,6 +35,7 @@ namespace Potm
 
             FavRepo = new FavRepository(dbPath);
             VoteRepo = new VoteRepo(dbPath);
+            LoggedInClubId = 0;
             clubId = 1128;
         }
 
@@ -112,7 +114,7 @@ namespace Potm
             string page = Application.Current.MainPage.Navigation.NavigationStack.Last().ToString();
             if (page != "Potm.pages.admin.AddPlayerPage")
             {
-                await ((NavigationPage)Application.Current.MainPage).PushAsync(new AddPlayerPage(1128));
+                await ((NavigationPage)Application.Current.MainPage).PushAsync(new AddPlayerPage(LoggedInClubId));
             }
         }
 
@@ -121,7 +123,7 @@ namespace Potm
             string page = Application.Current.MainPage.Navigation.NavigationStack.Last().ToString();
             if (page != "Potm.pages.admin.OldLandingPage")
             {
-                await ((NavigationPage)Application.Current.MainPage).PushAsync(new OldLandingPage(clubId));
+                await ((NavigationPage)Application.Current.MainPage).PushAsync(new OldLandingPage(LoggedInClubId));
             }
         }
 
