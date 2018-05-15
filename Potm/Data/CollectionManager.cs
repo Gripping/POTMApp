@@ -84,6 +84,15 @@ namespace Potm.Data
             }   
             return response;
         }
+        
+		public async Task<motmWinner> GetMotm(int matchId)
+        {
+            HttpClient client = new HttpClient();
+            var result = await client.GetAsync(Url + "GetMotm?matchId=" + matchId);
+			motmWinner response = JsonConvert.DeserializeObject<motmWinner>(await result.Content.ReadAsStringAsync());
+
+            return response;
+        }
 
     }
 }

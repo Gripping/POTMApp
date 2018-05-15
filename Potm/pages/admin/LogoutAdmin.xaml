@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Potm.pages.admin.LogoutAdmin"
               ControlTemplate="{DynamicResource adminTemplate}"
              BackgroundImage="Images/background.png">
@@ -9,74 +9,44 @@
                      VerticalOptions="Center"
                      Margin="20">
 
-            <Label Style="{StaticResource FPBig}"
-                   FontAttributes="Bold"
-                   XAlign="Center">
-                <Label.Text>
-                    PLAYER OF THE
-                   
-                </Label.Text>
-            </Label>
-             <Label Style="{StaticResource FPBig2}"
-                   FontAttributes="Bold"
-                   XAlign="Center"
-                    Margin="0, -30, 0, 00">
-                <Label.Text>
-                    MATCH
-                   
-                </Label.Text>
+      <Label Style="{StaticResource FPBig}" FontAttributes="Bold" XAlign="Center">
+        <Label.Text>
+          PLAYER OF THE
 
-            </Label>
+        </Label.Text>
+      </Label>
+      <Label Style="{StaticResource FPBig2}" FontAttributes="Bold" XAlign="Center" Margin="0, -30, 0, 00">
+        <Label.Text>
+          MATCH
 
-            <Grid Margin="0, -30, 0, 70"
-                  VerticalOptions="Center"
-                  HorizontalOptions="Center"
-                  RowSpacing="20"
-                  ColumnSpacing="15">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="33" />
+        </Label.Text>
 
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="33" />
-                    <ColumnDefinition Width="33" />
-                    <ColumnDefinition Width="33" />
-                    <ColumnDefinition Width="33" />
-                </Grid.ColumnDefinitions>
-                <Image Grid.Row="0" Grid.Column="0" Source="Images/soccer-ball-variant.png" />
-                <Image Grid.Row="0" Grid.Column="1" Source="Images/football.png" />
-                <Image Grid.Row="0" Grid.Column="2" Source="Images/puck.png" />
-                <Image Grid.Row="0" Grid.Column="3" Source="Images/basketball.png" />
-            </Grid>
-           
-            
+      </Label>
 
+      <Grid Margin="0, -30, 0, 70" VerticalOptions="Center" HorizontalOptions="Center" RowSpacing="20" ColumnSpacing="15">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="33"/>
 
-             
-            <Button x:Name="btn1" 
-                     Text="OPRET NYT HOLD"
-                     Style="{StaticResource button2FP}"
-                     />
-            <Button x:Name="btn2" 
-                     Text="OPRET NY KAMP"
-                     Style="{StaticResource button2FP}"
-                     />
-           
-             <Button x:Name="btn3" 
-                     Text="REDIGER KAMP"
-                     Style="{StaticResource button2FP}"
-                     />
-            <Button x:Name="btn4" 
-                     Text="REDIGER HOLD"
-                     Style="{StaticResource button2FP}"
-                     />
-             <Button x:Name="btn5" 
-                     Text="LOGUD"
-                     Clicked="logoutAdmin"
-                     Style="{StaticResource button2FP}"
-                     />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="33"/>
+          <ColumnDefinition Width="33"/>
+          <ColumnDefinition Width="33"/>
+          <ColumnDefinition Width="33"/>
+        </Grid.ColumnDefinitions>
+        <Image Grid.Row="0" Grid.Column="0" Source="Images/soccer-ball-variant.png"/>
+        <Image Grid.Row="0" Grid.Column="1" Source="Images/football.png"/>
+        <Image Grid.Row="0" Grid.Column="2" Source="Images/puck.png"/>
+        <Image Grid.Row="0" Grid.Column="3" Source="Images/basketball.png"/>
+      </Grid>
 
-           
-        </StackLayout>
-    </ContentPage.Content>
+      <Button x:Name="btn1" Text="OPRET NYT HOLD" Style="{StaticResource button2FP}"/>
+      <Button x:Name="btn2" Text="OPRET NY KAMP" Style="{StaticResource button2FP}"/>
+
+      <Button x:Name="btn3" Text="REDIGER KAMP" Style="{StaticResource button2FP}"/>
+      <Button x:Name="btn4" Text="REDIGER HOLD" Style="{StaticResource button2FP}"/>
+      <Button x:Name="btn5" Text="LOGUD" Clicked="logoutAdmin" Style="{StaticResource button2FP}"/>
+
+    </StackLayout>
+  </ContentPage.Content>
 </ContentPage>

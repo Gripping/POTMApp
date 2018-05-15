@@ -1,73 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Potm.pages.admin.LoginPage"
-             BackgroundImage="Images/background.png"
-             ControlTemplate="{DynamicResource loginTemplate}">
-    <ContentPage.Content>
-        <StackLayout Margin="20">
-            <Label Style="{StaticResource h1}"
-                   FontAttributes="Bold">
-                <Label.Text>
-                    Manager
-                </Label.Text>
-            </Label>
-            <BoxView Style="{StaticResource linje}"/>
-            <StackLayout Margin="20, 80, 20, 0">
-                <Label Style="{StaticResource h1}"
-                       HorizontalOptions="Center"
-                       Margin="0, 0, 0, 15">
-                    <Label.Text>
-                        Login
-                    </Label.Text>
-                </Label>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Potm.pages.admin.LoginPage" BackgroundImage="Images/background.png" ControlTemplate="{DynamicResource loginTemplate}">
+  <ContentPage.Content>
+    <StackLayout Margin="20">
+      <Label Style="{StaticResource h1}" FontAttributes="Bold">
+        <Label.Text>
+          Manager
+        </Label.Text>
+      </Label>
+      <BoxView Style="{StaticResource linje}"/>
+      <StackLayout Margin="20, 80, 20, 0">
+        <Label Style="{StaticResource h1}" HorizontalOptions="Center" Margin="0, 0, 0, 15">
+          <Label.Text>
+            Login
+          </Label.Text>
+        </Label>
 
-                <Label TextColor="{StaticResource orange}"
-                       FontFamily="Oswald"
-                       FontSize="12">
-                    <Label.Text>
-                        BRUGERNAVN
-                    </Label.Text>
-                </Label>
+        <Label TextColor="{StaticResource orange}" FontFamily="Oswald" FontSize="12">
+          <Label.Text>
+            BRUGERNAVN
+          </Label.Text>
+        </Label>
 
-                <Entry x:Name="username" 
-                       Margin="0, 0, 0, 20"
-                       Placeholder="SKRIV HER"
-                       FontFamily="Oswald"
-                       FontSize="12"/>
+        <Entry x:Name="username" Margin="0, 0, 0, 20" Placeholder="SKRIV HER" FontFamily="Oswald" FontSize="12"/>
 
-                <Label TextColor="{StaticResource orange}"
-                       FontFamily="Oswald"
-                       FontSize="12">
-                    <Label.Text>
-                        ADGANGSKODE
-                    </Label.Text>
-                </Label>
+        <Label TextColor="{StaticResource orange}" FontFamily="Oswald" FontSize="12">
+          <Label.Text>
+            ADGANGSKODE
+          </Label.Text>
+        </Label>
 
-                <Entry x:Name="password"
-                       IsPassword="true"
-                       FontSize="12"
-                       Placeholder="********"/>
+        <Entry x:Name="password" IsPassword="true" FontSize="12" Placeholder="********"/>
 
-                <Label x:Name="eMessage"
-                       TextColor="Red"
-                       FontSize="12"
-                       HorizontalOptions="Center"/>
+        <Label x:Name="eMessage" TextColor="Red" FontSize="12" HorizontalOptions="Center"/>
 
-                <Button x:Name="loginBTN"
-                        Margin="0, 25, 0, 0"
-                        FontFamily="Oswald"
-                        BackgroundColor="{StaticResource orange}"
-                        TextColor="{StaticResource textWhite}"
-                        HorizontalOptions="Center"
-                        WidthRequest="150"
-                        Clicked="loginManager">
-                    <Button.Text>
-                        LOGIN
-                    </Button.Text>
-                </Button>
-                
-            </StackLayout>
-        </StackLayout>
-    </ContentPage.Content>
+        <Button x:Name="loginBTN" Margin="0, 25, 0, 0" FontFamily="Oswald" BackgroundColor="{StaticResource orange}" TextColor="{StaticResource textWhite}" HorizontalOptions="Center" WidthRequest="150" Clicked="loginManager">
+          <Button.Text>
+            LOGIN
+          </Button.Text>
+        </Button>
+
+      </StackLayout>
+    </StackLayout>
+  </ContentPage.Content>
 </ContentPage>

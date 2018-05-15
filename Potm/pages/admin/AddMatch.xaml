@@ -1,141 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             x:Class="Potm.pages.admin.AddMatch"
-             BackgroundImage="Images/background.png"
-              ControlTemplate="{DynamicResource adminTemplate}">
-    <ContentPage.Content>
-             <ScrollView>
-     <StackLayout HorizontalOptions="Center"
-                     Margin="20">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Potm.pages.admin.AddMatch" BackgroundImage="Images/background.png" ControlTemplate="{DynamicResource adminTemplate}">
+  <ContentPage.Content>
+    <ScrollView>
+      <StackLayout HorizontalOptions="Center" Margin="20">
 
-                      <Label Style="{StaticResource h1}"
-                   FontAttributes="Bold">
-                <Label.Text>
-                    TILFØJ KAMP
+        <Label Style="{StaticResource h1}" FontAttributes="Bold">
+          <Label.Text>
+            TILFØJ KAMP
 
-                </Label.Text>
-            </Label>
-            <BoxView Style="{StaticResource linje}"/>
-            
-     
-         
-                <Grid Margin="0, 0, 0, 0"
-                      RowSpacing="20"
-                      ColumnSpacing="0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="5*"/>
-                        <ColumnDefinition Width="1*"/>
-                        <ColumnDefinition Width="6*"/>
+          </Label.Text>
+        </Label>
+        <BoxView Style="{StaticResource linje}"/>
 
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition/> 
-                         
-                    </Grid.RowDefinitions>
-                    <Image Grid.Row="0" 
-                           Grid.Column="0" 
-                           VerticalOptions="Center"
-                           HorizontalOptions="Center"
-                           Source="Images/StaticPicture.png"/>
-                    <Label  
-                           Grid.Row="0" 
-                           Grid.Column="0"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center"
-                           Style="{DynamicResource orangeText-sm}" 
-                           Text="INDSÆT BILLEDE" />
-                    <Label Grid.Column="1" 
-                           FontSize="25" 
-                           VerticalOptions="Center" 
-                           HorizontalOptions="Center" 
-                           Style="{DynamicResource orangeText-sm}" 
-                           Text="VS"
-                           />
-                    <Image Grid.Row="0" Grid.Column="2"
-                           Source="Images/StaticPicture.png"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center"/>
-                    <Label HorizontalOptions="Center"
-                            VerticalOptions="Center"
-                           Grid.Row="0" 
-                           Grid.Column="2" 
-                           Style="{DynamicResource orangeText-sm}" 
-                           Text="INDSÆT BILLEDE" />
-                    
-                </Grid>
+        <Grid Margin="0, 0, 0, 0" RowSpacing="20" ColumnSpacing="0">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="6*"/>
 
-                <StackLayout Margin="0, 40, 0, 0" HorizontalOptions="Center"
-                             VerticalOptions="Center">
-                   
+          </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+            <RowDefinition/>
 
-                    <Label Text="MODSTANDER"
-                           HorizontalOptions="Start"
-                           VerticalOptions="End"
-                           Margin="0, 20, 0, 0"
-                           Style="{DynamicResource orangeText-sm}"/>
-                    <Entry HorizontalOptions="Center"
-                           VerticalOptions="Center"
-                           WidthRequest="400"
-                           HeightRequest="39"
-                           x:Name="enemyTeam"/>
+          </Grid.RowDefinitions>
+          <Image Grid.Row="0" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" Source="Images/StaticPicture.png"/>
+          <Label Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" Style="{DynamicResource orangeText-sm}" Text="INDSÆT BILLEDE"/>
+          <Label Grid.Column="1" FontSize="25" VerticalOptions="Center" HorizontalOptions="Center" Style="{DynamicResource orangeText-sm}" Text="VS"/>
+          <Image Grid.Row="0" Grid.Column="2" Source="Images/StaticPicture.png" HorizontalOptions="Center" VerticalOptions="Center"/>
+          <Label HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="0" Grid.Column="2" Style="{DynamicResource orangeText-sm}" Text="INDSÆT BILLEDE"/>
 
+        </Grid>
 
-                    <Label Text="ADRESSE"
-                           HorizontalOptions="Start"
-                           VerticalOptions="End"
-                           Margin="0, 20, 0, 0"
-                           Style="{DynamicResource orangeText-sm}"/>
-                    <Entry HorizontalOptions="Center"
-                           VerticalOptions="Center"
-                           WidthRequest="400"
-                           HeightRequest="39"
-                           x:Name="matchLocation"/>
+        <StackLayout Margin="0, 40, 0, 0" HorizontalOptions="Center" VerticalOptions="Center">
 
+          <Label Text="MODSTANDER" HorizontalOptions="Start" VerticalOptions="End" Margin="0, 20, 0, 0" Style="{DynamicResource orangeText-sm}"/>
+          <Entry HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="400" HeightRequest="39" x:Name="enemyTeam"/>
 
+          <Label Text="ADRESSE" HorizontalOptions="Start" VerticalOptions="End" Margin="0, 20, 0, 0" Style="{DynamicResource orangeText-sm}"/>
+          <Entry HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="400" HeightRequest="39" x:Name="matchLocation"/>
 
-                    <Label Text="DATO"
-                           HorizontalOptions="Start"
-                           VerticalOptions="End"
-                           Margin="0, 20, 0, 0"
-                           Style="{DynamicResource orangeText-sm}"
-                           /> 
-                    <DatePicker HorizontalOptions="Center"
-                                VerticalOptions="Center"
-                                WidthRequest="400"
-                                HeightRequest="39"
-                                x:Name="date"
-                                />
+          <Label Text="DATO" HorizontalOptions="Start" VerticalOptions="End" Margin="0, 20, 0, 0" Style="{DynamicResource orangeText-sm}"/>
+          <DatePicker HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="400" HeightRequest="39" x:Name="date"/>
 
+          <Label Text="TID" HorizontalOptions="Start" VerticalOptions="End" Margin="0, 20, 0, 0" Style="{DynamicResource orangeText-sm}"/>
+          <TimePicker HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="400" HeightRequest="39" x:Name="time"/>
 
+        </StackLayout>
+        <Button
+          BackgroundColor="{StaticResource green}"
+          Text="VÆLG SPILLERE"
+          FontFamily="OSWALD"
+          TextColor="{StaticResource textWhite}"
+          WidthRequest="135"
+          HeightRequest="34"
+          HorizontalOptions="Center"
+          VerticalOptions="Center"
+          Margin="0, 20, 0 ,0"
+          Clicked="createMatch"/>
+      </StackLayout>
 
-                    <Label Text="TID"
-                           HorizontalOptions="Start"
-                           VerticalOptions="End"
-                           Margin="0, 20, 0, 0"
-                           Style="{DynamicResource orangeText-sm}"/> 
-                    <TimePicker
-                        HorizontalOptions="Center"
-                                VerticalOptions="Center"
-                                WidthRequest="400"
-                                HeightRequest="39"
-                                x:Name="time"/>
+    </ScrollView>
 
-                    
-                </StackLayout>
-                <Button BackgroundColor="{StaticResource green}"
-                        Text="VÆLG SPILLERE" 
-                        FontFamily="OSWALD"
-                        TextColor="{StaticResource textWhite}"
-                        WidthRequest="135"
-                        HeightRequest="34"
-                        HorizontalOptions="Center"
-                        VerticalOptions="Center"
-                        Margin="0, 20, 0 ,0" 
-                        Clicked="createMatch"/>
-                </StackLayout>
-
-            </ScrollView>
-        
-    </ContentPage.Content>
+  </ContentPage.Content>
 </ContentPage>

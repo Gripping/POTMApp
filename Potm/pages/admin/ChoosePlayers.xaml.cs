@@ -39,7 +39,8 @@ namespace Potm.pages.admin
 
 		protected override async void OnAppearing()
 		{
-			flowAllPlayers.FlowItemsSource = await cManager.GetAllPlayers(clubId, teamId);
+			//var test = await cManager.GetAllPlayers(clubId, teamId);
+			flowAllPlayers.FlowItemsSource = await cManager.GetAllPlayers(clubId, 0);
 		}
 
 		protected async void addPlayerToList(object sender, ItemTappedEventArgs e)

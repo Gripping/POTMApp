@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Potm.pages.admin.AddPlayerPage"
-             BackgroundImage="Images/background.png"
-             ControlTemplate="{DynamicResource adminTemplate}">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Potm.pages.admin.AddPlayerPage" BackgroundImage="Images/background.png" ControlTemplate="{DynamicResource adminTemplate}">
   <ContentPage.Content>
     <StackLayout HorizontalOptions="Center" Margin="20">
 
@@ -51,44 +47,49 @@
         </Grid.ColumnDefinitions>
 
         <Label Grid.Row="0" Grid.Column="0" Margin="0, 30, 0, 0" Text="Navn" Style="{StaticResource orangeText-sm}"/>
-        <Entry Grid.Row="1" Grid.Column="0" Margin="-20, 0, 0, 0" Style="{StaticResource textInput}"
-               x:Name="pName"/>
+        <Entry Grid.Row="1" Grid.Column="0" Margin="-20, 0, 0, 0" Style="{StaticResource textInput}" x:Name="pName"/>
 
         <Label Grid.Row="2" Grid.Column="0" Margin="0, 30, 0, 0" Text="Nr." Style="{StaticResource orangeText-sm}"/>
-        <Entry Grid.Row="3" Grid.Column="0" Margin="-20, 0, 0, 0" Style="{StaticResource textInput}"
-               x:Name="pNumber"/>
+        <Entry Grid.Row="3" Grid.Column="0" Margin="-20, 0, 0, 0" Style="{StaticResource textInput}" x:Name="pNumber"/>
 
         <Label Grid.Row="4" Grid.Column="0" Margin="0, 30, 0, 0" Text="Position" Style="{StaticResource orangeText-sm}"/>
-        <Entry Grid.Row="5" Grid.Column="0" Margin="-20, 0, 0, 0" Style="{StaticResource textInput}"
-               x:Name="pPosition"/>
+        <Entry Grid.Row="5" Grid.Column="0" Margin="-20, 0, 0, 0" Style="{StaticResource textInput}" x:Name="pPosition"/>
 
         <Label Grid.Row="6" Grid.Column="0" Margin="0, 30, 0, 0" Text="Fødselsdag" Style="{StaticResource orangeText-sm}"/>
-        <Entry Grid.Row="7" Grid.Column="0" Margin="-20, 0, 0, 0" Style="{StaticResource textInput}" Placeholder="dd-mm-yyyy"
-               x:Name="pAge"/>
+        <Entry Grid.Row="7" Grid.Column="0" Margin="-20, 0, 0, 0" Style="{StaticResource textInput}" Placeholder="dd-mm-yyyy" x:Name="pAge"/>
 
         <Label Grid.Row="8" Grid.Column="0" Margin="0, 30, 0, 0" Text="Sport" Style="{StaticResource orangeText-sm}"/>
-        <Picker Grid.Row="9"
-                Grid.Column="0"
-                VerticalOptions="Center"
-                HorizontalOptions="Center"
-                HeightRequest="40"
-                WidthRequest="320"
-                Margin="-20, 0, 0, 0"
-                SelectedIndex="1"
-                x:Name="dropDownSport"
-                ItemDisplayBinding="{Binding sportName}"
-                SelectedItem="{Binding id}"
-                >
-            <Picker.ItemsSource>
-
-            </Picker.ItemsSource>
+        <Picker
+          Grid.Row="9"
+          Grid.Column="0"
+          VerticalOptions="Center"
+          HorizontalOptions="Center"
+          HeightRequest="40"
+          WidthRequest="320"
+          Margin="-20, 0, 0, 0"
+          SelectedIndex="1"
+          x:Name="dropDownSport"
+          ItemDisplayBinding="{Binding sportName}"
+          SelectedItem="{Binding id}">
+          <Picker.ItemsSource></Picker.ItemsSource>
         </Picker>
 
       </Grid>
 
-      <Label x:Name="eMessage" Style="{StaticResource eMsg}" />
+      <Label x:Name="eMessage" Style="{StaticResource eMsg}"/>
 
-      <Button x:Name="playerAddBtn" BackgroundColor="{StaticResource green}" Text="ADD PLAYER" FontFamily="OSWALD" TextColor="{StaticResource textWhite}" WidthRequest="200" HeightRequest="30" HorizontalOptions="Center" Clicked="btnCreatePlayer" VerticalOptions="Center" Margin="0, 0, 0 ,0"/>
+      <Button
+        x:Name="playerAddBtn"
+        BackgroundColor="{StaticResource green}"
+        Text="ADD PLAYER"
+        FontFamily="OSWALD"
+        TextColor="{StaticResource textWhite}"
+        WidthRequest="200"
+        HeightRequest="30"
+        HorizontalOptions="Center"
+        Clicked="btnCreatePlayer"
+        VerticalOptions="Center"
+        Margin="0, 0, 0 ,0"/>
 
     </StackLayout>
 

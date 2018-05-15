@@ -102,6 +102,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)pages\admin\AdminSeePlayers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
@@ -185,6 +189,9 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)pages\admin\ManOfTheMatch.xaml.cs">
       <DependentUpon>ManOfTheMatch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)pages\admin\AdminSeePlayers.xaml.cs">
+      <DependentUpon>AdminSeePlayers.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

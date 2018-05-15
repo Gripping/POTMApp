@@ -76,6 +76,7 @@ namespace Potm.pages.admin
 				wrongPassword.Text = "Passwords skal være ens eller indeholde over 10 tegn";
             }
 
+			playersAddBtn.IsVisible = true;
 
            
         }

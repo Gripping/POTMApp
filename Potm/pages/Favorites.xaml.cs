@@ -23,8 +23,10 @@ namespace Potm.pages
         {
             var favsList = await App.FavRepo.GetFavs();
 
+			var test = favsList.Count;
+
             foreach (var fav in favsList) {
-                favs.Add(fav);
+				favs.Add(fav);
             }
             favList.FlowItemsSource = favs;
 

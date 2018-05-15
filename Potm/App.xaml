@@ -1,388 +1,284 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Potm.App">
-    <Application.Resources>
-      <ResourceDictionary>
-            <Color x:Key="facebook">#093E88</Color>
-            <Color x:Key="textBlack">#2E2F34</Color>
-            <Color x:Key="textWhite">#FFFFFF</Color>
-            <Color x:Key="darkRed">#8B2727</Color>
-            <Color x:Key="orange">#F07500</Color>
-            <Color x:Key="green">#469528</Color>
-            <Color x:Key="matBlue">#355B70</Color>
+  <Application.Resources>
+    <ResourceDictionary>
+      <Color x:Key="facebook">#093E88</Color>
+      <Color x:Key="textBlack">#2E2F34</Color>
+      <Color x:Key="textWhite">#FFFFFF</Color>
+      <Color x:Key="darkRed">#8B2727</Color>
+      <Color x:Key="orange">#F07500</Color>
+      <Color x:Key="green">#469528</Color>
+      <Color x:Key="matBlue">#355B70</Color>
 
-            <OnPlatform x:TypeArguments="Font" Android="Oswald.ttf" iOS="Oswald" x:Key="BtnFontFamily" />
+      <OnPlatform x:TypeArguments="Font" Android="Oswald.ttf" iOS="Oswald" x:Key="BtnFontFamily"/>
 
-            <Style x:Key="FPBig" TargetType="Label">
-                <Setter Property="FontSize" Value="26" />
-                <Setter Property="FontFamily" Value="BebasNeue"/>
-                <Setter Property="TextColor" Value="{StaticResource textWhite}"/>
-            </Style>
-            <Style x:Key="FPBig2" TargetType="Label">
-                <Setter Property="FontSize" Value="103" />
-                <Setter Property="FontFamily" Value="BebasNeue"/>
-                <Setter Property="TextColor" Value="{StaticResource textWhite}"/>
-            </Style>
-            <Style x:Key="std" TargetType="Label">
-                <Setter Property="FontSize" Value="15" />
-                <Setter Property="FontFamily" Value="Oswald"/>
-                <Setter Property="TextColor" Value="{StaticResource textWhite}"/>
-            </Style>
-            
-            <Style x:Key="std-sm" TargetType="Label">
-                <Setter Property="FontSize" Value="12" />
-                <Setter Property="FontFamily" Value="Oswald"/>
-                <Setter Property="TextColor" Value="{StaticResource textWhite}"/>
-            </Style>
-            
-            <Style x:Key="h1" TargetType="Label">
-                <Setter Property="FontSize" Value="35" />
-                <Setter Property="FontFamily" Value="BebasNeue"/>
-                <Setter Property="TextColor" Value="{StaticResource textWhite}"/>
-            </Style>
-            <Style x:Key="h2" TargetType="Label">
-                <Setter Property="FontSize" Value="26" />
-                <Setter Property="FontFamily" Value="BebasNeue"/>
-                <Setter Property="TextColor" Value="{StaticResource textWhite}"/>
-            </Style>
-            <Style x:Key="date" TargetType="Label">
-                <Setter Property="FontSize" Value="20" />
-                <Setter Property="FontFamily" Value="Oswald"/>
-                <Setter Property="TextColor" Value="{StaticResource textWhite}"/>
-            </Style>
-            <Style x:Key="sm-info" TargetType="Label">
-                <Setter Property="FontSize" Value="9" />
-                <Setter Property="FontFamily" Value="Oswald"/>
-                <Setter Property="TextColor" Value="{StaticResource textWhite}"/>
-            </Style>
-             <Style x:Key="playerName" TargetType="Label">
-                <Setter Property="FontSize" Value="30" />
-                <Setter Property="FontFamily" Value="Oswald"/>
-                <Setter Property="TextColor" Value="{StaticResource textWhite}"/>
-            </Style>
-             <Style x:Key="orangeText-sm" TargetType="Label">
-                <Setter Property="FontSize" Value="10" />
-                <Setter Property="FontFamily" Value="Oswald"/>
-                <Setter Property="TextColor" Value="{StaticResource orange}"/>
-            </Style>
-            <Style x:Key="eMsg" TargetType="Label">
-                <Setter Property="FontSize" Value="12" />
-                <Setter Property="FontFamily" Value="Oswald"/>
-                <Setter Property="TextColor" Value="Red"/>
-                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
-                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
-                 
-            </Style>
+      <Style x:Key="FPBig" TargetType="Label">
+        <Setter Property="FontSize" Value="26"/>
+        <Setter Property="FontFamily" Value="BebasNeue"/>
+        <Setter Property="TextColor" Value="{StaticResource textWhite}"/>
+      </Style>
+      <Style x:Key="FPBig2" TargetType="Label">
+        <Setter Property="FontSize" Value="103"/>
+        <Setter Property="FontFamily" Value="BebasNeue"/>
+        <Setter Property="TextColor" Value="{StaticResource textWhite}"/>
+      </Style>
+      <Style x:Key="std" TargetType="Label">
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="FontFamily" Value="Oswald"/>
+        <Setter Property="TextColor" Value="{StaticResource textWhite}"/>
+      </Style>
 
-            <Style x:Key="buttonFP" TargetType="Button">
-                <Setter Property="HorizontalOptions" Value="Center"/>
-                <Setter Property="VerticalOptions" Value="Center"/>
-                <Setter Property="FontSize" Value="{StaticResource std}"/>
-                <Setter Property="FontFamily" Value="Oswald"/>
-                <Setter Property="TextColor" Value="{StaticResource textWhite}"/>
-                <Setter Property="WidthRequest" Value="141"/>
-                <Setter Property="HeightRequest" Value="34"/>
-                <Setter Property="BackgroundColor" Value="{StaticResource facebook}"/>
-                <Setter Property="BorderRadius" Value="5"/>
+      <Style x:Key="std-sm" TargetType="Label">
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="FontFamily" Value="Oswald"/>
+        <Setter Property="TextColor" Value="{StaticResource textWhite}"/>
+      </Style>
 
-            </Style>
-            <Style x:Key="button2FP" TargetType="Button">
-                <Setter Property="HorizontalOptions" Value="Center"/>
-                <Setter Property="VerticalOptions" Value="Center"/>
+      <Style x:Key="h1" TargetType="Label">
+        <Setter Property="FontSize" Value="35"/>
+        <Setter Property="FontFamily" Value="BebasNeue"/>
+        <Setter Property="TextColor" Value="{StaticResource textWhite}"/>
+      </Style>
+      <Style x:Key="h2" TargetType="Label">
+        <Setter Property="FontSize" Value="26"/>
+        <Setter Property="FontFamily" Value="BebasNeue"/>
+        <Setter Property="TextColor" Value="{StaticResource textWhite}"/>
+      </Style>
+      <Style x:Key="date" TargetType="Label">
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="FontFamily" Value="Oswald"/>
+        <Setter Property="TextColor" Value="{StaticResource textWhite}"/>
+      </Style>
+      <Style x:Key="sm-info" TargetType="Label">
+        <Setter Property="FontSize" Value="9"/>
+        <Setter Property="FontFamily" Value="Oswald"/>
+        <Setter Property="TextColor" Value="{StaticResource textWhite}"/>
+      </Style>
+      <Style x:Key="playerName" TargetType="Label">
+        <Setter Property="FontSize" Value="30"/>
+        <Setter Property="FontFamily" Value="Oswald"/>
+        <Setter Property="TextColor" Value="{StaticResource textWhite}"/>
+      </Style>
+      <Style x:Key="orangeText-sm" TargetType="Label">
+        <Setter Property="FontSize" Value="10"/>
+        <Setter Property="FontFamily" Value="Oswald"/>
+        <Setter Property="TextColor" Value="{StaticResource orange}"/>
+      </Style>
+      <Style x:Key="eMsg" TargetType="Label">
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="FontFamily" Value="Oswald"/>
+        <Setter Property="TextColor" Value="Red"/>
+        <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+        <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
 
-                <Setter Property="Font" Value="{StaticResource BtnFontFamily}"/>
-                <Setter Property="FontSize" Value="{StaticResource std}"/>
-                <Setter Property="TextColor" Value="{StaticResource orange}"/>
-                <Setter Property="WidthRequest" Value="141"/>
-                <Setter Property="BackgroundColor" Value="{StaticResource textWhite}"/>
-                <Setter Property="BorderRadius" Value="5"/>
-                <Setter Property="HeightRequest">
-                    <Setter.Value>
-                        <OnPlatform x:TypeArguments="x:Double" Android="50" iOS="34" />
-                    </Setter.Value>
-                </Setter>
-            </Style>
+      </Style>
 
-            <Style x:Key="textInput" TargetType="Entry">
+      <Style x:Key="buttonFP" TargetType="Button">
+        <Setter Property="HorizontalOptions" Value="Center"/>
+        <Setter Property="VerticalOptions" Value="Center"/>
+        <Setter Property="FontSize" Value="{StaticResource std}"/>
+        <Setter Property="FontFamily" Value="Oswald"/>
+        <Setter Property="TextColor" Value="{StaticResource textWhite}"/>
+        <Setter Property="WidthRequest" Value="141"/>
+        <Setter Property="HeightRequest" Value="34"/>
+        <Setter Property="BackgroundColor" Value="{StaticResource facebook}"/>
+        <Setter Property="BorderRadius" Value="5"/>
 
-                <Setter Property="HorizontalOptions" Value="Center"/>
-                <Setter Property="VerticalOptions" Value="Center"/>
-                <Setter Property="WidthRequest" Value="320"/>
-                <Setter Property="HeightRequest" Value="40"/>
-            </Style>
+      </Style>
+      <Style x:Key="button2FP" TargetType="Button">
+        <Setter Property="HorizontalOptions" Value="Center"/>
+        <Setter Property="VerticalOptions" Value="Center"/>
 
-            <Style x:Key="linje" TargetType="BoxView">
-                <Setter Property="HeightRequest" Value="1"/>
-                <Setter Property="BackgroundColor" Value="{StaticResource textWhite}"/>
-                <Setter Property="Margin" Value="0, 0, 0, 25"/>
-            </Style>
+        <Setter Property="Font" Value="{StaticResource BtnFontFamily}"/>
+        <Setter Property="FontSize" Value="{StaticResource std}"/>
+        <Setter Property="TextColor" Value="{StaticResource orange}"/>
+        <Setter Property="WidthRequest" Value="141"/>
+        <Setter Property="BackgroundColor" Value="{StaticResource textWhite}"/>
+        <Setter Property="BorderRadius" Value="5"/>
+        <Setter Property="HeightRequest">
+          <Setter.Value>
+            <OnPlatform x:TypeArguments="x:Double" Android="50" iOS="34"/>
+          </Setter.Value>
+        </Setter>
+      </Style>
 
-            <Style x:Key="clubBadge" TargetType="Frame">
-                <Setter Property="HorizontalOptions" Value="Center"/>
-                <Setter Property="VerticalOptions" Value="Center"/>
-                <Setter Property="CornerRadius" Value="5"/>
-                <Setter Property="HeightRequest" Value="150"/>
-                <Setter Property="WidthRequest" Value="130"/>
-            </Style>
+      <Style x:Key="textInput" TargetType="Entry">
 
-            <ControlTemplate x:Key="userTemplate">
+        <Setter Property="HorizontalOptions" Value="Center"/>
+        <Setter Property="VerticalOptions" Value="Center"/>
+        <Setter Property="WidthRequest" Value="320"/>
+        <Setter Property="HeightRequest" Value="40"/>
+      </Style>
 
-                <StackLayout HorizontalOptions="FillAndExpand"
-                             VerticalOptions="FillAndExpand"
-                             >
-                    <Grid HorizontalOptions="FillAndExpand"
-                          VerticalOptions="FillAndExpand"
-                          >
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="70"/>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="55"/>
-                        </Grid.RowDefinitions>
-                        <Button Image="Images/backArrow.png"
-                                Clicked="backButton"
-                                Grid.Column="0"
-                                Grid.Row="0"
-                                HorizontalOptions="Start"
-                                VerticalOptions="End"
-                                Margin="20, 0, 0, 0"/>
+      <Style x:Key="linje" TargetType="BoxView">
+        <Setter Property="HeightRequest" Value="1"/>
+        <Setter Property="BackgroundColor" Value="{StaticResource textWhite}"/>
+        <Setter Property="Margin" Value="0, 0, 0, 25"/>
+      </Style>
 
-                        <ScrollView Grid.Row="1"
-                                    Grid.Column="0">
-                            <ContentPresenter HorizontalOptions="FillAndExpand"
-                                              VerticalOptions="FillAndExpand"/>
-                        </ScrollView>
+      <Style x:Key="clubBadge" TargetType="Frame">
+        <Setter Property="HorizontalOptions" Value="Center"/>
+        <Setter Property="VerticalOptions" Value="Center"/>
+        <Setter Property="CornerRadius" Value="5"/>
+        <Setter Property="HeightRequest" Value="150"/>
+        <Setter Property="WidthRequest" Value="130"/>
+      </Style>
 
-                        <Grid Grid.Row="2"  BackgroundColor="White"
-                              HorizontalOptions="FillAndExpand"
-                              VerticalOptions="FillAndExpand">
-                            <Grid.RowDefinitions>
-                                <RowDefinition/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="1*"/>
-                                <ColumnDefinition Width="1*"/>
-                                <ColumnDefinition Width="1*"/>
+      <ControlTemplate x:Key="userTemplate">
 
-                            </Grid.ColumnDefinitions>
-                             <Button VerticalOptions="Start"
-                                     Grid.Row="0"
-                                        Grid.Column="1"
-                                        Image="Images/filterIcon.png"
-                                                    Clicked="filterPage"/>
-                             <Button VerticalOptions="Start"
-                                     Grid.Row="0"
-                                        Grid.Column="0"
-                                        Image="Images/starIcon.png"
-                                                 Clicked="favoritesPage"/>
-                              <Button VerticalOptions="Start"
-                                      Grid.Row="0"
-                                        Grid.Column="2"
-                                        Image="Images/logoutIcon.png"
-                                                Clicked="logoutPage"/>
-                        </Grid>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+          <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="70"/>
+              <RowDefinition Height="*"/>
+              <RowDefinition Height="55"/>
+            </Grid.RowDefinitions>
+            <Button Image="Images/backArrow.png" Clicked="backButton" Grid.Column="0" Grid.Row="0" HorizontalOptions="Start" VerticalOptions="End" Margin="20, 0, 0, 0"/>
 
-                    </Grid>
-                </StackLayout>
-               </ControlTemplate>
+            <ScrollView Grid.Row="1" Grid.Column="0">
+              <ContentPresenter HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            </ScrollView>
 
-            <ControlTemplate x:Key="adminTemplate">
+            <Grid Grid.Row="2" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+              <Grid.RowDefinitions>
+                <RowDefinition/>
+              </Grid.RowDefinitions>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
 
-                <StackLayout HorizontalOptions="FillAndExpand"
-                           VerticalOptions="FillAndExpand"
-                             >
-                    <Grid HorizontalOptions="FillAndExpand"
-                          VerticalOptions="FillAndExpand"
-                          >
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="70"/>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="55"/>
-                        </Grid.RowDefinitions>
-                        <Button Image="Images/backArrow.png"
-                                Clicked="backButton"
-                                Grid.Column="0"
-                                Grid.Row="0"
-                                HorizontalOptions="Start"
-                                VerticalOptions="End"
-                                Margin="20, 0, 0, 0"/>
+              </Grid.ColumnDefinitions>
+              <Button VerticalOptions="Start" Grid.Row="0" Grid.Column="1" Image="Images/filterIcon.png" Clicked="filterPage"/>
+              <Button VerticalOptions="Start" Grid.Row="0" Grid.Column="0" Image="Images/starIcon.png" Clicked="favoritesPage"/>
+              <Button VerticalOptions="Start" Grid.Row="0" Grid.Column="2" Image="Images/logoutIcon.png" Clicked="logoutPage"/>
+            </Grid>
 
-                        <ScrollView Grid.Row="1"
-                                    Grid.Column="0">
-                            <ContentPresenter HorizontalOptions="FillAndExpand"
-                                              VerticalOptions="FillAndExpand"/>
-                        </ScrollView>
+          </Grid>
+        </StackLayout>
+      </ControlTemplate>
 
-                        <Grid Grid.Row="2"  BackgroundColor="White"
-                              HorizontalOptions="FillAndExpand"
-                              VerticalOptions="FillAndExpand">
-                            <Grid.RowDefinitions>
-                                <RowDefinition/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="1*"/>
-                                <ColumnDefinition Width="1*"/>
-                                <ColumnDefinition Width="1*"/>
+      <ControlTemplate x:Key="adminTemplate">
 
-                            </Grid.ColumnDefinitions>
-                             <Button VerticalOptions="Start"
-                                     Grid.Row="0"
-                                        Grid.Column="1"
-                                        Image="Images/addPlayerIcon.png"
-                                                    Clicked="addPlayerPage"/>
-                             <Button VerticalOptions="Start"
-                                     Grid.Row="0"
-                                        Grid.Column="0"
-                                        Image="Images/playersIcon.png"
-                                                 Clicked="allPlayersPage"/>
-                              <Button VerticalOptions="Start"
-                                      Grid.Row="0"
-                                        Grid.Column="2"
-                                        Image="Images/logoutIcon.png"
-                                                Clicked="logoutAdminPage"/>
-                        </Grid>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+          <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="70"/>
+              <RowDefinition Height="*"/>
+              <RowDefinition Height="55"/>
+            </Grid.RowDefinitions>
+            <Button Image="Images/backArrow.png" Clicked="backButton" Grid.Column="0" Grid.Row="0" HorizontalOptions="Start" VerticalOptions="End" Margin="20, 0, 0, 0"/>
 
-                    </Grid>
-                </StackLayout>
-               </ControlTemplate>
+            <ScrollView Grid.Row="1" Grid.Column="0">
+              <ContentPresenter HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            </ScrollView>
 
+            <Grid Grid.Row="2" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+              <Grid.RowDefinitions>
+                <RowDefinition/>
+              </Grid.RowDefinitions>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
 
+              </Grid.ColumnDefinitions>
+              <Button VerticalOptions="Start" Grid.Row="0" Grid.Column="1" Image="Images/addPlayerIcon.png" Clicked="addPlayerPage"/>
+              <Button VerticalOptions="Start" Grid.Row="0" Grid.Column="0" Image="Images/playersIcon.png" Clicked="allPlayersPage"/>
+              <Button VerticalOptions="Start" Grid.Row="0" Grid.Column="2" Image="Images/logoutIcon.png" Clicked="logoutAdminPage"/>
+            </Grid>
 
-             <ControlTemplate x:Key="loginTemplate">
+          </Grid>
+        </StackLayout>
+      </ControlTemplate>
 
-                <StackLayout HorizontalOptions="FillAndExpand"
-                           VerticalOptions="FillAndExpand"
-                             >
-                    <Grid HorizontalOptions="FillAndExpand"
-                          VerticalOptions="FillAndExpand"
-                          >
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="70"/>
-                            <RowDefinition Height="*"/>
+      <ControlTemplate x:Key="loginTemplate">
 
-                        </Grid.RowDefinitions>
-                        <Button Image="Images/backArrow.png"
-                                Clicked="backButton"
-                                Grid.Column="0"
-                                Grid.Row="0"
-                                HorizontalOptions="Start"
-                                VerticalOptions="End"
-                                Margin="20, 0, 0, 0"/>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+          <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="70"/>
+              <RowDefinition Height="*"/>
 
-                        <ScrollView Grid.Row="1"
-                                    Grid.Column="0">
-                            <ContentPresenter HorizontalOptions="FillAndExpand"
-                                              VerticalOptions="FillAndExpand"/>
-                        </ScrollView>
-                       
-                    </Grid>
-                </StackLayout>
-               </ControlTemplate>
+            </Grid.RowDefinitions>
+            <Button Image="Images/backArrow.png" Clicked="backButton" Grid.Column="0" Grid.Row="0" HorizontalOptions="Start" VerticalOptions="End" Margin="20, 0, 0, 0"/>
 
+            <ScrollView Grid.Row="1" Grid.Column="0">
+              <ContentPresenter HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            </ScrollView>
 
-                 <ControlTemplate x:Key="newUserTemplate">
+          </Grid>
+        </StackLayout>
+      </ControlTemplate>
 
-                <StackLayout HorizontalOptions="FillAndExpand"
-                           VerticalOptions="FillAndExpand"
-                             >
-                    <Grid HorizontalOptions="FillAndExpand"
-                          VerticalOptions="FillAndExpand"
-                          BackgroundColor="Transparent">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="70"/>
-                            <RowDefinition Height="*"/>
+      <ControlTemplate x:Key="newUserTemplate">
 
-                        </Grid.RowDefinitions>
-                        <Button Image="Images/logoutWhiteIcon.png"
-                                Clicked="backButton"
-                                Grid.Column="0"
-                                Grid.Row="0"
-                                HorizontalOptions="End"
-                                VerticalOptions="End"
-                                Margin="0, 30, 20, 0"/>
-                        
-                        <ScrollView Grid.Row="0"
-                                    Grid.Column="2">
-                            <ContentPresenter HorizontalOptions="FillAndExpand"
-                                              VerticalOptions="FillAndExpand"/>
-                        </ScrollView>
-                       
-                    </Grid>
-                </StackLayout>
-               </ControlTemplate>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+          <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="Transparent">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="70"/>
+              <RowDefinition Height="*"/>
 
-   
+            </Grid.RowDefinitions>
+            <Button Image="Images/logoutWhiteIcon.png" Clicked="backButton" Grid.Column="0" Grid.Row="0" HorizontalOptions="End" VerticalOptions="End" Margin="0, 30, 20, 0"/>
 
+            <ScrollView Grid.Row="0" Grid.Column="2">
+              <ContentPresenter HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            </ScrollView>
 
-               <ControlTemplate x:Key="adminHome">
+          </Grid>
+        </StackLayout>
+      </ControlTemplate>
 
+      <ControlTemplate x:Key="adminHome">
 
-                <StackLayout HorizontalOptions="FillAndExpand"
-                           VerticalOptions="FillAndExpand"
-                             >
-                    <Grid HorizontalOptions="FillAndExpand"
-                          VerticalOptions="FillAndExpand"
-                          >
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="70"/>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="70"/>
-                        </Grid.RowDefinitions>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+          <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="70"/>
+              <RowDefinition Height="*"/>
+              <RowDefinition Height="70"/>
+            </Grid.RowDefinitions>
 
+            <ScrollView Grid.Row="1" Grid.Column="0">
+              <ContentPresenter HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            </ScrollView>
 
-                        <ScrollView Grid.Row="1"
-                                    Grid.Column="0">
-                            <ContentPresenter HorizontalOptions="FillAndExpand"
-                                              VerticalOptions="FillAndExpand"/>
-                        </ScrollView>
+            <Grid Grid.Row="2" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+              <Grid.RowDefinitions>
+                <RowDefinition/>
+              </Grid.RowDefinitions>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
 
-                        <Grid Grid.Row="2"  BackgroundColor="White"
-                              HorizontalOptions="FillAndExpand"
-                              VerticalOptions="FillAndExpand">
-                            <Grid.RowDefinitions>
-                                <RowDefinition/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="1*"/>
-                                <ColumnDefinition Width="1*"/>
-                                <ColumnDefinition Width="1*"/>
+              </Grid.ColumnDefinitions>
+              <Button VerticalOptions="Start" Grid.Row="0" Grid.Column="1" Image="Images/addPlayerIcon.png" Clicked="addPlayerPage"/>
+              <Button VerticalOptions="Start" Grid.Row="0" Grid.Column="0" Image="Images/playersIcon.png" Clicked="allPlayersPage"/>
+              <Button VerticalOptions="Start" Grid.Row="0" Grid.Column="2" Image="Images/logoutIcon.png" Clicked="logoutAdminPage"/>
+            </Grid>
 
-                            </Grid.ColumnDefinitions>
-                             <Button VerticalOptions="Start"
-                                     Grid.Row="0"
-                                        Grid.Column="1"
-                                        Image="Images/addPlayerIcon.png"
-                                                    Clicked="addPlayerPage"/>
-                             <Button VerticalOptions="Start"
-                                     Grid.Row="0"
-                                        Grid.Column="0"
-                                        Image="Images/playersIcon.png"
-                                                 Clicked="allPlayersPage"/>
-                              <Button VerticalOptions="Start"
-                                      Grid.Row="0"
-                                        Grid.Column="2"
-                                        Image="Images/logoutIcon.png"
-                                                Clicked="logoutAdminPage"/>
-                        </Grid>
-                       
-                    </Grid>
-                </StackLayout>
-               </ControlTemplate>
+          </Grid>
+        </StackLayout>
+      </ControlTemplate>
 
-        </ResourceDictionary>
+    </ResourceDictionary>
 
-    </Application.Resources>
+  </Application.Resources>
 </Application>

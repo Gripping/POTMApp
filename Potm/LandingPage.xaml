@@ -1,37 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Potm.LandingPage"
-             Title="POTM app"
-             BackgroundImage="Images/background.png">
-     <ContentPage.Content>
-        <StackLayout HorizontalOptions="Center"
-                     VerticalOptions="Center"
-                     Margin="20">
-            <Image Source="Images/logo.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="0, 0, 0, 100"/>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Potm.LandingPage" Title="POTM app" BackgroundImage="Images/background.png">
+  <ContentPage.Content>
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Margin="20">
+      <Image Source="Images/logo.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="0, 0, 0, 100"/>
 
+      <Button x:Name="facebookLogin" Text="FACEBOOK LOGIN" Style="{StaticResource buttonFP}"/>
+      <Button x:Name="guestLogin" Text="GÆST" Style="{StaticResource button2FP}" Margin="0, 3"/>
+      <Button x:Name="managerLogin" Text="MANAGER" Style="{StaticResource button2FP}" BackgroundColor="Transparent" BorderColor="{StaticResource orange}" BorderWidth="1"/>
 
-
-
-
-             <Button x:Name="facebookLogin"
-                     Text="FACEBOOK LOGIN"
-                     Style="{StaticResource buttonFP}"
-                     />
-            <Button x:Name="guestLogin"
-                     Text="GÆST"
-                     Style="{StaticResource button2FP}"
-                     Margin="0, 3"
-                     />
-            <Button x:Name="managerLogin"
-                     Text="MANAGER"
-                     Style="{StaticResource button2FP}"
-                     BackgroundColor="Transparent"
-                     BorderColor="{StaticResource orange}"
-                     BorderWidth="1"
-                     />
-
-
-        </StackLayout>
-    </ContentPage.Content>
+    </StackLayout>
+  </ContentPage.Content>
 </ContentPage>
