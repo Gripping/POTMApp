@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="Potm.pages.admin.LogoutAdmin"
               ControlTemplate="{DynamicResource adminTemplate}"
-             BackgroundImage="Images/Background.png">
+             BackgroundImage="Images/background.png">
     <ContentPage.Content>
         <StackLayout HorizontalOptions="Center"
                      VerticalOptions="Center"
