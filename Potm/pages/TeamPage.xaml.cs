@@ -37,7 +37,7 @@ namespace Potm.pages
 			{
 				t.clubName = clubName;
 				t.clubImage = clubImage;
-                if (flowSingleTeam.All(x => x.matchTime != t.matchTime))
+                if (flowSingleTeam.All(x => x.id != t.id))
                 {
 					flowSingleTeam.Add(t);
                 }

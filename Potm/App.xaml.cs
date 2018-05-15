@@ -15,7 +15,6 @@ namespace Potm
 {
     public partial class App : Application
     {
-        readonly int clubId;
         public static FavRepository FavRepo { get; private set; }
         public static VoteRepo VoteRepo { get; private set; }
         public static int LoggedInClubId;
@@ -36,7 +35,6 @@ namespace Potm
             FavRepo = new FavRepository(dbPath);
             VoteRepo = new VoteRepo(dbPath);
             LoggedInClubId = 0;
-            clubId = 1128;
         }
 
         protected override void OnStart()
@@ -92,7 +90,7 @@ namespace Potm
                 {
                     await ((NavigationPage)Application.Current.MainPage).Navigation.PopModalAsync();
                 }
-                await ((NavigationPage)Application.Current.MainPage).PushAsync(new Logout());
+                await ((NavigationPage)Application.Current.MainPage).PushAsync(new LandingPage());
             }
         }
 
